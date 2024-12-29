@@ -1,0 +1,40 @@
+{
+    "sceneID": "Game",
+    "bgm": "mysterious_theme.mp3",
+    "background": "castle_room.jpg",
+    "dialogueDatas": [
+        {
+            "dialogueID": "d1",
+            "character": "타마마",
+            "text": "환영합니다!",
+            "emotion": "happy",
+            "position": "left",
+            "effects": ["fadeIn"],
+            "sfx": ["door_creak.mp3"]
+           
+        },
+
+        {
+            "dialogueID": "d2",
+            "character": "타마마",
+            "text": "중사님!",
+            "emotion": "happy",
+            "position": "left",
+            "effects": ["fadeIn"],
+            "sfx": ["door_creak.mp3"]
+            
+        },
+
+        {
+            "dialogueID": "d3",
+            "character": "타마마",
+            "text": "아니 이거 어떻게 합니까 ㅠㅠ",
+            "emotion": "happy",
+            "position": "left",
+            "effects": ["fadeIn"],
+            "sfx": ["door_creak.mp3"]
+            
+        }
+
+    ]
+}
