@@ -16,7 +16,7 @@ public class NameScript : MonoBehaviour
 
     void Update() {
         if (Input.GetKeyDown(KeyCode.Return))
-        Save();
+            Save();
     }
     
 

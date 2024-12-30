@@ -7,7 +7,19 @@ using System.IO;
 public class Chat : MonoBehaviour
 {
     public Image emptyImage;
-    public Sprite changeSprite;
+    public Sprite Elina;
+    public Sprite Cecilia;
+    public Sprite Sophia;
+    public Sprite Coco;
+    public Sprite Empty;
+
+    public Image main;
+    public Sprite Bg1;
+    public Sprite black;
+    public Sprite bed;
+    public Sprite classtest;
+    public Sprite classroom;
+    public Sprite campus;
 
     public TMPro.TMP_Text ChatText;
     public TMPro.TMP_Text CharacterName;
@@ -16,10 +28,12 @@ public class Chat : MonoBehaviour
 
     private JsonData dialogueRoot;
 
+
     // Start is called before the first frame update
     void Start()
     {
         LoadDialogueData("dgData.json");
+        ApplyPlayerName();
         StartCoroutine(PlayDialogues());
     }
 
@@ -38,15 +52,57 @@ public class Chat : MonoBehaviour
         }
     }
 
+    void ApplyPlayerName()
+    {
+        string playerName = PlayerPrefs.GetString("Name", "inputName");
+
+        foreach (var scene in dialogueRoot.scenes)
+        {
+            foreach (var dialogue in scene.dialogueDatas)
+            {
+                if (dialogue.text.Contains("{PlayerName}"))
+                {
+                    dialogue.text = dialogue.text.Replace("{PlayerName}", playerName);
+                }
+                if (dialogue.character == "{PlayerName}")
+                {
+                    dialogue.character = dialogue.character.Replace("{PlayerName}", playerName);
+                }
+            }
+        }
+    }
+
     IEnumerator PlayDialogues()
     {
-        foreach (DialogueData data in dialogueRoot.dialogueDatas)
+        foreach (var scene in dialogueRoot.scenes)
         {
-            if (!this.enabled) 
-            {
-                yield return new WaitUntil(() => this.enabled);
+            if (scene.background == "school1") {
+                main.sprite = Bg1;
             }
-            yield return StartCoroutine(NormalChat(data));
+            else if (scene.background == "black") {
+                main.sprite = black;
+            }
+            else if (scene.background == "bed") {
+                main.sprite = bed;
+            }
+            else if (scene.background == "classtest") {
+                main.sprite = classtest;
+            }
+            else if (scene.background == "classroom") {
+                main.sprite = classroom;
+            }
+            else if (scene.background == "campus") {
+                main.sprite = campus;
+            }
+    
+            foreach (DialogueData data in scene.dialogueDatas)
+            {
+                if (!this.enabled) 
+                {
+                    yield return new WaitUntil(() => this.enabled);
+                }
+                yield return StartCoroutine(NormalChat(data));
+            }
         }
     }
 
@@ -56,9 +112,22 @@ public class Chat : MonoBehaviour
         ChatText.fontSize = data.fontSize;
         writerText = "";
 
-        if (data.character == "타마마") {
-            emptyImage.sprite = changeSprite;
+        if (data.character == "엘리나") {
+            emptyImage.sprite = Elina;
         }
+        else if (data.character == "세실리아") {
+            emptyImage.sprite = Cecilia;
+        }
+        else if (data.character == "소피아") {
+            emptyImage.sprite = Sophia;
+        }
+        else if (data.character == "코코") {
+            emptyImage.sprite = Coco;
+        }
+        else if (data.character == "나레이션" || data.character == "교수") {
+            emptyImage.sprite = Empty;
+        }
+       
 
         for (int i = 0; i < data.text.Length; i++)
         {

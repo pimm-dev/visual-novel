@@ -27,6 +27,12 @@ public class Dialogue : MonoBehaviour
 [System.Serializable]
 public class JsonData
 {
+    public SceneData[] scenes;
+}
+
+[System.Serializable]
+public class SceneData
+{
     public string sceneID;
     public string bgm;
     public string background;
@@ -50,11 +56,13 @@ public class JsonData
         public string fontType;
         public DialogueData()
         {
+            emotion = "happy";
             shakeEffect = false;
             duration = 2.5f;
             textSpeed = 50;
             fontSize = 48;
             fontType = "Preesentation";
+            position = "middle";
             effects = new string[] {"fadeIn", "e1", "e2"};
             sfx = new string[] {"door_creak.mp3", "s1", "s2"};
         }

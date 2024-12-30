@@ -2428,8 +2428,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -110}
-  m_SizeDelta: {x: 595.7466, y: 652.3386}
+  m_AnchoredPosition: {x: -0.00001955, y: -22.666687}
+  m_SizeDelta: {x: 691.3306, y: 1034.6743}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1127515438
 MonoBehaviour:
@@ -2551,7 +2551,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   emptyImage: {fileID: 1127515438}
-  changeSprite: {fileID: 21300000, guid: 2d50f87f75f45a449873477ca8fc9020, type: 3}
+  Elina: {fileID: 21300000, guid: 34aebcb76b287464481617abfb3dfb90, type: 3}
+  Cecilia: {fileID: 21300000, guid: 7d4ca858d40670744a6b5745b0db6331, type: 3}
+  Sophia: {fileID: 21300000, guid: 714cc731933ce1a4ea7eecd9f8a87a04, type: 3}
+  Coco: {fileID: 21300000, guid: 9fa18910e4dd8114e81c22515444efcf, type: 3}
+  Empty: {fileID: 21300000, guid: cc0137257350c6d44a24fea54fd226b2, type: 3}
+  main: {fileID: 1893930155}
+  Bg1: {fileID: 21300000, guid: 36d8ae3aa67032148ab1d534931bad67, type: 3}
+  black: {fileID: 21300000, guid: 6e971d9d7cec012409cba89177bfe7f1, type: 3}
+  bed: {fileID: 21300000, guid: eac661d2fc9b83b4aa854a9d7e960e46, type: 3}
+  classtest: {fileID: 21300000, guid: a8993e2f26947be41885e210f3ec52d3, type: 3}
+  classroom: {fileID: 21300000, guid: 6497c6aad36397e41969effa5f0b4724, type: 3}
+  campus: {fileID: 21300000, guid: bd0c4468e55648449bedd798ce48a453, type: 3}
   ChatText: {fileID: 181569068}
   CharacterName: {fileID: 1417408168}
   writerText: 
