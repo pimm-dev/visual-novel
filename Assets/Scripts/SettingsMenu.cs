@@ -29,38 +29,39 @@ public class SettingsMenu : MonoBehaviour
 
     public TMPro.TMP_Dropdown resolutionDropdown;
 
-    Resolution[] resolutions;
-
     void Start()
     {
-        resolutions = Screen.resolutions;
+        // resolutions = Screen.resolutions;
 
-        resolutionDropdown.ClearOptions();
+        // resolutionDropdown.ClearOptions();
 
-        List<string> options = new List<string>();
+        // List<string> options = new List<string>();
 
-        int currentResolutionIndex = 0;
+        // int currentResolutionIndex = 0;
 
-        for (int i = 0; i < resolutions.Length; i++)
-        {
-            string option = resolutions[i].width + " x " + resolutions[i].height;
-            options.Add(option);
-            if (resolutions[i].width == Screen.width &&
-                resolutions[i].height == Screen.height)
-            {
-                currentResolutionIndex = i;
-            }
-        }
+        // for (int i = 0; i < resolutions.Length; i++)
+        // {
+        //     string option = resolutions[i].width + " x " + resolutions[i].height;
+        //     options.Add(option);
+        //     if (resolutions[i].width == Screen.width &&
+        //         resolutions[i].height == Screen.height)
+        //     {
+        //         currentResolutionIndex = i;
+        //     }
+        // }
 
-        resolutionDropdown.AddOptions(options);
-        resolutionDropdown.value = currentResolutionIndex;
+        // resolutionDropdown.AddOptions(options);
+        // resolutionDropdown.value = currentResolutionIndex;
+        Screen.SetResolution(1920, 1080, Screen.fullScreen);
         resolutionDropdown.RefreshShownValue();
     }
 
     public void SetResolution(int resulutionIndex)
     {
-        Resolution resolution = resolutions[resulutionIndex];
-        Screen.SetResolution(resolution.width, resolution.height, Screen.fullScreen);
+        string[] resolutionText = resolutionDropdown.options[resulutionIndex].text.Split('x');
+        int width = int.Parse(resolutionText[0].Trim());
+        int height = int.Parse(resolutionText[1].Trim());
+        Screen.SetResolution(width, height, Screen.fullScreen);
     }
 
     public void SetVolume(float volume)
