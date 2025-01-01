@@ -7,11 +7,17 @@ using UnityEngine.SceneManagement;
 public class NameScript : MonoBehaviour
 {
     public TMPro.TMP_InputField inputName;
+    public GameObject nullpanel;
 
     public void Save()
     {
-        PlayerPrefs.SetString("Name", inputName.text);
-        SceneManager.LoadScene("Game");
+        if (inputName.text == "")
+            nullpanel.SetActive(true);
+        else
+        {
+            PlayerPrefs.SetString("Name", inputName.text);
+            SceneManager.LoadScene("Game");
+        }
     }
 
     void Update() {

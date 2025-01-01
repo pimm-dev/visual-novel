@@ -334,6 +334,12 @@
                     "text":"수업이 끝나고, 세실리아와 엘리나가 이야기를 나눈다."
                 },
                 {
+                    "dialogueID":"d99",
+                    "character":"엘리나",
+                    "position":"right",
+                    "text":""
+                },
+                {
                     "dialogueID":"d59",
                     "position":"left",
                     "character":"세실리아",
@@ -453,7 +459,7 @@
                 {
                     "dialogueID":"d78",
                     "character":"나레이션",
-                    "text":"주인공은 소피아와 함께 교정을 걷는다."
+                    "text":"{PlayerName}은(는) 소피아와 함께 교정을 걷는다."
                 },
                 {
                     "dialogueID":"d79",

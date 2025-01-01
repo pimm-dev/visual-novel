@@ -15,7 +15,6 @@ public class Chat : MonoBehaviour
     public Sprite Coco;
     public Sprite Empty;
 
-
     public Image main;
     public Sprite Bg1;
     public Sprite black;
@@ -31,7 +30,6 @@ public class Chat : MonoBehaviour
 
     private JsonData dialogueRoot;
     private GameObject namebox;
-
 
     // Start is called before the first frame update
     void Start()
