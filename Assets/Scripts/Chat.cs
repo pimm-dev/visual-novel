@@ -7,11 +7,14 @@ using System.IO;
 public class Chat : MonoBehaviour
 {
     public Image emptyImage;
+    public Image left;
+    public Image right;
     public Sprite Elina;
     public Sprite Cecilia;
     public Sprite Sophia;
     public Sprite Coco;
     public Sprite Empty;
+
 
     public Image main;
     public Sprite Bg1;
@@ -27,11 +30,13 @@ public class Chat : MonoBehaviour
     public string writerText = "";
 
     private JsonData dialogueRoot;
+    private GameObject namebox;
 
 
     // Start is called before the first frame update
     void Start()
     {
+        namebox = GameObject.Find("Name");
         LoadDialogueData("dgData.json");
         ApplyPlayerName();
         StartCoroutine(PlayDialogues());
@@ -108,24 +113,68 @@ public class Chat : MonoBehaviour
 
     IEnumerator NormalChat(DialogueData data)
     {
-        CharacterName.text = data.character;
+        if (data.character == "나레이션") {
+            namebox.SetActive(false);
+        } 
+        else {
+            namebox.SetActive(true);
+            CharacterName.text = data.character;
+        }
         ChatText.fontSize = data.fontSize;
         writerText = "";
 
         if (data.character == "엘리나") {
-            emptyImage.sprite = Elina;
+            if (data.position == "left") {
+                emptyImage.sprite = Empty;
+                left.sprite = Elina;
+            }
+            else if (data.position == "right") {
+                emptyImage.sprite = Empty;
+                right.sprite = Elina;
+            }
+            else
+                emptyImage.sprite = Elina;
         }
         else if (data.character == "세실리아") {
-            emptyImage.sprite = Cecilia;
+            if (data.position == "left") {
+                emptyImage.sprite = Empty;
+                left.sprite = Cecilia;
+            }
+            else if (data.position == "right") {
+                emptyImage.sprite = Empty;
+                right.sprite = Cecilia;
+            }
+            else
+                emptyImage.sprite = Cecilia;
         }
         else if (data.character == "소피아") {
-            emptyImage.sprite = Sophia;
+            if (data.position == "left") {
+                emptyImage.sprite = Empty;
+                left.sprite = Sophia;
+            }
+            else if (data.position == "right") {
+                emptyImage.sprite = Empty;
+                right.sprite = Sophia;
+            }
+            else
+                emptyImage.sprite = Sophia;
         }
         else if (data.character == "코코") {
-            emptyImage.sprite = Coco;
+            if (data.position == "left") {
+                emptyImage.sprite = Empty;
+                left.sprite = Coco;
+            }
+            else if (data.position == "right") {
+                emptyImage.sprite = Empty;
+                right.sprite = Coco;
+            }
+            else
+                emptyImage.sprite = Coco;
         }
         else if (data.character == "나레이션" || data.character == "교수") {
             emptyImage.sprite = Empty;
+            left.sprite = Empty;
+            right.sprite = Empty;
         }
        
 

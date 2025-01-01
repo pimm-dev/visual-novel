@@ -300,17 +300,26 @@
                     "text":"예이! 다 같이 같은 반이네!"
                 },
                 {
+                    "dialogueID":"d98",
+                    "position":"left",
+                    "character":"코코",
+                    "text":""
+                },
+                {
                     "dialogueID":"d54",
+                    "position":"right",
                     "character":"세실리아",
-                    "text":"(코코를 보며) 너는 누구야?"
+                    "text":"너는 누구야?"
                 },
                 {
                     "dialogueID":"d55",
+                    "position":"left",
                     "character":"코코",
                     "text":"나는 코코야! 앞으로 잘 부탁해!"
                 },
                 {
                     "dialogueID":"d56",
+                    "position":"right",
                     "character":"소피아",
                     "text":"안녕, 코코."
                 },
@@ -326,21 +335,25 @@
                 },
                 {
                     "dialogueID":"d59",
+                    "position":"left",
                     "character":"세실리아",
                     "text":"엘리나, 그 {PlayerName}(이)라는 애 좀 특이하지 않아?"
                 },
                 {
                     "dialogueID":"d60",
+                    "position":"right",
                     "character":"엘리나",
                     "text":"그렇네. 마나 제어 방식이 독특했어."
                 },
                 {
                     "dialogueID":"d61",
+                    "position":"left",
                     "character":"세실리아",
                     "text":"흥, 하지만 나 만큼은 아니지."
                 },
                 {
                     "dialogueID":"d62",
+                    "position":"right",
                     "character":"엘리나",
                     "text":"자신감은 여전하구나."
                 },
@@ -390,27 +403,38 @@
                     "text":"그때 코코가 갑자기 끼어든다."
                 },
                 {
+                    "dialogueID":"d96",
+                    "position":"left",
+                    "character":"세실리아",
+                    "text":""
+                },
+                {
                     "dialogueID":"d72",
+                    "position":"right",
                     "character":"코코",
                     "text":"동아리라니! 나도 낄래!"
                 },
                 {
                     "dialogueID":"d73",
+                    "position":"left",
                     "character":"세실리아",
                     "text":"어디서 갑자기 나타난 거야?"
                 },
                 {
                     "dialogueID":"d74",
+                    "position":"right",
                     "character":"코코",
                     "text":"재미있는 건 놓칠 수 없지!"
                 },
                 {
                     "dialogueID":"d75",
+                    "position":"right",
                     "character":"엘리나",
-                    "text":"(조용히 다가와) 동아리 부원은 다 모았어?"
+                    "text":"동아리 부원은 다 모았어?"
                 },
                 {
                     "dialogueID":"d76",
+                    "position":"left",
                     "character":"세실리아",
                     "text":"어쩌다보니, 충분히 모았네!"
                 },
