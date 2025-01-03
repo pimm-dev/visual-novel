@@ -18,6 +18,7 @@ public class MainMenu : MonoBehaviour
             ev.SetSelectedGameObject(target);
             isSelected = true;
         }
+
         if(Input.GetKeyDown(KeyCode.Escape))
         {
             QuitGame();      
