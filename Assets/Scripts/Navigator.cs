@@ -15,9 +15,11 @@ public class Navigator : MonoBehaviour
     // Start is called before the first frame update
     void Update()
     {
-        if( Input.GetAxisRaw("Horizontal") != 0f && !isSelected ){
-            ev.SetSelectedGameObject(target);
-            isSelected = true;
+        if(!isSelected){
+            if (Input.GetAxisRaw("Horizontal") != 0f || Input.GetAxisRaw("Vertical") != 0f) {
+                ev.SetSelectedGameObject(target);
+                isSelected = true;
+            }
         }
     }
     private void OnDisable(){

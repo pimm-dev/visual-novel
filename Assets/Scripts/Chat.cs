@@ -16,6 +16,9 @@ public class Chat : MonoBehaviour
     public Sprite Empty;
 
     public Image main;
+
+    private Dictionary<string, Sprite> backgroundSprites;
+
     public Sprite Bg1;
     public Sprite black;
     public Sprite bed;
@@ -31,13 +34,30 @@ public class Chat : MonoBehaviour
     private JsonData dialogueRoot;
     private GameObject namebox;
 
+    private bool isAutoMode = false;
+    public float autoChatDelay = 1f;
+
     // Start is called before the first frame update
     void Start()
     {
         namebox = GameObject.Find("Name");
+        InitializeBackgroundSprites();
         LoadDialogueData("dgData.json");
         ApplyPlayerName();
         StartCoroutine(PlayDialogues());
+    }
+
+    void InitializeBackgroundSprites()
+    {
+        backgroundSprites = new Dictionary<string, Sprite>
+        {
+            {"school1", Bg1},
+            {"black", black},
+            {"bed", bed},
+            {"classtest", classtest},
+            {"classroom", classroom},
+            {"campus", campus}
+        };
     }
 
     void LoadDialogueData(string fileName)
@@ -79,23 +99,9 @@ public class Chat : MonoBehaviour
     {
         foreach (var scene in dialogueRoot.scenes)
         {
-            if (scene.background == "school1") {
-                main.sprite = Bg1;
-            }
-            else if (scene.background == "black") {
-                main.sprite = black;
-            }
-            else if (scene.background == "bed") {
-                main.sprite = bed;
-            }
-            else if (scene.background == "classtest") {
-                main.sprite = classtest;
-            }
-            else if (scene.background == "classroom") {
-                main.sprite = classroom;
-            }
-            else if (scene.background == "campus") {
-                main.sprite = campus;
+            if (backgroundSprites.ContainsKey(scene.background))
+            {
+                main.sprite = backgroundSprites[scene.background];
             }
     
             foreach (DialogueData data in scene.dialogueDatas)
@@ -175,15 +181,16 @@ public class Chat : MonoBehaviour
             right.sprite = Empty;
         }
        
-
         for (int i = 0; i < data.text.Length; i++)
         {
             if (!this.enabled) 
             {
                 yield return new WaitUntil(() => this.enabled);
             }
+
             writerText += data.text[i];
             ChatText.text = writerText;
+
             yield return new WaitForSeconds(1f/data.textSpeed);
         }
 
@@ -193,11 +200,26 @@ public class Chat : MonoBehaviour
             {
                 yield return new WaitUntil(() => this.enabled);
             }
-            if (Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.Return) || Input.GetKeyDown(KeyCode.Z))
+            if (!isAutoMode && (Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.Return) || Input.GetKeyDown(KeyCode.Z)))
             {
                 break;
             }
-            yield return null;
+            if (isAutoMode)
+            {
+                if (data.text == "")
+                    yield return new WaitForSeconds(0f);
+                else
+                    yield return new WaitForSeconds(autoChatDelay);
+                break;
+            }
+            else
+                yield return null;
         }
+    }
+
+    public void AutoMode()
+    {   
+        isAutoMode = !isAutoMode;
+        Debug.Log($"Auto Mode: {isAutoMode}");
     }
 }
