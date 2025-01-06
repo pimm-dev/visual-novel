@@ -37,7 +37,10 @@ public class Chat : MonoBehaviour
     private bool isAutoMode = false;
     public float autoChatDelay = 1f;
 
-    // Start is called before the first frame update
+    private bool isSkip = false;
+    private bool isTyping = false;
+    private bool canInput = true;
+
     void Start()
     {
         namebox = GameObject.Find("Name");
@@ -45,6 +48,18 @@ public class Chat : MonoBehaviour
         LoadDialogueData("dgData.json");
         ApplyPlayerName();
         StartCoroutine(PlayDialogues());
+    }
+
+    void Update() 
+    {
+        if (isTyping && canInput)
+        {
+            if (Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.Return) || Input.GetKeyDown(KeyCode.Z))
+            {  
+                isSkip = true;
+                canInput = false;
+            }
+        }
     }
 
     void InitializeBackgroundSprites()
@@ -124,8 +139,6 @@ public class Chat : MonoBehaviour
             namebox.SetActive(true);
             CharacterName.text = data.character;
         }
-        ChatText.fontSize = data.fontSize;
-        writerText = "";
 
         if (data.character == "엘리나") {
             if (data.position == "left") {
@@ -181,6 +194,11 @@ public class Chat : MonoBehaviour
             right.sprite = Empty;
         }
        
+        ChatText.fontSize = data.fontSize;
+        writerText = "";
+        isTyping = true;
+        canInput = true;
+
         for (int i = 0; i < data.text.Length; i++)
         {
             if (!this.enabled) 
@@ -188,11 +206,23 @@ public class Chat : MonoBehaviour
                 yield return new WaitUntil(() => this.enabled);
             }
 
+            if(isSkip)
+            {
+                writerText = data.text;
+                ChatText.text = writerText;
+                break;
+            }
+
             writerText += data.text[i];
             ChatText.text = writerText;
-
             yield return new WaitForSeconds(1f/data.textSpeed);
         }
+
+        isTyping = false;
+        isSkip = false;
+        if (data.text != "")
+            yield return new WaitForSeconds(0.1f);
+        canInput = true;
 
         while (true)
         {
@@ -200,10 +230,7 @@ public class Chat : MonoBehaviour
             {
                 yield return new WaitUntil(() => this.enabled);
             }
-            if (!isAutoMode && (Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.Return) || Input.GetKeyDown(KeyCode.Z)))
-            {
-                break;
-            }
+            
             if (isAutoMode)
             {
                 if (data.text == "")
@@ -212,8 +239,11 @@ public class Chat : MonoBehaviour
                     yield return new WaitForSeconds(autoChatDelay);
                 break;
             }
-            else
-                yield return null;
+            else if (Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.Return) || Input.GetKeyDown(KeyCode.Z))
+            {
+                break;
+            }
+            yield return null;
         }
     }
 
