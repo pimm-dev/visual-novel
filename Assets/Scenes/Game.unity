@@ -1063,8 +1063,8 @@ MonoBehaviour:
   m_Navigation:
     m_Mode: 4
     m_WrapAround: 1
-    m_SelectOnUp: {fileID: 0}
-    m_SelectOnDown: {fileID: 0}
+    m_SelectOnUp: {fileID: 1715976291}
+    m_SelectOnDown: {fileID: 1715976291}
     m_SelectOnLeft: {fileID: 1715976291}
     m_SelectOnRight: {fileID: 1715976291}
   m_Transition: 1
@@ -1972,7 +1972,7 @@ MonoBehaviour:
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_SelectedColor: {r: 1, g: 1, b: 1, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_DisabledColor: {r: 1, g: 1, b: 1, a: 1}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -2706,6 +2706,7 @@ MonoBehaviour:
   CharacterName: {fileID: 1417408168}
   writerText: 
   autoChatDelay: 2
+  AutoModeButton: {fileID: 968477817}
 --- !u!1 &1192504458
 GameObject:
   m_ObjectHideFlags: 0
@@ -3825,8 +3826,8 @@ MonoBehaviour:
   m_Navigation:
     m_Mode: 4
     m_WrapAround: 1
-    m_SelectOnUp: {fileID: 0}
-    m_SelectOnDown: {fileID: 0}
+    m_SelectOnUp: {fileID: 468152814}
+    m_SelectOnDown: {fileID: 468152814}
     m_SelectOnLeft: {fileID: 468152814}
     m_SelectOnRight: {fileID: 468152814}
   m_Transition: 1

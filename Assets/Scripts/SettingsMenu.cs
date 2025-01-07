@@ -15,9 +15,22 @@ public class SettingsMenu : MonoBehaviour
 
     void Update()
     {
-       if( Input.GetAxisRaw("Vertical") != 0f && !isSelected ){
+        if( Input.GetAxisRaw("Vertical") != 0f && !isSelected ){
             ev.SetSelectedGameObject(target);
             isSelected = true;
+        }
+        if (Input.GetKeyDown(KeyCode.Z))
+        {
+            GameObject currentSelected = ev.currentSelectedGameObject;
+
+            if (currentSelected != null)
+            {
+                Button button = currentSelected.GetComponent<Button>();
+                if (button != null)
+                {
+                    button.onClick.Invoke();
+                }
+            }
         }
     }
 

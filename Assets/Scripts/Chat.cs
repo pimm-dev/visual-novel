@@ -40,6 +40,8 @@ public class Chat : MonoBehaviour
     private bool isSkip = false;
     private bool isTyping = false;
     private bool canInput = true;
+    public Button AutoModeButton;
+    private ColorBlock originalColors;
 
     void Start()
     {
@@ -48,11 +50,13 @@ public class Chat : MonoBehaviour
         LoadDialogueData("dgData.json");
         ApplyPlayerName();
         StartCoroutine(PlayDialogues());
+
+        originalColors = AutoModeButton.colors;
     }
 
     void Update() 
     {
-        if (isTyping && canInput)
+        if (isTyping && canInput && !isAutoMode)
         {
             if (Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.Return) || Input.GetKeyDown(KeyCode.Z))
             {  
@@ -224,6 +228,7 @@ public class Chat : MonoBehaviour
             yield return new WaitForSeconds(0.1f);
         canInput = true;
 
+        float autoTimer = 0f;
         while (true)
         {
             if (!this.enabled) 
@@ -233,15 +238,19 @@ public class Chat : MonoBehaviour
             
             if (isAutoMode)
             {
+                autoTimer += Time.deltaTime;
                 if (data.text == "")
-                    yield return new WaitForSeconds(0f);
-                else
-                    yield return new WaitForSeconds(autoChatDelay);
-                break;
+                    autoTimer = autoChatDelay;
+                if (autoTimer >= autoChatDelay)
+                    break;
             }
-            else if (Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.Return) || Input.GetKeyDown(KeyCode.Z))
+            else 
             {
-                break;
+                autoTimer = 0f;
+                if (Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.Return) || Input.GetKeyDown(KeyCode.Z))
+                {
+                    break;
+                }
             }
             yield return null;
         }
@@ -251,5 +260,17 @@ public class Chat : MonoBehaviour
     {   
         isAutoMode = !isAutoMode;
         Debug.Log($"Auto Mode: {isAutoMode}");
+
+        ColorBlock colors = originalColors;
+        if (isAutoMode)
+        {
+            colors.normalColor = originalColors.selectedColor;
+        }
+        else
+        {
+            colors.normalColor = originalColors.normalColor;
+            colors.selectedColor = originalColors.normalColor;
+        }
+        AutoModeButton.colors = colors;
     }
 }

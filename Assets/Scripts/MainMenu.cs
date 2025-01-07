@@ -19,6 +19,20 @@ public class MainMenu : MonoBehaviour
             isSelected = true;
         }
 
+        if (Input.GetKeyDown(KeyCode.Z))
+        {
+            GameObject currentSelected = ev.currentSelectedGameObject;
+
+            if (currentSelected != null)
+            {
+                Button button = currentSelected.GetComponent<Button>();
+                if (button != null)
+                {
+                    button.onClick.Invoke();
+                }
+            }
+        }
+
         if(Input.GetKeyDown(KeyCode.Escape))
         {
             QuitGame();      
