@@ -42,6 +42,8 @@ public class Chat : MonoBehaviour
     private bool canInput = true;
     public Button AutoModeButton;
     private ColorBlock originalColors;
+    public static string currentID;
+    bool isSame = false;
 
     void Start()
     {
@@ -96,7 +98,7 @@ public class Chat : MonoBehaviour
 
     void ApplyPlayerName()
     {
-        string playerName = PlayerPrefs.GetString("Name", "inputName");
+        string playerName = PlayerPrefs.GetString("Name");
 
         foreach (var scene in dialogueRoot.scenes)
         {
@@ -129,8 +131,13 @@ public class Chat : MonoBehaviour
                 {
                     yield return new WaitUntil(() => this.enabled);
                 }
-                yield return StartCoroutine(NormalChat(data));
+                currentID = data.dialogueID;
+                if (data.dialogueID == SaveLoad.LoadID)
+                    isSame = true;
+                if (isSame)
+                    yield return StartCoroutine(NormalChat(data));
             }
+            
         }
     }
 
@@ -273,4 +280,16 @@ public class Chat : MonoBehaviour
         }
         AutoModeButton.colors = colors;
     }
+
+    public void GameSave()
+    {
+        PlayerPrefs.SetString("ID", currentID);
+        PlayerPrefs.Save();
+    }
+
+    public void GameLoad()
+    {
+        Start();
+    }
 }
+

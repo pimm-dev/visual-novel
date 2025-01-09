@@ -10,7 +10,7 @@ public class SettingsMenu : MonoBehaviour
 {
     public EventSystem ev;
     public GameObject target;
-
+    public GameObject quitPanel;
     private bool isSelected = false;
 
     void Update()
@@ -32,6 +32,10 @@ public class SettingsMenu : MonoBehaviour
                 }
             }
         }
+    }
+
+    public void QuitPanelOff(){
+        isSelected = false;
     }
 
     private void OnDisable(){
