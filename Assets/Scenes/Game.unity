@@ -210,6 +210,7 @@ GameObject:
   - component: {fileID: 93159258}
   - component: {fileID: 93159257}
   - component: {fileID: 93159256}
+  - component: {fileID: 93159259}
   m_Layer: 5
   m_Name: SaveButton
   m_TagString: Untagged
@@ -295,25 +296,13 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 1183414206}
-        m_TargetAssemblyTypeName: Chat, Assembly-CSharp
+      - m_Target: {fileID: 93159259}
+        m_TargetAssemblyTypeName: SaveLoad, Assembly-CSharp
         m_MethodName: GameSave
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: Chat, Assembly-CSharp
-        m_MethodName: 
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -357,6 +346,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 93159254}
   m_CullTransparentMesh: 1
+--- !u!114 &93159259
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 93159254}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76f076fa14706934e92b34285ec2c63f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &161938042
 GameObject:
   m_ObjectHideFlags: 0

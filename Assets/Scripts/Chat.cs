@@ -44,6 +44,7 @@ public class Chat : MonoBehaviour
     private ColorBlock originalColors;
     public static string currentID;
     bool isSame = false;
+    public static string playerName;
 
     void Start()
     {
@@ -98,8 +99,6 @@ public class Chat : MonoBehaviour
 
     void ApplyPlayerName()
     {
-        string playerName = PlayerPrefs.GetString("Name");
-
         foreach (var scene in dialogueRoot.scenes)
         {
             foreach (var dialogue in scene.dialogueDatas)
@@ -279,17 +278,6 @@ public class Chat : MonoBehaviour
             colors.selectedColor = originalColors.normalColor;
         }
         AutoModeButton.colors = colors;
-    }
-
-    public void GameSave()
-    {
-        PlayerPrefs.SetString("ID", currentID);
-        PlayerPrefs.Save();
-    }
-
-    public void GameLoad()
-    {
-        Start();
     }
 }
 

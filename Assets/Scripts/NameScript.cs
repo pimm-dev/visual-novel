@@ -12,10 +12,14 @@ public class NameScript : MonoBehaviour
     public void Save()
     {
         if (inputName.text == "")
+        {
             nullpanel.SetActive(true);
+        }
         else
         {
-            PlayerPrefs.SetString("Name", inputName.text);
+            PlayerPrefs.SetString("NewName", inputName.text);
+            PlayerPrefs.Save();
+            Chat.playerName = inputName.text;
             SceneManager.LoadScene("Game");
         }
     }
