@@ -138,9 +138,14 @@
                     "text":"각자 자신 있는 마법을 한 번씩 시연해 주시기 바랍니다."
                 },
                 {
+                    "dialogueID":"d101",
+                    "character":"나레이션",
+                    "text":"{PlayerName}은(는) 속으로 생각했다."
+                },
+                {
                     "dialogueID":"d23",
                     "character":"{PlayerName}",
-                    "text":"(속으로) 마법 시연이라... 하지만 난 아직 기초도 잘 모르는데."
+                    "text":"마법 시연이라... 하지만 난 아직 기초도 잘 모르는데."
                 },
                 {
                     "dialogueID":"d24",
@@ -150,7 +155,7 @@
                 {
                     "dialogueID":"d25",
                     "character":"{PlayerName}",
-                    "text":"(속으로) 알고리즘과 마법의 원리가 비슷하다면... 내가 아는 걸 응용해 볼 수 있을지도."
+                    "text":"알고리즘과 마법의 원리가 비슷하다면... 내가 아는 걸 응용해 볼 수 있을지도."
                 },
                 {
                     "dialogueID":"d26",
@@ -175,7 +180,7 @@
                 {
                     "dialogueID":"d30",
                     "character":"{PlayerName}",
-                    "text":"(속으로) 분할정복 알고리즘처럼 마나를 효율적으로 분배하면..."
+                    "text":"분할정복 알고리즘처럼 마나를 효율적으로 분배하면..."
                 },
                 {
                     "dialogueID":"d31",
@@ -243,9 +248,14 @@
                     "text":"멋져!"
                 },
                 {
+                    "dialogueID":"d100",
+                    "character":"나레이션",
+                    "text":"세실리아는 {PlayerName}을(를) 보며 말한다."
+                },
+                {
                     "dialogueID":"d44",
                     "character":"세실리아",
-                    "text":"({PlayerName}을(를) 힐끗 보며) 이 정도는 기본이지."
+                    "text":"이 정도는 기본이지."
                 },
                 {
                     "dialogueID":"d45",
@@ -275,7 +285,7 @@
                 {
                     "dialogueID":"d50",
                     "character":"{PlayerName}",
-                    "text":"(속으로) 대단하네... 나보다 훨씬 뛰어나."
+                    "text":"대단하네... 나보다 훨씬 뛰어나."
                 },
                 {
                     "dialogueID":"d51",
@@ -484,7 +494,7 @@
                 {
                     "dialogueID":"d83",
                     "character":"{PlayerName}",
-                    "text":"(주위를 둘러보며) 이상하네... 누군가 우리를 지켜보는 것 같아."
+                    "text":"이상하네... 누군가 우리를 지켜보는 것 같아."
                 },
                 {
                     "dialogueID":"d84",
@@ -541,9 +551,14 @@
                     "text":"음... 재미없게는 하지 말자고!"
                 },
                 {
+                    "dialogueID":"d102",
+                    "character":"나레이션",
+                    "text":"소피아가 조용히 손을 들며 말한다."
+                },
+                {
                     "dialogueID":"d92",
                     "character":"소피아",
-                    "text":"(조용히 손을 들며) 그럼, 서로의 특기를 살려서 협력하는 건 어때?"
+                    "text":"그럼, 서로의 특기를 살려서 협력하는 건 어때?"
                 },
                 {
                     "dialogueID":"d93",
