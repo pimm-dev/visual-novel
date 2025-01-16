@@ -1,0 +1,3 @@
+[submodule "Assets/Libraries/i18n-unity-csharp"]
+	path = Assets/Libraries/i18n-unity-csharp
+	url = https://github.com/MoonGateLabs/i18n-unity-csharp
