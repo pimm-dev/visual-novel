@@ -34,36 +34,31 @@ public class JsonData
 public class SceneData
 {
     public string sceneID;
-    public string bgm;
-    public string background;
+    public BG background;
     public DialogueData[] dialogueDatas;
+    public SceneData()
+    {
+        sceneID = "Game";
+    }
 }
 
 [System.Serializable]
 public class DialogueData
 {
     public string dialogueID;
-    public string character;
+    public Character character;
     public string text;
     public string emotion;
-    public string position;
-    public string[] effects;
-    public bool shakeEffect;
+    public NPC position;
     public int textSpeed;
-    public string[] sfx;
-    public float duration;
     public int fontSize;
     public string fontType;
     public DialogueData()
     {
         emotion = "happy";
-        shakeEffect = false;
-        duration = 2.5f;
         textSpeed = 50;
         fontSize = 40;
         fontType = "Preesentation";
-        position = "middle";
-        effects = new string[] {"fadeIn", "e1", "e2"};
-        sfx = new string[] {"door_creak.mp3", "s1", "s2"};
+        position = NPC.Middle;
     }
 }

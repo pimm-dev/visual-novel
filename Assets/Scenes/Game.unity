@@ -3121,22 +3121,24 @@ MonoBehaviour:
   emptyImage: {fileID: 1127515438}
   left: {fileID: 1878789084}
   right: {fileID: 1675274616}
-  Elina: {fileID: 21300000, guid: 01a24c5eebae41649a99ca676503a705, type: 3}
-  Cecilia: {fileID: 21300000, guid: dfac18a394cd5c340bdd589e88c4e24e, type: 3}
-  Sophia: {fileID: 21300000, guid: e174b59efe0133a42b1b4ec23b5eba08, type: 3}
-  Coco: {fileID: 21300000, guid: 733c1c8fc7248bd4e9bb99f98b04b5d7, type: 3}
-  Empty: {fileID: 21300000, guid: cc0137257350c6d44a24fea54fd226b2, type: 3}
   main: {fileID: 1893930155}
-  Bg1: {fileID: 21300000, guid: 36d8ae3aa67032148ab1d534931bad67, type: 3}
-  black: {fileID: 21300000, guid: 6e971d9d7cec012409cba89177bfe7f1, type: 3}
-  bed: {fileID: 21300000, guid: eac661d2fc9b83b4aa854a9d7e960e46, type: 3}
-  classtest: {fileID: 21300000, guid: a8993e2f26947be41885e210f3ec52d3, type: 3}
-  classroom: {fileID: 21300000, guid: 6497c6aad36397e41969effa5f0b4724, type: 3}
-  campus: {fileID: 21300000, guid: bd0c4468e55648449bedd798ce48a453, type: 3}
+  characters:
+  - {fileID: 21300000, guid: cc0137257350c6d44a24fea54fd226b2, type: 3}
+  - {fileID: 21300000, guid: 01a24c5eebae41649a99ca676503a705, type: 3}
+  - {fileID: 21300000, guid: dfac18a394cd5c340bdd589e88c4e24e, type: 3}
+  - {fileID: 21300000, guid: e174b59efe0133a42b1b4ec23b5eba08, type: 3}
+  - {fileID: 21300000, guid: 733c1c8fc7248bd4e9bb99f98b04b5d7, type: 3}
+  backgrounds:
+  - {fileID: 21300000, guid: 36d8ae3aa67032148ab1d534931bad67, type: 3}
+  - {fileID: 21300000, guid: 6e971d9d7cec012409cba89177bfe7f1, type: 3}
+  - {fileID: 21300000, guid: eac661d2fc9b83b4aa854a9d7e960e46, type: 3}
+  - {fileID: 21300000, guid: a8993e2f26947be41885e210f3ec52d3, type: 3}
+  - {fileID: 21300000, guid: 6497c6aad36397e41969effa5f0b4724, type: 3}
+  - {fileID: 21300000, guid: bd0c4468e55648449bedd798ce48a453, type: 3}
   ChatText: {fileID: 181569068}
   CharacterName: {fileID: 1417408168}
   writerText: 
-  autoChatDelay: 2
+  autoChatDelay: 1
   AutoModeButton: {fileID: 968477817}
 --- !u!1 &1192504458
 GameObject:

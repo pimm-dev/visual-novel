@@ -3,31 +3,53 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using System.IO;
+using System.Security.Permissions;
+using Unity.VisualScripting;
+using Unity.Burst.Intrinsics;
+
+public enum Character {
+    Elina,
+    Cecilia,
+    Sophia,
+    Coco,
+    Player,
+    Narration,
+    Principal,
+    Professor,
+    Student
+}
+
+public enum BG {
+    hall,
+    black,
+    bed,
+    classtest,
+    classroom,
+    campus
+}
+
+public enum NPC {
+    Left,
+    Middle,
+    Right
+}
 
 public class Chat : MonoBehaviour
 {
-    public Image emptyImage;
-    public Image left;
-    public Image right;
-    public Sprite Elina;
-    public Sprite Cecilia;
-    public Sprite Sophia;
-    public Sprite Coco;
-    public Sprite Empty;
-
-    public Image main;
+    [SerializeField] public Image emptyImage;
+    [SerializeField] public Image left;
+    [SerializeField] public Image right;
+    [SerializeField] private Image main;
+    
+    [SerializeField] private Sprite[] characters;
+    [SerializeField] private Sprite[] backgrounds;
 
     private Dictionary<string, Sprite> backgroundSprites;
 
-    public Sprite Bg1;
-    public Sprite black;
-    public Sprite bed;
-    public Sprite classtest;
-    public Sprite classroom;
-    public Sprite campus;
-
     public TMPro.TMP_Text ChatText;
     public TMPro.TMP_Text CharacterName;
+
+    private string[] names = {"엘리나", "세실리아", "소피아", "코코", "교장", "교수", "학생"};
 
     public string writerText = "";
 
@@ -49,11 +71,9 @@ public class Chat : MonoBehaviour
     void Start()
     {
         namebox = GameObject.Find("Name");
-        InitializeBackgroundSprites();
         LoadDialogueData("dgData.json");
         ApplyPlayerName();
         StartCoroutine(PlayDialogues());
-
         originalColors = AutoModeButton.colors;
     }
 
@@ -69,17 +89,29 @@ public class Chat : MonoBehaviour
         }
     }
 
-    void InitializeBackgroundSprites()
+    void InitializeBackgroundSprites(SceneData scene)
     {
-        backgroundSprites = new Dictionary<string, Sprite>
+        switch (scene.background)
         {
-            {"school1", Bg1},
-            {"black", black},
-            {"bed", bed},
-            {"classtest", classtest},
-            {"classroom", classroom},
-            {"campus", campus}
-        };
+            case BG.hall:
+                main.sprite = backgrounds[0];
+                break;
+            case BG.black:
+                main.sprite = backgrounds[1];
+                break;
+            case BG.bed:
+                main.sprite = backgrounds[2];
+                break;
+            case BG.classtest:
+                main.sprite = backgrounds[3];
+                break;
+            case BG.classroom:
+                main.sprite = backgrounds[4];
+                break;
+            case BG.campus:
+                main.sprite = backgrounds[5];
+                break;
+        }
     }
 
     void LoadDialogueData(string fileName)
@@ -103,13 +135,9 @@ public class Chat : MonoBehaviour
         {
             foreach (var dialogue in scene.dialogueDatas)
             {
-                if (dialogue.text.Contains("{PlayerName}"))
+                if (dialogue.text.Contains("Player"))
                 {
-                    dialogue.text = dialogue.text.Replace("{PlayerName}", playerName);
-                }
-                if (dialogue.character == "{PlayerName}")
-                {
-                    dialogue.character = dialogue.character.Replace("{PlayerName}", playerName);
+                    dialogue.text = dialogue.text.Replace("Player", playerName);
                 }
             }
         }
@@ -119,10 +147,7 @@ public class Chat : MonoBehaviour
     {
         foreach (var scene in dialogueRoot.scenes)
         {
-            if (backgroundSprites.ContainsKey(scene.background))
-            {
-                main.sprite = backgroundSprites[scene.background];
-            }
+            InitializeBackgroundSprites(scene);
     
             foreach (DialogueData data in scene.dialogueDatas)
             {
@@ -142,66 +167,105 @@ public class Chat : MonoBehaviour
 
     IEnumerator NormalChat(DialogueData data)
     {
-        if (data.character == "나레이션") {
+        if (data.character == Character.Narration) {
             namebox.SetActive(false);
         } 
         else {
             namebox.SetActive(true);
-            CharacterName.text = data.character;
         }
 
-        if (data.character == "엘리나") {
-            if (data.position == "left") {
-                emptyImage.sprite = Empty;
-                left.sprite = Elina;
-            }
-            else if (data.position == "right") {
-                emptyImage.sprite = Empty;
-                right.sprite = Elina;
-            }
-            else
-                emptyImage.sprite = Elina;
-        }
-        else if (data.character == "세실리아") {
-            if (data.position == "left") {
-                emptyImage.sprite = Empty;
-                left.sprite = Cecilia;
-            }
-            else if (data.position == "right") {
-                emptyImage.sprite = Empty;
-                right.sprite = Cecilia;
-            }
-            else
-                emptyImage.sprite = Cecilia;
-        }
-        else if (data.character == "소피아") {
-            if (data.position == "left") {
-                emptyImage.sprite = Empty;
-                left.sprite = Sophia;
-            }
-            else if (data.position == "right") {
-                emptyImage.sprite = Empty;
-                right.sprite = Sophia;
-            }
-            else
-                emptyImage.sprite = Sophia;
-        }
-        else if (data.character == "코코") {
-            if (data.position == "left") {
-                emptyImage.sprite = Empty;
-                left.sprite = Coco;
-            }
-            else if (data.position == "right") {
-                emptyImage.sprite = Empty;
-                right.sprite = Coco;
-            }
-            else
-                emptyImage.sprite = Coco;
-        }
-        else if (data.character == "나레이션" || data.character == "교수") {
-            emptyImage.sprite = Empty;
-            left.sprite = Empty;
-            right.sprite = Empty;
+        switch (data.character)
+        {
+            case Character.Elina:
+                CharacterName.text = names[0];
+                switch (data.position)
+                {
+                    case NPC.Left:
+                        emptyImage.sprite = characters[0];
+                        left.sprite = characters[1];
+                        break;
+                    case NPC.Middle:
+                        left.sprite = characters[0];
+                        emptyImage.sprite = characters[1];
+                        right.sprite = characters[0];
+                        break;
+                    case NPC.Right:
+                        emptyImage.sprite = characters[0];
+                        right.sprite = characters[1];
+                        break;
+                }
+                break;
+            case Character.Cecilia:
+                CharacterName.text = names[1];
+                switch (data.position)
+                {
+                    case NPC.Left:
+                        emptyImage.sprite = characters[0];
+                        left.sprite = characters[2];
+                        break;
+                    case NPC.Middle:
+                        left.sprite = characters[0];
+                        emptyImage.sprite = characters[2];
+                        right.sprite = characters[0];
+                        break;
+                    case NPC.Right:
+                        emptyImage.sprite = characters[0];
+                        right.sprite = characters[2];
+                        break;
+                }
+                break;
+            case Character.Sophia:
+                CharacterName.text = names[2];
+                switch (data.position)
+                {
+                    case NPC.Left:
+                        emptyImage.sprite = characters[0];
+                        left.sprite = characters[3];
+                        break;
+                    case NPC.Middle:
+                        left.sprite = characters[0];
+                        emptyImage.sprite = characters[3];
+                        right.sprite = characters[0];
+                        break;
+                    case NPC.Right:
+                        emptyImage.sprite = characters[0];
+                        right.sprite = characters[3];
+                        break;
+                }
+                break;
+            case Character.Coco:
+                CharacterName.text = names[3];
+                switch (data.position)
+                {
+                    case NPC.Left:
+                        emptyImage.sprite = characters[0];
+                        left.sprite = characters[4];
+                        break;
+                    case NPC.Middle:
+                        left.sprite = characters[0];
+                        emptyImage.sprite = characters[4];
+                        right.sprite = characters[0];
+                        break;
+                    case NPC.Right:
+                        emptyImage.sprite = characters[0];
+                        right.sprite = characters[4];
+                        break;
+                }
+                break;
+            case Character.Player:
+                CharacterName.text = playerName;
+                break;
+            default:
+                left.sprite = characters[0];
+                emptyImage.sprite = characters[0];
+                right.sprite = characters[0];
+                if (data.character == Character.Principal)
+                    CharacterName.text = names[4];
+                else if (data.character == Character.Professor)
+                    CharacterName.text = names[5];
+                else
+                    CharacterName.text = names[6];
+                break;
         }
        
         ChatText.fontSize = data.fontSize;
