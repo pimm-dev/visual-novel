@@ -481,8 +481,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 22.884521, y: -31.360397}
-  m_SizeDelta: {x: -45.7693, y: -62.7208}
+  m_AnchoredPosition: {x: -29.096497, y: -31.360397}
+  m_SizeDelta: {x: -149.7313, y: -62.7208}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &181569068
 MonoBehaviour:
@@ -3084,6 +3084,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1183414205}
   - component: {fileID: 1183414206}
+  - component: {fileID: 1183414207}
   m_Layer: 0
   m_Name: ChatController
   m_TagString: Untagged
@@ -3130,16 +3131,34 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 733c1c8fc7248bd4e9bb99f98b04b5d7, type: 3}
   backgrounds:
   - {fileID: 21300000, guid: 36d8ae3aa67032148ab1d534931bad67, type: 3}
-  - {fileID: 21300000, guid: 6e971d9d7cec012409cba89177bfe7f1, type: 3}
+  - {fileID: 21300000, guid: 0c6e2d6f5ce6be640988481ebc2140dc, type: 3}
   - {fileID: 21300000, guid: eac661d2fc9b83b4aa854a9d7e960e46, type: 3}
   - {fileID: 21300000, guid: a8993e2f26947be41885e210f3ec52d3, type: 3}
   - {fileID: 21300000, guid: 6497c6aad36397e41969effa5f0b4724, type: 3}
   - {fileID: 21300000, guid: bd0c4468e55648449bedd798ce48a453, type: 3}
+  - {fileID: 21300000, guid: 477ad80c270974549b77ca2e3c789079, type: 3}
+  - {fileID: 21300000, guid: ff349202b29821a4fae744dcb2bc6eff, type: 3}
+  - {fileID: 21300000, guid: 2d5ed2a830304644491d769b5216cb2e, type: 3}
+  - {fileID: 21300000, guid: 0bb981cec0fc0c645af152dc2b495594, type: 3}
   ChatText: {fileID: 181569068}
   CharacterName: {fileID: 1417408168}
   writerText: 
   autoChatDelay: 1
   AutoModeButton: {fileID: 968477817}
+--- !u!114 &1183414207
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1183414203}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b76b1f4b3534a1e4aac4509a6bcfd049, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  jsonData:
+    scenes: []
 --- !u!1 &1192504458
 GameObject:
   m_ObjectHideFlags: 0

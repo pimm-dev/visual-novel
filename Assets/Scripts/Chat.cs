@@ -25,7 +25,11 @@ public enum BG {
     bed,
     classtest,
     classroom,
-    campus
+    campus,
+    forest,
+    frontgate,
+    corridor,
+    alchemy
 }
 
 public enum NPC {
@@ -67,13 +71,13 @@ public class Chat : MonoBehaviour
     public static string currentID;
     bool isSame = false;
     public static string playerName;
+    private int currentChapter = 1;
+    private int totalChapters = 5;
 
     void Start()
     {
         namebox = GameObject.Find("Name");
-        LoadDialogueData("dgData.json");
-        ApplyPlayerName();
-        StartCoroutine(PlayDialogues());
+        LoadChapter(1);
         originalColors = AutoModeButton.colors;
     }
 
@@ -111,6 +115,18 @@ public class Chat : MonoBehaviour
             case BG.campus:
                 main.sprite = backgrounds[5];
                 break;
+            case BG.forest:
+                main.sprite = backgrounds[6];
+                break;
+            case BG.frontgate:
+                main.sprite = backgrounds[7];
+                break;
+            case BG.corridor:
+                main.sprite = backgrounds[8];
+                break;
+            case BG.alchemy:
+                main.sprite = backgrounds[9];
+                break;
         }
     }
 
@@ -127,6 +143,14 @@ public class Chat : MonoBehaviour
         {
             Debug.LogError($"File not found at path: {path}");
         }
+    }
+
+    public void LoadChapter(int chapterNumber)
+    {
+        string fileName = $"chapter{chapterNumber}.json";
+        LoadDialogueData(fileName);
+        ApplyPlayerName();
+        StartCoroutine(PlayDialogues());
     }
 
     void ApplyPlayerName()
@@ -161,7 +185,12 @@ public class Chat : MonoBehaviour
                 if (isSame)
                     yield return StartCoroutine(NormalChat(data));
             }
-            
+        }
+
+        if (currentChapter < totalChapters)
+        {
+            currentChapter++;
+            LoadChapter(currentChapter);
         }
     }
 

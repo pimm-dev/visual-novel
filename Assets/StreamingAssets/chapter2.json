@@ -1,0 +1,334 @@
+{
+    "scenes": [
+        {
+            "background": 8,
+            "dialogueDatas": [
+                {
+                    "dialogueID": "e1",
+                    "character": 5,
+                    "text": "학교생활의 첫날. Player은(는) 연금술 교실을 향하고 있었다."
+                },
+                {
+                    "dialogueID": "e2",
+                    "character": 4,
+                    "text": "어? 엘리나 아닌가?"
+                },
+                {
+                    "dialogueID":"e3",
+                    "character":5,
+                    "text":"엘리나를 발견한 Player. 반갑게 인사한다."
+                },
+                {
+                    "dialogueID":"e4",
+                    "character":4,
+                    "text":"엘리나!"
+                },
+                {
+                    "dialogueID":"e5",
+                    "character":0,
+                    "text":"..."
+                },
+                {
+                    "dialogueID":"e6",
+                    "character":5,
+                    "text":"엘리나는 교실로 들어가버렸다."
+                },
+                {
+                    "dialogueID":"e7",
+                    "character":4,
+                    "text":"어.. 못 들었나?"
+                }
+            ]
+        },
+        {
+            "background":9,
+            "dialogueDatas": [
+                {
+                    "dialogueID":"e8",
+                    "character":7,
+                    "text":"자, 모두들 조용히. 나는 여러분의 연금술 담당 교수, 아르베르토다. 오늘은 연금술의 기본 원리를 배워보겠다."
+                },
+                {
+                    "dialogueID":"e9",
+                    "character":7,
+                    "text":"조별로 수업을 진행 할 것이다. 해당되는 조원끼리 모이도록."
+                },
+                {
+                    "dialogueID":"e10",
+                    "character":5,
+                    "text":"아르베르토 교수는 조를 발표했다."
+                },
+                {
+                    "dialogueID":"e11",
+                    "character":7,
+                    "text":"... E조, Player, 엘리나, 세실리아. F조, 코코, 소피아, 나타니엘. ..."
+                },
+                {
+                    "dialogueID":"e12",
+                    "character":3,
+                    "text":"동아리 대전이다! 누가 더 잘하나 보자고~"
+                },
+                {
+                    "dialogueID":"e13",
+                    "character":1,
+                    "text":"흥. 엘리나랑 내가 있는데, 누가 이길 수 있겠어?"
+                },
+                {
+                    "dialogueID":"e14",
+                    "character":5,
+                    "text":"Player은(는) 작게 중얼거린다."
+                },
+                {
+                    "dialogueID":"e15",
+                    "character":4,
+                    "text":"나는..?"
+                },
+                {
+                    "dialogueID":"e16",
+                    "character":7,
+                    "text":"이번 시간에는 '기본 회복 물약'을 만들 것이다."
+                },
+                {
+                    "dialogueID":"e59",
+                    "character":7,
+                    "text":"재료는 주변 숲에서 직접 채집해야 하며, 제작은 교실에서 이루어진다."
+                },
+                {
+                    "dialogueID":"e60",
+                    "character":7,
+                    "text":"잘 협력해 보도록."
+                }
+            ]
+        },
+        {
+            "background":6,
+            "dialogueDatas":[
+                {
+                    "dialogueID":"e17",
+                    "character":5,
+                    "text":"Player, 엘리나, 세실리아는 재료를 구하기 위해 학교 뒤편에 있는 작은 숲으로 향했다."
+                },
+                {
+                    "dialogueID":"e18",
+                    "character":1,
+                    "text":"숲이 이렇게 어두워도 되는 거야?"
+                },
+                {
+                    "dialogueID":"e19",
+                    "character":0,
+                    "text":"이 숲은 학교의 보호막 안에 있으니까 위험하진 않을거야."
+                },
+                {
+                    "dialogueID":"e20",
+                    "character":5,
+                    "text":"필요한 재료들을 채집하던 중, 그림자 속에서 작은 괴물 무리가 튀어나왔다."
+                },
+                {
+                    "dialogueID":"e21",
+                    "character":4,
+                    "text":"조심해!"
+                },
+                {
+                    "dialogueID":"e22",
+                    "character":5,
+                    "text":"주인공은 바람 마법으로 괴물들의 움직임을 묶었다."
+                },
+                {
+                    "dialogueID":"e23",
+                    "character":5,
+                    "text":"세실리아는 강렬한 불꽃 마법으로 공격했다."
+                },
+                {
+                    "dialogueID":"e24",
+                    "character":1,
+                    "text":"뭐, 뭐야 이것들은!"
+                },
+                {
+                    "dialogueID":"e25",
+                    "character":5,
+                    "text":"엘리나는 얼음벽을 세워 적들이 오지 못하게 막았다."
+                },
+                {
+                    "dialogueID":"e26",
+                    "character":0,
+                    "text":"이 틈에 돌아가자."
+                },
+                {
+                    "dialogueID":"e27",
+                    "character":5,
+                    "text":"셋은 빠르게 학교 정문으로 향했다."
+                }
+            ]
+        },
+        {
+            "background":7,
+            "dialogueDatas":[
+                {
+                    "dialogueID":"e28",
+                    "character":4,
+                    "text":"휴, 다행히 재료는 들고 나왔네. 다들 괜찮을까?"
+                },
+                {
+                    "dialogueID":"e29",
+                    "character":5,
+                    "text":"엘리나가 뒤를 돌아본다."
+                },
+                {
+                    "dialogueID":"e30",
+                    "character":0,
+                    "text":"보호막이.. 다시 강해졌어."
+                },
+                {
+                    "dialogueID":"e31",
+                    "character":0,
+                    "text":"누군가 일부러 보호막을 약화시켰던 것 같아."
+                },
+                {
+                    "dialogueID":"e32",
+                    "character":1,
+                    "text":"누구야? 누가 감히!"
+                },
+                {
+                    "dialogueID":"e33",
+                    "character":4,
+                    "text":"일단 진정하고, 교실로 돌아가보자. 다들 괜찮은지 확인해야겠어."
+                }
+            ]
+        },
+        {
+            "background":9,
+            "dialogueDatas":[
+                {
+                    "dialogueID":"e34",
+                    "character":5,
+                    "text":"교실엔 모든 학생들이 물약 제조를 하고 있었다."
+                },
+                {
+                    "dialogueID":"e35",
+                    "character":4,
+                    "text":"우리가 제일 늦게 나온건가?"
+                },
+                {
+                    "dialogueID":"e36",
+                    "character":1,
+                    "text":"우리가 마지막이라고? 다들 어떻게 빨리 나온거야?"
+                },
+                {
+                    "dialogueID":"e37",
+                    "character":0,
+                    "text":"일단 늦기 전에 물약 제조부터 하자."
+                },
+                {
+                    "dialogueID":"e38",
+                    "character":5,
+                    "text":"아르베르토 교수는 돌아다니며 말하고 있었다."
+                },
+                {
+                    "dialogueID":"e39",
+                    "character":7,
+                    "text":"연금술은 단순히 재료를 섞는 게 아니다. 올바른 순서와 조합을 찾아야 해."
+                },
+                {
+                    "dialogueID":"e40",
+                    "character":4,
+                    "text":"헷갈리지 않게 재료를 정렬하고, 순회 방식을 적용하면 빼먹지 않고 순서대로 넣겠군."
+                },
+                {
+                    "dialogueID":"e41",
+                    "character":5,
+                    "text":"주인공의 효율적인 방식 덕분에 마지막에 들어왔지만 제일 처음으로 물약을 제출하였다."
+                },
+                {
+                    "dialogueID":"e42",
+                    "character":7,
+                    "text":"그럼 오늘 수업은 여기까지다."
+                },
+                {
+                    "dialogueID":"e43",
+                    "character":3,
+                    "text":"어이~ 숲에서 뭘 했길래 이렇게 늦어?"
+                },
+                {
+                    "dialogueID":"e44",
+                    "character":1,
+                    "text":"흥, 제출은 우리가 1등인 거 못 봤어?"
+                },
+                {
+                    "dialogueID":"e45",
+                    "character":0,
+                    "text":"혹시.. 코코. 너네는 괴물을 보지 못했니?"
+                },
+                {
+                    "dialogueID":"e46",
+                    "character":3,
+                    "text":"응? 여기 괴물이 어딨어?"
+                },
+                {
+                    "dialogueID":"e47",
+                    "character":5,
+                    "text":"소피아가 걱정스러운 눈으로 주인공을 보며 말한다."
+                },
+                {
+                    "dialogueID":"e48",
+                    "character":2,
+                    "text":"괴물이라고..? 다친 덴 없는 거야?"
+                },
+                {
+                    "dialogueID":"e49",
+                    "character":4,
+                    "text":"아, 응.. 엘리나 덕분에."
+                },
+                {
+                    "dialogueID":"e61",
+                    "character":0,
+                    "text":"..."
+                },
+                {
+                    "dialogueID":"e50",
+                    "character":0,
+                    "text":"내가 아니라도 해치웠을 거야."
+                },
+                {
+                    "dialogueID":"e51",
+                    "character":5,
+                    "text":"그때, Player은(는) 교실 구석에서 이상한 흔적을 발견한다."
+                },
+                {
+                    "dialogueID":"e52",
+                    "character":4,
+                    "text":"이건.. 숲에서 본 괴물의 발톱 자국?"
+                },
+                {
+                    "dialogueID":"e53",
+                    "character":1,
+                    "text":"뭐? 여기까지 따라온 거야?"
+                },
+                {
+                    "dialogueID":"e54",
+                    "character":5,
+                    "text":"코코가 킁킁거리며 말한다."
+                },
+                {
+                    "dialogueID":"e55",
+                    "character":3,
+                    "text":"이상한 냄새는 안 나는데?"
+                },
+                {
+                    "dialogueID":"e56",
+                    "character":1,
+                    "text":"네가 개냐."
+                },
+                {
+                    "dialogueID":"e57",
+                    "character":3,
+                    "text":"헤헤. 내가 좀 잘 맡아."
+                },
+                {
+                    "dialogueID":"e58",
+                    "character":0,
+                    "text":"지금 여기 없다면.. 여기서 출발했다는 거지."
+                }
+            ]
+        }
+    ]
+}
