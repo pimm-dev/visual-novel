@@ -4,7 +4,6 @@ using UnityEngine;
 using UnityEngine.UI;
 using System.IO;
 using System.Security.Permissions;
-using Unity.VisualScripting;
 using Unity.Burst.Intrinsics;
 
 public enum Character {

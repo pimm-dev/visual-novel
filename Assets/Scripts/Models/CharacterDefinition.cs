@@ -1,10 +1,9 @@
 using UnityEngine;
-using I18nSupport;
+using LS = LocalizationSupports;
 
 public class CharacterDefinition
 {
-    private I18n i18n = I18n.Instance;
-    
+    private const string _T = LocalizationTableKeys.CHARACTERS_TABLE;
     public string characterID { get; }
     public string displayI18nID { get; }
     public string spritePath { get; }
@@ -25,7 +24,7 @@ public class CharacterDefinition
     {
         get
         {
-            return i18n.__(this.displayI18nID);
+            return LS.__(_T, this.displayI18nID);
         }
     }
     
