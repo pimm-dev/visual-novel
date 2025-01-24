@@ -1,575 +1,568 @@
 {
-    "scenes": [
+    "dialogueTablePostfix": "1",
+    "dialogueFlow": [
         {
-            "background": 1,
-            "dialogueDatas": [
+            "dialogueFlowID": "chap1d1",
+            "backgroundID": "bg1",
+            "dialogues": [
                 {
                     "dialogueID": "d1",
-                    "character": 5,
-                    "text": "깊은 어둠 속, 한 남자가 트럭에 치여 쓰러진다."
+                    "characterID": "narration",
+                    "l10nContentID": "chap1d1t1"
                 },
                 {
                     "dialogueID": "d2",
-                    "character": 4,
-                    "text": "이게... 끝인가?"
+                    "characterID": "player",
+                    "l10nContentID": "chap1d1t2"
                 }
             ]
         },
         {
-            "background": 2,
-            "dialogueDatas": [
+            "dialogueFlowID": "chap1d2",
+            "backgroundID": "bg2",
+            "dialogues": [
                 {
                     "dialogueID": "d3",
-                    "character": 5,
-                    "text": "눈을 뜨자 천장이 보인다. 땀에 젖은 이마를 닦으며 일어난다."
+                    "characterID": "narration",
+                    "l10nContentID": "chap1d2t1"
                 },
                 {
                     "dialogueID": "d4",
-                    "character": 4,
-                    "text": "또 그 꿈이야... 전생의 기억이라니, 말도 안 돼."
+                    "characterID": "player",
+                    "l10nContentID": "chap1d2t2"
                 },
                 {
-                    "dialogueID":"d5",
-                    "character": 5,
-                    "text": "창밖으로 아침 햇살이 비친다. 오늘은 마법학교의 입학식 날이다."
+                    "dialogueID": "d5",
+                    "characterID": "narration",
+                    "l10nContentID": "chap1d2t3"
                 },
                 {
-                    "dialogueID":"d6",
-                    "character":4,
-                    "text": "시간이 얼마 안 남았네. 서둘러야겠어."
+                    "dialogueID": "d6",
+                    "characterID": "player",
+                    "l10nContentID": "chap1d2t4"
                 },
                 {
-                    "dialogueID":"d7",
-                    "character":5,
-                    "text": "Player은(는) 급하게 준비를 마치고 학교로 향한다."
+                    "dialogueID": "d7",
+                    "characterID": "narration",
+                    "l10nContentID": "chap1d2t5"
                 }
             ]
         },
         {
-            "background": 0,
-            "dialogueDatas": [
+            "dialogueFlowID": "chap1d3",
+            "backgroundID": "bg0",
+            "dialogues": [
                 {
-                    "dialogueID":"d8",
-                    "character":5,
-                    "text":"학교 입구에는 수많은 신입생들이 모여 있다."
+                    "dialogueID": "d8",
+                    "characterID": "narration",
+                    "l10nContentID": "chap1d3t1"
                 },
                 {
                     "dialogueID": "d9",
-                    "character": 4,
-                    "text": "와... 정말 많은 사람이 모였네."
+                    "characterID": "player",
+                    "l10nContentID": "chap1d3t2"
                 },
                 {
                     "dialogueID": "d10",
-                    "character": 5,
-                    "text": "그때, 낯익은 얼굴이 눈에 들어온다."
+                    "characterID": "narration",
+                    "l10nContentID": "chap1d3t3"
                 },
                 {
                     "dialogueID": "d11",
-                    "character": 2,
-                    "text": "저기... 혹시... 너... Player 맞아?"
+                    "characterID": "sophia",
+                    "l10nContentID": "chap1d3t4"
                 },
                 {
                     "dialogueID": "d12",
-                    "character": 4,
-                    "text": "어? 소피아?"
+                    "characterID": "player",
+                    "l10nContentID": "chap1d3t5"
                 },
                 {
                     "dialogueID": "d13",
-                    "character": 2,
-                    "text": "맞구나! 정말 오랜만이야!"
+                    "characterID": "sophia",
+                    "l10nContentID": "chap1d3t6"
                 },
                 {
                     "dialogueID": "d14",
-                    "character": 4,
-                    "text": "그러게. 이렇게 다시 만나게 될 줄 이야. 어떻게 지냈어?"
+                    "characterID": "player",
+                    "l10nContentID": "chap1d3t7"
                 },
                 {
                     "dialogueID": "d15",
-                    "character": 2,
-                    "text": "잘 지냈어. 너는?"
+                    "characterID": "sophia",
+                    "l10nContentID": "chap1d3t8"
                 },
                 {
                     "dialogueID": "d16",
-                    "character": 4,
-                    "text": "나도 뭐, 그럭저럭."
+                    "characterID": "player",
+                    "l10nContentID": "chap1d3t9"
                 },
                 {
                     "dialogueID": "d17",
-                    "character": 2,
-                    "text": "그래도 이렇게 만나니까 너무 좋다."
+                    "characterID": "sophia",
+                    "l10nContentID": "chap1d3t10"
                 },
                 {
                     "dialogueID": "d18",
-                    "character": 5,
-                    "text": "어릴 적 종자였던 소피아와의 재회에 Player은(는) 반가움을 느낀다."
+                    "characterID": "narration",
+                    "l10nContentID": "chap1d3t11"
                 },
                 {
                     "dialogueID": "d19",
-                    "character": 5,
-                    "text": "그때, 웅장한 종소리가 울리고 입학식이 시작된다."
+                    "characterID": "narration",
+                    "l10nContentID": "chap1d3t12"
                 },
                 {
                     "dialogueID": "d20",
-                    "character": 6,
-                    "text": "신입생 여러분, 마법학교에 온 것을 환영합니다!"
+                    "characterID": "principal",
+                    "l10nContentID": "chap1d3t13"
                 }
             ]
         },
         {
-            "background": 3,
-            "dialogueDatas": [
+            "dialogueFlowID": "chap1d4",
+            "backgroundID": "bg3",
+            "dialogues": [
                 {
-                    "dialogueID":"d21",
-                    "character":5,
-                    "text":"입학식이 끝나고, 반 배정을 위한 마법 시연 시험이 진행된다."
+                    "dialogueID": "d21",
+                    "characterID": "narration",
+                    "l10nContentID": "chap1d4t1"
                 },
                 {
-                    "dialogueID":"d22",
-                    "character":7,
-                    "text":"각자 자신 있는 마법을 한 번씩 시연해 주시기 바랍니다."
+                    "dialogueID": "d22",
+                    "characterID": "professor",
+                    "l10nContentID": "chap1d4t2"
                 },
                 {
-                    "dialogueID":"d101",
-                    "character":5,
-                    "text":"Player은(는) 속으로 생각했다."
+                    "dialogueID": "d101",
+                    "characterID": "narration",
+                    "l10nContentID": "chap1d4t3"
                 },
                 {
-                    "dialogueID":"d23",
-                    "character":4,
-                    "text":"마법 시연이라... 하지만 난 아직 기초도 잘 모르는데."
+                    "dialogueID": "d23",
+                    "characterID": "player",
+                    "l10nContentID": "chap1d4t4"
                 },
                 {
-                    "dialogueID":"d24",
-                    "character":5,
-                    "text":"Player은(는) 전생의 개발자였던 기억을 떠올린다."
+                    "dialogueID": "d24",
+                    "characterID": "narration",
+                    "l10nContentID": "chap1d4t5"
                 },
                 {
-                    "dialogueID":"d25",
-                    "character":4,
-                    "text":"알고리즘과 마법의 원리가 비슷하다면... 내가 아는 걸 응용해 볼 수 있을지도."
+                    "dialogueID": "d25",
+                    "characterID": "player",
+                    "l10nContentID": "chap1d4t6"
                 },
                 {
-                    "dialogueID":"d26",
-                    "character":5,
-                    "text":"Player의 차례가 다가온다."
+                    "dialogueID": "d26",
+                    "characterID": "narration",
+                    "l10nContentID": "chap1d4t7"
                 },
                 {
-                    "dialogueID":"d27",
-                    "character":7,
-                    "text":"다음, Player 학생입니다."
+                    "dialogueID": "d27",
+                    "characterID": "professor",
+                    "l10nContentID": "chap1d4t8"
                 },
                 {
-                    "dialogueID":"d28",
-                    "character":4,
-                    "text":"네."
+                    "dialogueID": "d28",
+                    "characterID": "player",
+                    "l10nContentID": "chap1d4t9"
                 },
                 {
-                    "dialogueID":"d29",
-                    "character":5,
-                    "text":"Player은(는) 손을 내밀고 마력을 집중한다."
+                    "dialogueID": "d29",
+                    "characterID": "narration",
+                    "l10nContentID": "chap1d4t10"
                 },
                 {
-                    "dialogueID":"d30",
-                    "character":4,
-                    "text":"분할정복 알고리즘처럼 마나를 효율적으로 분배하면..."
+                    "dialogueID": "d30",
+                    "characterID": "player",
+                    "l10nContentID": "chap1d4t11"
                 },
                 {
-                    "dialogueID":"d31",
-                    "character":5,
-                    "text":"그의 손끝에서 복잡한 문양이 빛나며 강력한 바람이 일어난다."
+                    "dialogueID": "d31",
+                    "characterID": "narration",
+                    "l10nContentID": "chap1d4t12"
                 },
                 {
-                    "dialogueID":"d32",
-                    "character":8,
-                    "text":"우와!"
+                    "dialogueID": "d32",
+                    "characterID": "mob_student",
+                    "l10nContentID": "chap1d4t13"
                 },
                 {
-                    "dialogueID":"d33",
-                    "character":8,
-                    "text":"저런 마법은 처음 봐!"
+                    "dialogueID": "d33",
+                    "characterID": "mob_student",
+                    "l10nContentID": "chap1d4t14"
                 },
                 {
-                    "dialogueID":"d34",
-                    "character":0,
-                    "text":"저 사람... 누구지?"
+                    "dialogueID": "d34",
+                    "characterID": "elina",
+                    "l10nContentID": "chap1d4t15"
                 },
                 {
-                    "dialogueID":"d35",
-                    "character":1,
-                    "text":"호오? 재미있는 걸."
+                    "dialogueID": "d35",
+                    "characterID": "cecilia",
+                    "l10nContentID": "chap1d4t16"
                 },
                 {
-                    "dialogueID":"d36",
-                    "character":7,
-                    "text":"놀랍군요! 이 정도로 마나를 제어하다니."
+                    "dialogueID": "d36",
+                    "characterID": "professor",
+                    "l10nContentID": "chap1d4t17"
                 },
                 {
-                    "dialogueID":"d37",
-                    "character":4,
-                    "text":"어... 감사합니다."
+                    "dialogueID": "d37",
+                    "characterID": "player",
+                    "l10nContentID": "chap1d4t18"
                 },
                 {
-                    "dialogueID":"d38",
-                    "character":5,
-                    "text":"Player은(는) 자신도 놀란 표정이다."
+                    "dialogueID": "d38",
+                    "characterID": "narration",
+                    "l10nContentID": "chap1d4t19"
                 },
                 {
-                    "dialogueID":"d39",
-                    "character":5,
-                    "text":"다음은 세실리아의 차례다."
+                    "dialogueID": "d39",
+                    "characterID": "narration",
+                    "l10nContentID": "chap1d4t20"
                 },
                 {
-                    "dialogueID":"d40",
-                    "character":1,
-                    "text":"자, 내 차례네!"
+                    "dialogueID": "d40",
+                    "characterID": "cecilia",
+                    "l10nContentID": "chap1d4t21"
                 },
                 {
-                    "dialogueID":"d41",
-                    "character":5,
-                    "text":"그녀는 화려한 불꽃 마법을 시연하며 모두의 시선을 사로잡는다."
+                    "dialogueID": "d41",
+                    "characterID": "narration",
+                    "l10nContentID": "chap1d4t22"
                 },
                 {
-                    "dialogueID":"d42",
-                    "character":8,
-                    "text":"역시 황녀님!"
+                    "dialogueID": "d42",
+                    "characterID": "mob_student",
+                    "l10nContentID": "chap1d4t23"
                 },
                 {
-                    "dialogueID":"d43",
-                    "character":8,
-                    "text":"멋져!"
+                    "dialogueID": "d43",
+                    "characterID": "mob_student",
+                    "l10nContentID": "chap1d4t24"
                 },
                 {
-                    "dialogueID":"d100",
-                    "character":5,
-                    "text":"세실리아는 Player을(를) 보며 말한다."
+                    "dialogueID": "d100",
+                    "characterID": "narration",
+                    "l10nContentID": "chap1d4t25"
                 },
                 {
-                    "dialogueID":"d44",
-                    "character":1,
-                    "text":"이 정도는 기본이지."
+                    "dialogueID": "d44",
+                    "characterID": "cecilia",
+                    "l10nContentID": "chap1d4t26"
                 },
                 {
-                    "dialogueID":"d45",
-                    "character":5,
-                    "text":"엘리나가 조용히 앞으로 나선다."
+                    "dialogueID": "d45",
+                    "characterID": "narration",
+                    "l10nContentID": "chap1d4t27"
                 },
                 {
-                    "dialogueID":"d46",
-                    "character":0,
-                    "text":"시작하겠습니다."
+                    "dialogueID": "d46",
+                    "characterID": "elina",
+                    "l10nContentID": "chap1d4t28"
                 },
                 {
-                    "dialogueID":"d47",
-                    "character":5,
-                    "text":"그녀는 얼음과 바람을 조화롭게 결합한 마법을 선보인다."
+                    "dialogueID": "d47",
+                    "characterID": "narration",
+                    "l10nContentID": "chap1d4t29"
                 },
                 {
-                    "dialogueID":"d48",
-                    "character":8,
-                    "text":"우와... 아름다워."
+                    "dialogueID": "d48",
+                    "characterID": "mob_student",
+                    "l10nContentID": "chap1d4t30"
                 },
                 {
-                    "dialogueID":"d49",
-                    "character":8,
-                    "text":"역시 엘리나 공녀님이야."
+                    "dialogueID": "d49",
+                    "characterID": "mob_student",
+                    "l10nContentID": "chap1d4t31"
                 },
                 {
-                    "dialogueID":"d50",
-                    "character":4,
-                    "text":"대단하네... 나보다 훨씬 뛰어나."
+                    "dialogueID": "d50",
+                    "characterID": "player",
+                    "l10nContentID": "chap1d4t32"
                 },
                 {
-                    "dialogueID":"d51",
-                    "character":5,
-                    "text":"마법 시연이 모두 끝나고, 반 배정 결과가 발표된다."
+                    "dialogueID": "d51",
+                    "characterID": "narration",
+                    "l10nContentID": "chap1d4t33"
                 },
                 {
-                    "dialogueID":"d52",
-                    "character":7,
-                    "text":"Player, 엘리나, 세실리아, 소피아, 코코... 모두 A반입니다."
+                    "dialogueID": "d52",
+                    "characterID": "professor",
+                    "l10nContentID": "chap1d4t34"
                 }
             ]
         },
         {
-            "background": 4,
-            "dialogueDatas": [
+            "dialogueFlowID": "chap1d5",
+            "backgroundID": "bg4",
+            "dialogues": [
                 {
-                    "dialogueID":"d53",
-                    "character":3,
-                    "text":"예이! 다 같이 같은 반이네!"
+                    "dialogueID": "d53",
+                    "characterID": "coco",
+                    "l10nContentID": "chap1d5t1"
                 },
                 {
-                    "dialogueID":"d98",
-                    "position":0,
-                    "character":3,
-                    "text":""
+                    "dialogueID": "d98",
+                    "characterID": "coco",
+                    "l10nContentID": "chap1d5t2"
                 },
                 {
-                    "dialogueID":"d54",
-                    "position":2,
-                    "character":1,
-                    "text":"너는 누구야?"
+                    "dialogueID": "d54",
+                    "characterID": "cecilia",
+                    "l10nContentID": "chap1d5t3"
                 },
                 {
-                    "dialogueID":"d55",
-                    "position":0,
-                    "character":3,
-                    "text":"나는 코코야! 앞으로 잘 부탁해!"
+                    "dialogueID": "d55",
+                    "characterID": "coco",
+                    "l10nContentID": "chap1d5t4"
                 },
                 {
-                    "dialogueID":"d56",
-                    "position":2,
-                    "character":2,
-                    "text":"안녕, 코코."
+                    "dialogueID": "d56",
+                    "characterID": "sophia",
+                    "l10nContentID": "chap1d5t5"
                 },
                 {
-                    "dialogueID":"d57",
-                    "character":5,
-                    "text":"코코는 밝고 활기찬 모습으로 모두에게 인사를 건넨다."
+                    "dialogueID": "d57",
+                    "characterID": "narration",
+                    "l10nContentID": "chap1d5t6"
                 },
                 {
-                    "dialogueID":"d58",
-                    "character":5,
-                    "text":"수업이 끝나고, 세실리아와 엘리나가 이야기를 나눈다."
+                    "dialogueID": "d58",
+                    "characterID": "narration",
+                    "l10nContentID": "chap1d5t7"
                 },
                 {
-                    "dialogueID":"d99",
-                    "position":2,
-                    "character":0,
-                    "text":""
+                    "dialogueID": "d99",
+                    "characterID": "elina",
+                    "l10nContentID": "chap1d5t8"
                 },
                 {
-                    "dialogueID":"d59",
-                    "position":0,
-                    "character":1,
-                    "text":"엘리나, 그 Player(이)라는 애 좀 특이하지 않아?"
+                    "dialogueID": "d59",
+                    "characterID": "cecilia",
+                    "l10nContentID": "chap1d5t9"
                 },
                 {
-                    "dialogueID":"d60",
-                    "position":2,
-                    "character":0,
-                    "text":"그렇네. 마나 제어 방식이 독특했어."
+                    "dialogueID": "d60",
+                    "characterID": "elina",
+                    "l10nContentID": "chap1d5t10"
                 },
                 {
-                    "dialogueID":"d61",
-                    "position":0,
-                    "character":1,
-                    "text":"흥, 하지만 나 만큼은 아니지."
+                    "dialogueID": "d61",
+                    "characterID": "cecilia",
+                    "l10nContentID": "chap1d5t11"
                 },
                 {
-                    "dialogueID":"d62",
-                    "position":2,
-                    "character":0,
-                    "text":"자신감은 여전하구나."
+                    "dialogueID": "d62",
+                    "characterID": "elina",
+                    "l10nContentID": "chap1d5t12"
                 },
                 {
-                    "dialogueID":"d63",
-                    "character":5,
-                    "text":"그때, 세실리아가 Player에게 다가간다."
+                    "dialogueID": "d63",
+                    "characterID": "narration",
+                    "l10nContentID": "chap1d5t13"
                 },
                 {
-                    "dialogueID":"d64",
-                    "character":1,
-                    "text":"너! 이름이 뭐였더라?"
+                    "dialogueID": "d64",
+                    "characterID": "cecilia",
+                    "l10nContentID": "chap1d5t14"
                 },
                 {
-                    "dialogueID":"d65",
-                    "character":4,
-                    "text":"아, Player(이)야."
+                    "dialogueID": "d65",
+                    "characterID": "player",
+                    "l10nContentID": "chap1d5t15"
                 },
                 {
-                    "dialogueID":"d66",
-                    "character":1,
-                    "text":"나는 세실리아야. 너, 우리 동아리에 들어올래?"
+                    "dialogueID": "d66",
+                    "characterID": "cecilia",
+                    "l10nContentID": "chap1d5t16"
                 },
                 {
-                    "dialogueID":"d67",
-                    "character":4,
-                    "text":"동아리?"
+                    "dialogueID": "d67",
+                    "characterID": "player",
+                    "l10nContentID": "chap1d5t17"
                 },
                 {
-                    "dialogueID":"d68",
-                    "character":1,
-                    "text":"그래! 재미있는 거 많이 할 거야."
+                    "dialogueID": "d68",
+                    "characterID": "cecilia",
+                    "l10nContentID": "chap1d5t18"
                 },
                 {
-                    "dialogueID":"d69",
-                    "character":4,
-                    "text":"음... 소피아도 함께라면."
+                    "dialogueID": "d69",
+                    "characterID": "player",
+                    "l10nContentID": "chap1d5t19"
                 },
                 {
-                    "dialogueID":"d70",
-                    "character":1,
-                    "text":"소피아? 뭐, 좋아."
+                    "dialogueID": "d70",
+                    "characterID": "cecilia",
+                    "l10nContentID": "chap1d5t20"
                 },
                 {
-                    "dialogueID":"d71",
-                    "character":5,
-                    "text":"그때 코코가 갑자기 끼어든다."
+                    "dialogueID": "d71",
+                    "characterID": "narration",
+                    "l10nContentID": "chap1d5t21"
                 },
                 {
-                    "dialogueID":"d96",
-                    "position":0,
-                    "character":1,
-                    "text":""
+                    "dialogueID": "d96",
+                    "characterID": "cecilia",
+                    "l10nContentID": "chap1d5t22"
                 },
                 {
-                    "dialogueID":"d72",
-                    "position":2,
-                    "character":3,
-                    "text":"동아리라니! 나도 낄래!"
+                    "dialogueID": "d72",
+                    "characterID": "coco",
+                    "l10nContentID": "chap1d5t23"
                 },
                 {
-                    "dialogueID":"d73",
-                    "position":0,
-                    "character":1,
-                    "text":"어디서 갑자기 나타난 거야?"
+                    "dialogueID": "d73",
+                    "characterID": "cecilia",
+                    "l10nContentID": "chap1d5t24"
                 },
                 {
-                    "dialogueID":"d74",
-                    "position":2,
-                    "character":3,
-                    "text":"재미있는 건 놓칠 수 없지!"
+                    "dialogueID": "d74",
+                    "characterID": "coco",
+                    "l10nContentID": "chap1d5t25"
                 },
                 {
-                    "dialogueID":"d75",
-                    "position":2,
-                    "character":0,
-                    "text":"동아리 부원은 다 모았어?"
+                    "dialogueID": "d75",
+                    "characterID": "elina",
+                    "l10nContentID": "chap1d5t26"
                 },
                 {
-                    "dialogueID":"d76",
-                    "position":0,
-                    "character":1,
-                    "text":"어쩌다보니, 충분히 모았네!"
+                    "dialogueID": "d76",
+                    "characterID": "cecilia",
+                    "l10nContentID": "chap1d5t27"
                 },
                 {
-                    "dialogueID":"d77",
-                    "character":5,
-                    "text":"이렇게 해서 동아리가 결성되었다."
+                    "dialogueID": "d77",
+                    "characterID": "narration",
+                    "l10nContentID": "chap1d5t28"
                 }
             ]
         },
         {
-            "background": 5,
-            "dialogueDatas": [
+            "dialogueFlowID": "chap1d6",
+            "backgroundID": "bg5",
+            "dialogues": [
                 {
-                    "dialogueID":"d78",
-                    "character":5,
-                    "text":"Player은(는) 소피아와 함께 교정을 걷는다."
+                    "dialogueID": "d78",
+                    "characterID": "narration",
+                    "l10nContentID": "chap1d6t1"
                 },
                 {
-                    "dialogueID":"d79",
-                    "character":2,
-                    "text":"오늘 정말 멋졌어."
+                    "dialogueID": "d79",
+                    "characterID": "sophia",
+                    "l10nContentID": "chap1d6t2"
                 },
                 {
-                    "dialogueID":"d80",
-                    "character":4,
-                    "text":"고마워. 너도 치료 마법 잘하던데?"
+                    "dialogueID": "d80",
+                    "characterID": "player",
+                    "l10nContentID": "chap1d6t3"
                 },
                 {
-                    "dialogueID":"d81",
-                    "character":2,
-                    "text":"아니야, 아직 많이 부족해."
+                    "dialogueID": "d81",
+                    "characterID": "sophia",
+                    "l10nContentID": "chap1d6t4"
                 },
                 {
-                    "dialogueID":"d82",
-                    "character":5,
-                    "text":"그때, Player은(는) 어딘가에서 시선을 느낀다."
+                    "dialogueID": "d82",
+                    "characterID": "narration",
+                    "l10nContentID": "chap1d6t5"
                 },
                 {
-                    "dialogueID":"d83",
-                    "character":4,
-                    "text":"이상하네... 누군가 우리를 지켜보는 것 같아."
+                    "dialogueID": "d83",
+                    "characterID": "player",
+                    "l10nContentID": "chap1d6t6"
                 },
                 {
-                    "dialogueID":"d84",
-                    "character":2,
-                    "text":"에? 아무도 없는 것 같은데..."
+                    "dialogueID": "d84",
+                    "characterID": "sophia",
+                    "l10nContentID": "chap1d6t7"
                 },
                 {
-                    "dialogueID":"d85",
-                    "character":5,
-                    "text":"어둠 속에서 한 그림자가 미소를 짓는다."
+                    "dialogueID": "d85",
+                    "characterID": "narration",
+                    "l10nContentID": "chap1d6t8"
                 }
             ]
         },
         {
-            "background":1,
-            "dialogueDatas":[
+            "dialogueFlowID": "chap1d7",
+            "backgroundID": "bg1",
+            "dialogues": [
                 {
-                    "dialogueID":"d86",
-                    "character":5,
-                    "text":"다음 날, 동아리 첫 모임이 시작된다."
+                    "dialogueID": "d86",
+                    "characterID": "narration",
+                    "l10nContentID": "chap1d7t1"
                 }
             ]
         },
         {
-            "background":4,
-            "dialogueDatas":[
+            "dialogueFlowID": "chap1d8",
+            "backgroundID": "bg4",
+            "dialogues": [
                 {
-                    "dialogueID":"d87",
-                    "character":1,
-                    "text":"자, 앞으로 우리 동아리는 최고의 마법 동아리가 될 거야!"
+                    "dialogueID": "d87",
+                    "characterID": "cecilia",
+                    "l10nContentID": "chap1d8t1"
                 },
                 {
-                    "dialogueID":"d88",
-                    "character":3,
-                    "text":"우와! 그러면 우리 뭐부터 할까? 파티? 모험?"
+                    "dialogueID": "d88",
+                    "characterID": "coco",
+                    "l10nContentID": "chap1d8t2"
                 },
                 {
-                    "dialogueID":"d89",
-                    "character":0,
-                    "text":"일단 목표부터 정하는 게 좋겠어."
+                    "dialogueID": "d89",
+                    "characterID": "elina",
+                    "l10nContentID": "chap1d8t3"
                 },
                 {
-                    "dialogueID":"d90",
-                    "character":4,
-                    "text":"동의해. 체계적으로 계획을 세우는 게 좋을 것 같아."
+                    "dialogueID": "d90",
+                    "characterID": "player",
+                    "l10nContentID": "chap1d8t4"
                 },
                 {
-                    "dialogueID":"d91",
-                    "character":1,
-                    "text":"음... 재미없게는 하지 말자고!"
+                    "dialogueID": "d91",
+                    "characterID": "cecilia",
+                    "l10nContentID": "chap1d8t5"
                 },
                 {
-                    "dialogueID":"d102",
-                    "character":5,
-                    "text":"소피아가 조용히 손을 들며 말한다."
+                    "dialogueID": "d102",
+                    "characterID": "narration",
+                    "l10nContentID": "chap1d8t6"
                 },
                 {
-                    "dialogueID":"d92",
-                    "character":2,
-                    "text":"그럼, 서로의 특기를 살려서 협력하는 건 어때?"
+                    "dialogueID": "d92",
+                    "characterID": "sophia",
+                    "l10nContentID": "chap1d8t7"
                 },
                 {
-                    "dialogueID":"d93",
-                    "character":3,
-                    "text":"좋아! 나는 분위기 메이커 담당!"
+                    "dialogueID": "d93",
+                    "characterID": "coco",
+                    "l10nContentID": "chap1d8t8"
                 },
                 {
-                    "dialogueID":"d94",
-                    "character":1,
-                    "text":"그게 특기라고 할 수 있을까?"
+                    "dialogueID": "d94",
+                    "characterID": "cecilia",
+                    "l10nContentID": "chap1d8t9"
                 },
                 {
-                    "dialogueID":"d95",
-                    "character":0,
-                    "text":"그래도 코코가 있으면 분위기가 밝아지니까."
+                    "dialogueID": "d95",
+                    "characterID": "elina",
+                    "l10nContentID": "chap1d8t10"
                 },
                 {
-                    "dialogueID":"d96",
-                    "character":5,
-                    "text":"모두의 웃음소리가 교실에 울려 퍼진다."
+                    "dialogueID": "d96",
+                    "characterID": "narration",
+                    "l10nContentID": "chap1d8t11"
                 },
                 {
-                    "dialogueID":"d97",
-                    "character":5,
-                    "text":"이렇게, 새로운 친구들과의 학교 생활이 시작되었다."
+                    "dialogueID": "d97",
+                    "characterID": "narration",
+                    "l10nContentID": "chap1d8t12"
                 }
             ]
         }
     ]
-    
 }
