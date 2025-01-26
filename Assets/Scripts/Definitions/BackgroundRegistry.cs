@@ -10,6 +10,7 @@ public class BackgroundRegistry
      */
     public static BackgroundDefinition black = new BackgroundDefinition("black", "Sprites/Backgrounds/Black");
     public static BackgroundDefinition hall = new BackgroundDefinition("hall", "Sprites/Backgrounds/Hall");
+    public static BackgroundDefinition bedroom = new BackgroundDefinition("bedroom", "Sprites/Backgrounds/Bedroom");
     public static BackgroundDefinition classroom = new BackgroundDefinition("classroom", "Sprites/Backgrounds/Classroom");
     public static BackgroundDefinition classroomTesting = new BackgroundDefinition("classroom_testing", "Sprites/Backgrounds/ClassroomTesting");
     public static BackgroundDefinition campusOverview = new BackgroundDefinition("campus_overview", "Sprites/Backgrounds/CampusOverview");
