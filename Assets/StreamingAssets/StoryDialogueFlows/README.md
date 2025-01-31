@@ -12,7 +12,7 @@ This directory contains the first only. The second is stored under the `/Assets/
 
 ## Manifest format
 
-All v2 JSON files are store in this folder, and the value of `format` in the root node is `"2"`. (Because of possibility of versioning using string value, setting the value as integer is not recommended.)
+All v2 JSON files are store in this folder, and the value of `format` in the root node is `"2"`. (Because of possibility of versioning with non-numerical value in the future, setting the value as integer is not recommended.)
 
 ```json
 {
