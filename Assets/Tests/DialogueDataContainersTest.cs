@@ -19,7 +19,7 @@ public class DialogueDataContainersTest
      * If this test has been failed, please check the reference value.
      */
     [Test]
-    public void ValidateMethodWorks_Serialization()
+    public void ValidateMethodWorks_v2Serialization()
     {
         string _ref = "{\"dialogueTablePostfix\":\"postfix\",\"dialogueFlow\":[{\"dialogueFlowID\":\"dialogueFlowID_0\",\"backgroundID\":\"backgroundID_0\",\"dialogues\":[{\"dialogueID\":\"dialogueID_0_0\",\"characterID\":\"characterID_0_0\",\"l10nContentID\":\"l10nContentID_0_0\"},{\"dialogueID\":\"dialogueID_0_1\",\"characterID\":\"characterID_0_1\",\"l10nContentID\":\"l10nContentID_0_1\"},{\"dialogueID\":\"dialogueID_0_2\",\"characterID\":\"characterID_0_2\",\"l10nContentID\":\"l10nContentID_0_2\"}]},{\"dialogueFlowID\":\"dialogueFlowID_1\",\"backgroundID\":\"backgroundID_1\",\"dialogues\":[{\"dialogueID\":\"dialogueID_1_0\",\"characterID\":\"characterID_1_0\",\"l10nContentID\":\"l10nContentID_1_0\"},{\"dialogueID\":\"dialogueID_1_1\",\"characterID\":\"characterID_1_1\",\"l10nContentID\":\"l10nContentID_1_1\"},{\"dialogueID\":\"dialogueID_1_2\",\"characterID\":\"characterID_1_2\",\"l10nContentID\":\"l10nContentID_1_2\"}]}]}";
 
@@ -50,7 +50,7 @@ public class DialogueDataContainersTest
     }
 
     [Test]
-    public void ValidateMethodWorks_Deserialization()
+    public void ValidateMethodWorks_v2Deserialization()
     {
         DialogueFlow dialogueFlow = new DialogueFlow
         (
@@ -84,5 +84,24 @@ public class DialogueDataContainersTest
 
         DialogueFlow deserialized = new DialogueFlow(postfix, deserializedSerializable);
         Assert.AreEqual(dialogueFlow, deserialized);
+    }
+
+    [Test]
+    public void ValidateMethodWorks_DeserializationFromFile()
+    {
+        try
+        {
+            // Try to load v1 formatted chapter 1 file.
+            DialogueLoader.LoadDialogueFlow("1", "1");
+        }
+        catch (DeprecatedApiException)
+        {
+            goto v1ExpectedExceptionRaised;
+        }
+        Assert.Fail("Format v1 handler: No exception raised.");
+
+        v1ExpectedExceptionRaised:
+        // Try to load v2 formatted chapter 1 file.
+        SerializableDialogueFlow deserialized = DialogueLoader.LoadDialogueFlow("1", "2") as SerializableDialogueFlow;
     }
 }
