@@ -122,7 +122,6 @@ public class DialogueFlow
 
     public DialogueFlow
     (
-        string dialogueTablePostfix,
         SerializableDialogueFlow container
     )
     {

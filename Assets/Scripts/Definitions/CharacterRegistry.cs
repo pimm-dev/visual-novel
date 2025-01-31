@@ -7,10 +7,10 @@
  */
 public class CharacterRegistry
 {
-    public static CharacterDefinition elina = new CharacterDefinition("elina", "ELINA.DISPLAY_NAME", "Sprites/Characters/Elina");
-    public static CharacterDefinition cecilia = new CharacterDefinition("cecilia", "CECILIA.DISPLAY_NAME", "Sprites/Characters/Cecilia");
-    public static CharacterDefinition sophia = new CharacterDefinition("sophia", "SOPHIA.DISPLAY_NAME", "Sprites/Characters/Sophia");
-    public static CharacterDefinition coco = new CharacterDefinition("coco", "COCO.DISPLAY_NAME", "Sprites/Characters/Coco");
+    public static CharacterDefinition elina = new CharacterDefinition("elina", "ELINA.DISPLAY_NAME", "Sprites/Characters/Elina.png");
+    public static CharacterDefinition cecilia = new CharacterDefinition("cecilia", "CECILIA.DISPLAY_NAME", "Sprites/Characters/Cecilia.png");
+    public static CharacterDefinition sophia = new CharacterDefinition("sophia", "SOPHIA.DISPLAY_NAME", "Sprites/Characters/Sophia.png");
+    public static CharacterDefinition coco = new CharacterDefinition("coco", "COCO.DISPLAY_NAME", "Sprites/Characters/Coco.png");
 
     // Specific control needed
     public static CharacterDefinition player = new CharacterDefinition("player", "PLAYER.DISPLAY_NAME", "Sprites/Characters/Player");

@@ -4,6 +4,16 @@ using UnityEngine;
 
 public class DialogueLoader
 {
+    public static DialogueFlow GetDialogueV2(string target)
+    {
+        /**
+         * Because loading from string table is implemented in the DialogueDataContainers as a getterr,
+         * any other loading localized data is not implemented in this method.
+         * TODO: If there is required to optimize the loading process, implement the loading localized data here.
+         */
+        return new DialogueFlow(LoadDialogueFlow2(target));
+    }
+
     public static object LoadDialogueFlow(string target, string version = "2")
     /**
      * There has been changed the format of the dialogue data.

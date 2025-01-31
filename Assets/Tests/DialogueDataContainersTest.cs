@@ -82,7 +82,7 @@ public class DialogueDataContainersTest
         Assert.IsTrue(deserializedSerializable.Equals(serializableFlow));
         Assert.AreEqual(serializableFlow, deserializedSerializable);
 
-        DialogueFlow deserialized = new DialogueFlow(postfix, deserializedSerializable);
+        DialogueFlow deserialized = new DialogueFlow(deserializedSerializable);
         Assert.AreEqual(dialogueFlow, deserialized);
     }
 
