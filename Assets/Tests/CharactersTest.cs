@@ -63,4 +63,16 @@ public class CharactersTest
         Assert.AreEqual("Coco", CharacterRegistry.coco.DisplayName);
         Assert.AreEqual("!!__WARN: UNDEFINED CHARACTER__!!", CharacterRegistry.undefined.DisplayName);
     }
+
+    /**
+     * Validate all of character textures are loaded correctly.
+     */
+    [Test]
+    public void ValidateAllTexturesLoaded()
+    {
+        Assert.IsNotNull(CharacterRegistry.Get("elina").texture);
+        Assert.IsNotNull(CharacterRegistry.Get("cecilia").texture);
+        Assert.IsNotNull(CharacterRegistry.Get("sophia").texture);
+        Assert.IsNotNull(CharacterRegistry.Get("coco").texture);
+    }
 }

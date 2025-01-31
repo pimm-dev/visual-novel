@@ -12,7 +12,7 @@ BACKGROUND_V1_TO_V2 = [
     "hall",
     "black",
     "bedroom",
-    "classroom_testing",
+    "testroom",
     "classroom",
     "campus_overview",
     "forest",

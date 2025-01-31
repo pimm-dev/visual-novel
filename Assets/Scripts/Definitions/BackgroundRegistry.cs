@@ -8,22 +8,23 @@ public class BackgroundRegistry
     /**
      * Backgrounds
      */
-    public static BackgroundDefinition black = new BackgroundDefinition("black", "Sprites/Backgrounds/Black");
-    public static BackgroundDefinition hall = new BackgroundDefinition("hall", "Sprites/Backgrounds/Hall");
-    public static BackgroundDefinition bedroom = new BackgroundDefinition("bedroom", "Sprites/Backgrounds/Bedroom");
-    public static BackgroundDefinition classroom = new BackgroundDefinition("classroom", "Sprites/Backgrounds/Classroom");
-    public static BackgroundDefinition classroomTesting = new BackgroundDefinition("classroom_testing", "Sprites/Backgrounds/ClassroomTesting");
-    public static BackgroundDefinition campusOverview = new BackgroundDefinition("campus_overview", "Sprites/Backgrounds/CampusOverview");
-    public static BackgroundDefinition forest = new BackgroundDefinition("forest", "Sprites/Backgrounds/Forest");
-    public static BackgroundDefinition frontGate = new BackgroundDefinition("front_gate", "Sprites/Backgrounds/FrontGate");
-    public static BackgroundDefinition hallway = new BackgroundDefinition("hallway", "Sprites/Backgrounds/Hallway");
+    public static BackgroundDefinition black = new BackgroundDefinition("black", "Sprites/Backgrounds/Black.jpg");
+    public static BackgroundDefinition hall = new BackgroundDefinition("hall", "Sprites/Backgrounds/Hall.png");
+    public static BackgroundDefinition bedroom = new BackgroundDefinition("bedroom", "Sprites/Backgrounds/Bedroom.jpg");
+    public static BackgroundDefinition classroom = new BackgroundDefinition("classroom", "Sprites/Backgrounds/Classroom.png");
+    public static BackgroundDefinition testroom = new BackgroundDefinition("testroom", "Sprites/Backgrounds/Testroom.png");
+    public static BackgroundDefinition campusOverview = new BackgroundDefinition("campus_overview", "Sprites/Backgrounds/CampusOverview.png");
+    public static BackgroundDefinition forest = new BackgroundDefinition("forest", "Sprites/Backgrounds/Forest.png");
+    public static BackgroundDefinition frontGate = new BackgroundDefinition("front_gate", "Sprites/Backgrounds/FrontGate.png");
+    public static BackgroundDefinition hallway = new BackgroundDefinition("hallway", "Sprites/Backgrounds/Hallway.png");
     // TODO: Rename to "alchemyLab"
-    public static BackgroundDefinition alchemy = new BackgroundDefinition("alchemy", "Sprites/Backgrounds/Alchemy");
+    public static BackgroundDefinition alchemy = new BackgroundDefinition("alchemy", "Sprites/Backgrounds/Alchemy.png");
+    public static BackgroundDefinition empty = new BackgroundDefinition("empty", "Sprites/Backgrounds/Empty.png");
 
     /**
      * Aliases
      */
-    public static BackgroundDefinition undefined = black;
+    public static BackgroundDefinition undefined = empty;
 
     /**
      * Index
@@ -38,8 +39,8 @@ public class BackgroundRegistry
                 return hall;
             case "classroom":
                 return classroom;
-            case "classroom_testing":
-                return classroomTesting;
+            case "testroom":
+                return testroom;
             case "campus_overview":
                 return campusOverview;
             case "forest":
