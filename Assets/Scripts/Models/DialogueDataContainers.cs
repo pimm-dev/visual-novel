@@ -4,6 +4,9 @@ using System.Collections.Generic;
 using System.Linq;
 using LS = LocalizationSupports;
 
+/// TODO: Add limitation for clarify this code is only for
+///       format version 2.
+
 /**
  * based on `/Assets/StreamingAssets/*.json` files
  */
