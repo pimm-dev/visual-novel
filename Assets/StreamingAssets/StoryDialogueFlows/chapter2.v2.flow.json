@@ -1,0 +1,341 @@
+{
+    "format": "2",
+    "dialogueTablePostfix": "2",
+    "dialogueFlow": [
+        {
+            "dialogueFlowID": "chap2d0",
+            "backgroundID": "hallway",
+            "dialogues": [
+                {
+                    "dialogueID": "e1",
+                    "characterID": "narration",
+                    "l10nContentID": "chap2d0t0"
+                },
+                {
+                    "dialogueID": "e2",
+                    "characterID": "player",
+                    "l10nContentID": "chap2d0t1"
+                },
+                {
+                    "dialogueID": "e3",
+                    "characterID": "narration",
+                    "l10nContentID": "chap2d0t2"
+                },
+                {
+                    "dialogueID": "e4",
+                    "characterID": "player",
+                    "l10nContentID": "chap2d0t3"
+                },
+                {
+                    "dialogueID": "e5",
+                    "characterID": "elina",
+                    "l10nContentID": "chap2d0t4"
+                },
+                {
+                    "dialogueID": "e6",
+                    "characterID": "narration",
+                    "l10nContentID": "chap2d0t5"
+                },
+                {
+                    "dialogueID": "e7",
+                    "characterID": "player",
+                    "l10nContentID": "chap2d0t6"
+                }
+            ]
+        },
+        {
+            "dialogueFlowID": "chap2d1",
+            "backgroundID": "alchemy",
+            "dialogues": [
+                {
+                    "dialogueID": "e8",
+                    "characterID": "professor",
+                    "l10nContentID": "chap2d1t0"
+                },
+                {
+                    "dialogueID": "e9",
+                    "characterID": "professor",
+                    "l10nContentID": "chap2d1t1"
+                },
+                {
+                    "dialogueID": "e10",
+                    "characterID": "narration",
+                    "l10nContentID": "chap2d1t2"
+                },
+                {
+                    "dialogueID": "e11",
+                    "characterID": "professor",
+                    "l10nContentID": "chap2d1t3"
+                },
+                {
+                    "dialogueID": "e12",
+                    "characterID": "coco",
+                    "l10nContentID": "chap2d1t4"
+                },
+                {
+                    "dialogueID": "e13",
+                    "characterID": "cecilia",
+                    "l10nContentID": "chap2d1t5"
+                },
+                {
+                    "dialogueID": "e14",
+                    "characterID": "narration",
+                    "l10nContentID": "chap2d1t6"
+                },
+                {
+                    "dialogueID": "e15",
+                    "characterID": "player",
+                    "l10nContentID": "chap2d1t7"
+                },
+                {
+                    "dialogueID": "e16",
+                    "characterID": "professor",
+                    "l10nContentID": "chap2d1t8"
+                },
+                {
+                    "dialogueID": "e59",
+                    "characterID": "professor",
+                    "l10nContentID": "chap2d1t9"
+                },
+                {
+                    "dialogueID": "e60",
+                    "characterID": "professor",
+                    "l10nContentID": "chap2d1t10"
+                }
+            ]
+        },
+        {
+            "dialogueFlowID": "chap2d2",
+            "backgroundID": "forest",
+            "dialogues": [
+                {
+                    "dialogueID": "e17",
+                    "characterID": "narration",
+                    "l10nContentID": "chap2d2t0"
+                },
+                {
+                    "dialogueID": "e18",
+                    "characterID": "cecilia",
+                    "l10nContentID": "chap2d2t1"
+                },
+                {
+                    "dialogueID": "e19",
+                    "characterID": "elina",
+                    "l10nContentID": "chap2d2t2"
+                },
+                {
+                    "dialogueID": "e20",
+                    "characterID": "narration",
+                    "l10nContentID": "chap2d2t3"
+                },
+                {
+                    "dialogueID": "e21",
+                    "characterID": "player",
+                    "l10nContentID": "chap2d2t4"
+                },
+                {
+                    "dialogueID": "e22",
+                    "characterID": "narration",
+                    "l10nContentID": "chap2d2t5"
+                },
+                {
+                    "dialogueID": "e23",
+                    "characterID": "narration",
+                    "l10nContentID": "chap2d2t6"
+                },
+                {
+                    "dialogueID": "e24",
+                    "characterID": "cecilia",
+                    "l10nContentID": "chap2d2t7"
+                },
+                {
+                    "dialogueID": "e25",
+                    "characterID": "narration",
+                    "l10nContentID": "chap2d2t8"
+                },
+                {
+                    "dialogueID": "e26",
+                    "characterID": "elina",
+                    "l10nContentID": "chap2d2t9"
+                },
+                {
+                    "dialogueID": "e27",
+                    "characterID": "narration",
+                    "l10nContentID": "chap2d2t10"
+                }
+            ]
+        },
+        {
+            "dialogueFlowID": "chap2d3",
+            "backgroundID": "front_gate",
+            "dialogues": [
+                {
+                    "dialogueID": "e28",
+                    "characterID": "player",
+                    "l10nContentID": "chap2d3t0"
+                },
+                {
+                    "dialogueID": "e29",
+                    "characterID": "narration",
+                    "l10nContentID": "chap2d3t1"
+                },
+                {
+                    "dialogueID": "e30",
+                    "characterID": "elina",
+                    "l10nContentID": "chap2d3t2"
+                },
+                {
+                    "dialogueID": "e31",
+                    "characterID": "elina",
+                    "l10nContentID": "chap2d3t3"
+                },
+                {
+                    "dialogueID": "e32",
+                    "characterID": "cecilia",
+                    "l10nContentID": "chap2d3t4"
+                },
+                {
+                    "dialogueID": "e33",
+                    "characterID": "player",
+                    "l10nContentID": "chap2d3t5"
+                }
+            ]
+        },
+        {
+            "dialogueFlowID": "chap2d4",
+            "backgroundID": "alchemy",
+            "dialogues": [
+                {
+                    "dialogueID": "e34",
+                    "characterID": "narration",
+                    "l10nContentID": "chap2d4t0"
+                },
+                {
+                    "dialogueID": "e35",
+                    "characterID": "player",
+                    "l10nContentID": "chap2d4t1"
+                },
+                {
+                    "dialogueID": "e36",
+                    "characterID": "cecilia",
+                    "l10nContentID": "chap2d4t2"
+                },
+                {
+                    "dialogueID": "e37",
+                    "characterID": "elina",
+                    "l10nContentID": "chap2d4t3"
+                },
+                {
+                    "dialogueID": "e38",
+                    "characterID": "narration",
+                    "l10nContentID": "chap2d4t4"
+                },
+                {
+                    "dialogueID": "e39",
+                    "characterID": "professor",
+                    "l10nContentID": "chap2d4t5"
+                },
+                {
+                    "dialogueID": "e40",
+                    "characterID": "player",
+                    "l10nContentID": "chap2d4t6"
+                },
+                {
+                    "dialogueID": "e41",
+                    "characterID": "narration",
+                    "l10nContentID": "chap2d4t7"
+                },
+                {
+                    "dialogueID": "e42",
+                    "characterID": "professor",
+                    "l10nContentID": "chap2d4t8"
+                },
+                {
+                    "dialogueID": "e43",
+                    "characterID": "coco",
+                    "l10nContentID": "chap2d4t9"
+                },
+                {
+                    "dialogueID": "e44",
+                    "characterID": "cecilia",
+                    "l10nContentID": "chap2d4t10"
+                },
+                {
+                    "dialogueID": "e45",
+                    "characterID": "elina",
+                    "l10nContentID": "chap2d4t11"
+                },
+                {
+                    "dialogueID": "e46",
+                    "characterID": "coco",
+                    "l10nContentID": "chap2d4t12"
+                },
+                {
+                    "dialogueID": "e47",
+                    "characterID": "narration",
+                    "l10nContentID": "chap2d4t13"
+                },
+                {
+                    "dialogueID": "e48",
+                    "characterID": "sophia",
+                    "l10nContentID": "chap2d4t14"
+                },
+                {
+                    "dialogueID": "e49",
+                    "characterID": "player",
+                    "l10nContentID": "chap2d4t15"
+                },
+                {
+                    "dialogueID": "e61",
+                    "characterID": "elina",
+                    "l10nContentID": "chap2d4t16"
+                },
+                {
+                    "dialogueID": "e50",
+                    "characterID": "elina",
+                    "l10nContentID": "chap2d4t17"
+                },
+                {
+                    "dialogueID": "e51",
+                    "characterID": "narration",
+                    "l10nContentID": "chap2d4t18"
+                },
+                {
+                    "dialogueID": "e52",
+                    "characterID": "player",
+                    "l10nContentID": "chap2d4t19"
+                },
+                {
+                    "dialogueID": "e53",
+                    "characterID": "cecilia",
+                    "l10nContentID": "chap2d4t20"
+                },
+                {
+                    "dialogueID": "e54",
+                    "characterID": "narration",
+                    "l10nContentID": "chap2d4t21"
+                },
+                {
+                    "dialogueID": "e55",
+                    "characterID": "coco",
+                    "l10nContentID": "chap2d4t22"
+                },
+                {
+                    "dialogueID": "e56",
+                    "characterID": "cecilia",
+                    "l10nContentID": "chap2d4t23"
+                },
+                {
+                    "dialogueID": "e57",
+                    "characterID": "coco",
+                    "l10nContentID": "chap2d4t24"
+                },
+                {
+                    "dialogueID": "e58",
+                    "characterID": "elina",
+                    "l10nContentID": "chap2d4t25"
+                }
+            ]
+        }
+    ]
+}

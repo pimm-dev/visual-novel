@@ -41,6 +41,7 @@ def convert(data: dict, postfix: str="0") -> tuple:
     """
 
     next_root = {
+        "format": "2",
         "dialogueTablePostfix": postfix,
         "dialogueFlow": [],
     }
@@ -108,9 +109,11 @@ def convert_file(path: str, locale_code: str=OUTPUT_L10N_LOCALE, postfix: str=No
         postfix = "".join([each for each in os.path.basename(path).split(".")[0] if each.isdigit()])
     
     next_dialogue_json, next_l10n_table = convert(data, postfix)
-    with open(f"{path}.v2.json", "w", encoding="utf-8") as f:
+    
+    starts = path.split(".")[0]
+    with open(f"{starts}.v2.flow.json", "w", encoding="utf-8") as f:
         f.write(dumps(next_dialogue_json, ensure_ascii=False, indent=4))
-    with open(f"{path}.v2.l10n.{locale_code}.csv", "w", encoding="utf-8") as f:
+    with open(f"{starts}.v2.l10n.{locale_code}.csv", "w", encoding="utf-8") as f:
         f.write(render_l10n_table(locale, next_l10n_table))
 
 if __name__ == "__main__":

@@ -14,7 +14,7 @@ def app():
     if args.input_format == 1 and args.output_format == 2:
         output_postfix = ""
         if args.output == "(based on input)":
-            output_postfix = args.input.split('.')[-1]
+            output_postfix = None
         else:
             output_postfix = args.output
         v2.convert_file(args.input, args.locale, output_postfix)
