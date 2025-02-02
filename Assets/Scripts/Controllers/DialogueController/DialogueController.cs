@@ -3,32 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using DialogueControllers.Options;
 
-[System.Serializable]
-public class DialogueControllerDescriptor
-{
-    public bool enabled;
-    public string currentChapter;
-    public string currentDialogueFlowID;
-    public string currentDialogueID;
-
-    public DialogueControllerDescriptor()
-    {
-        // Refer: Assets/Scripts/Definitions/DialogueControllerDefaults.cs
-        enabled = DialogueControllerDescriptorDefaults.ENABLED;
-        currentDialogueFlowID = DialogueControllerDescriptorDefaults.CURRENT_DIALOGUE_FLOW_ID;
-        currentDialogueID = DialogueControllerDescriptorDefaults.CURRENT_DIALOGUE_ID;
-        currentChapter = DialogueControllerDescriptorDefaults.CURRENT_CHAPTER;
-    }
-
-    public DialogueControllerDescriptor(bool enabled, string currentChapter, string currentDialogueID)
-    {
-        enabled = enabled;
-        currentChapter = currentChapter;
-        currentDialogueFlowID = currentDialogueFlowID;
-        currentDialogueID = currentDialogueID;
-    }
-}
-
 public class DialogueController : MonoBehaviour
 {
     [SerializeField]
@@ -39,6 +13,25 @@ public class DialogueController : MonoBehaviour
     private DialogueControllerDescriptor descriptor = new DialogueControllerDescriptor();
     [SerializeField]
     private DialogueControllerDescriptor fDescriptor;  // serialized
+    private bool Enabled
+    {
+        /**
+         * Setter wrapper for tracking changes in descriptor.enabled.
+         * Using descriptor.enabled directly is not recommended.
+         */
+        get => descriptor.enabled;
+        set
+        {
+            if (value != descriptor.enabled)
+            {
+                if (options.serializingdescriptorTiming.HasFlag(SerializingDescriptorTiming.OnEnabledChanged))
+                {
+                    _requeestDumpAndSerializeDescriptor();
+                }
+            }
+            descriptor.enabled = value;
+        }
+    }
 
     // options
     [SerializeField]
@@ -63,6 +56,7 @@ public class DialogueController : MonoBehaviour
         LoadRequiredResources();
         LoadDialogueContext();
     }
+    
     private void LoadRequiredResources()
     {
         /**
@@ -81,6 +75,13 @@ public class DialogueController : MonoBehaviour
         {
             _ = each.sprite;
         }
+    }
+
+    private void _requeestDumpAndSerializeDescriptor()
+    {
+        fDescriptor = (DialogueControllerDescriptor)descriptor.Clone();
+        PlayerData.I.dialogueControllerDescriptor = fDescriptor;
+        PlayerData.I.SerializeAsync();
     }
 
     private void LoadDialogueContext()
@@ -133,7 +134,7 @@ public class DialogueController : MonoBehaviour
             if (options.eachDialogueEndsAction != EachDialogueEndsAction.Continue)
             {
                 options.eachDialogueEndsAction = EachDialogueEndsAction.Continue;
-                descriptor.enabled = true;
+                Enabled = true;
             }
         }
         else
@@ -152,6 +153,10 @@ public class DialogueController : MonoBehaviour
         currentDialogue = context.dataContainers[descriptor.currentDialogueID];
         targetDisplayContent = context.__(currentDialogue);
         currentDisplayingContent = "";
+        if (options.serializingdescriptorTiming.HasFlag(SerializingDescriptorTiming.OnDialogueStarted))
+        {
+            _requeestDumpAndSerializeDescriptor();
+        }
     }
 
     private IEnumerator PlayDialogueContext()
@@ -166,9 +171,9 @@ public class DialogueController : MonoBehaviour
         int i;  // for avoiding overhead: used for forloop in writting dialogue content
         while (true)
         {
-            if (!descriptor.enabled)
+            if (!Enabled)
             {
-                yield return new WaitUntil(() => descriptor.enabled);
+                yield return new WaitUntil(() => Enabled);
                 continue;
             }
 
@@ -189,15 +194,20 @@ public class DialogueController : MonoBehaviour
                 currentDisplayingContent += targetDisplayContent[i++];
                 yield return new WaitForSeconds(options.writtingCharacterInterval);
             }
-            // ends each dialogue
+
+            // On Dialogue Ended
             switch (options.eachDialogueEndsAction)
             {
                 case EachDialogueEndsAction.Suspend:
-                    descriptor.enabled = false;
-                    yield return new WaitUntil(() => descriptor.enabled);
+                    Enabled = false;
+                    yield return new WaitUntil(() => Enabled);
                     break;
                 case EachDialogueEndsAction.Continue:
                     break;
+            }
+            if (options.serializingdescriptorTiming.HasFlag(SerializingDescriptorTiming.OnDialogueEnded))
+            {
+                _requeestDumpAndSerializeDescriptor();
             }
             yield return new WaitUntilOrForSeconds
             (
@@ -214,7 +224,13 @@ public class DialogueController : MonoBehaviour
                 // Wait Until
                 options.startNextDialogueDelayWhenAutoWritting
             );
+
+            // On Dialogue Flow Changed
             descriptor.currentDialogueID = currentDialogue.nextDialogueID;
+            if (options.serializingdescriptorTiming.HasFlag(SerializingDescriptorTiming.OnDialogueFlowChanged))
+            {
+                _requeestDumpAndSerializeDescriptor();
+            }
             _dialogueSetNext();
         }
     }
@@ -222,7 +238,7 @@ public class DialogueController : MonoBehaviour
     private void _setWrittingStop()
     {
         options.eachDialogueEndsAction = EachDialogueEndsAction.Suspend;
-        descriptor.enabled = false;
+        Enabled = false;
         isAutoWritting = false;
     }
 }

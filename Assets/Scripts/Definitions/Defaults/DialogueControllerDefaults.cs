@@ -19,10 +19,3 @@ public class DialogueControllerDescriptorDefaults
     public const string CURRENT_DIALOGUE_FLOW_ID = "";
     public const string CURRENT_DIALOGUE_ID = "";
 }
-
-public class DialogueControllerOptionsDefaults
-{
-    public const EachDialogueEndsAction EACH_DIALOGUE_ENDS_ACTION = EachDialogueEndsAction.Suspend;
-    public const float WRITTING_CHARACTER_INTERVAL = .5f;
-    public const float START_NEXT_DIALOGUE_DELAY_WHEN_AUTO_WRITTING = 1f;
-}
