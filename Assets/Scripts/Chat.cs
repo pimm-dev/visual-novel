@@ -29,7 +29,9 @@ public enum BG {
     forest,
     frontgate,
     corridor,
-    alchemy
+    alchemy,
+    lab,
+    library
 }
 
 public enum NPC {
@@ -126,6 +128,12 @@ public class Chat : MonoBehaviour
                 break;
             case BG.alchemy:
                 main.sprite = backgrounds[9];
+                break;
+            case BG.lab:
+                main.sprite = backgrounds[10];
+                break;
+            case BG.library:
+                main.sprite = backgrounds[11];
                 break;
         }
     }

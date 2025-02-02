@@ -74,14 +74,9 @@
                     "text":"흥. 엘리나랑 내가 있는데, 누가 이길 수 있겠어?"
                 },
                 {
-                    "dialogueID":"e14",
-                    "character":5,
-                    "text":"Player은(는) 작게 중얼거린다."
-                },
-                {
                     "dialogueID":"e15",
                     "character":4,
-                    "text":"나는..?"
+                    "text":"(나는..?)"
                 },
                 {
                     "dialogueID":"e16",
@@ -324,7 +319,7 @@
                     "text":"헤헤. 내가 좀 잘 맡아."
                 },
                 {
-                    "dialogueID":"e58",
+                    "dialogueID":"e14",
                     "character":0,
                     "text":"지금 여기 없다면.. 여기서 출발했다는 거지."
                 }

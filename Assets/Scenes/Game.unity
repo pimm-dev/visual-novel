@@ -481,7 +481,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -29.096497, y: -31.360397}
+  m_AnchoredPosition: {x: -29.096436, y: -31.360397}
   m_SizeDelta: {x: -149.7313, y: -62.7208}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &181569068
@@ -3136,10 +3136,12 @@ MonoBehaviour:
   - {fileID: 21300000, guid: a8993e2f26947be41885e210f3ec52d3, type: 3}
   - {fileID: 21300000, guid: 6497c6aad36397e41969effa5f0b4724, type: 3}
   - {fileID: 21300000, guid: bd0c4468e55648449bedd798ce48a453, type: 3}
-  - {fileID: 21300000, guid: 477ad80c270974549b77ca2e3c789079, type: 3}
-  - {fileID: 21300000, guid: ff349202b29821a4fae744dcb2bc6eff, type: 3}
-  - {fileID: 21300000, guid: 2d5ed2a830304644491d769b5216cb2e, type: 3}
-  - {fileID: 21300000, guid: 0bb981cec0fc0c645af152dc2b495594, type: 3}
+  - {fileID: 21300000, guid: 6f42daaaafd43cd4d806345a01084553, type: 3}
+  - {fileID: 21300000, guid: 5359bc66f85087e489036f31d64c100e, type: 3}
+  - {fileID: 21300000, guid: d866961d89054cb48b4769d409385d62, type: 3}
+  - {fileID: 21300000, guid: 5bc50f8057e7a3645b0238ec335b4a60, type: 3}
+  - {fileID: 21300000, guid: e8451141a05c52c46b6b4197be340c5d, type: 3}
+  - {fileID: 21300000, guid: e0b6783be4fcf0a41b364ef57ed8883f, type: 3}
   ChatText: {fileID: 181569068}
   CharacterName: {fileID: 1417408168}
   writerText: 

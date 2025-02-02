@@ -1,3 +1,20 @@
 {
-    "scenes": []
+    "scenes": [
+        {
+            "background":1,
+            "dialogueDatas":[
+                {
+                    "dialogueID":"g1",
+                    "character":5,
+                    "text":"다음 날, Player은(는) 동아리실로 향했다."
+                }
+            ]
+        },
+        {
+            "background":4,
+            "dialogueDatas":[
+                
+            ]
+        }
+    ]
 }
