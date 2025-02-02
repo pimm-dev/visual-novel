@@ -25,6 +25,10 @@ public class BackgroundRegistry
      * Aliases
      */
     public static BackgroundDefinition undefined = empty;
+    public static BackgroundDefinition[] all = new BackgroundDefinition[]
+    {
+        black, hall, bedroom, classroom, testroom, campusOverview, forest, frontGate, hallway, alchemy, empty
+    };
 
     /**
      * Index

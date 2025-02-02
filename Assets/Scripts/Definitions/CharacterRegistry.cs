@@ -18,6 +18,12 @@ public class CharacterRegistry
     public static CharacterDefinition undefined = new CharacterDefinition("undefined", "UNDEFINED.DISPLAY_NAME", "__TODO__");
 
     /**
+     * Aliases
+     */
+    
+    public static CharacterDefinition[] all = new CharacterDefinition[] { elina, cecilia, sophia, coco };
+
+    /**
      * Index
      */
     public static CharacterDefinition Get(string characterID)

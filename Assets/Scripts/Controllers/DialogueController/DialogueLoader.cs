@@ -4,14 +4,18 @@ using UnityEngine;
 
 public class DialogueLoader
 {
-    public static DialogueFlow GetDialogueV2(string target)
+    public static T LoadDialogueFlow<T>(string target)
     {
-        /**
-         * Because loading from string table is implemented in the DialogueDataContainers as a getterr,
-         * any other loading localized data is not implemented in this method.
-         * TODO: If there is required to optimize the loading process, implement the loading localized data here.
-         */
-        return new DialogueFlow(LoadDialogueFlow2(target));
+        // Format v1: (not implemented)
+        // Format v2: SerializableDialogueFlow
+        if (typeof(T) == typeof(SerializableDialogueFlow))
+        {
+            return (T)LoadDialogueFlow(target, "2");
+        }
+        else
+        {
+            throw new ArgumentException($"Invalid type: {typeof(T)}");
+        }
     }
 
     public static object LoadDialogueFlow(string target, string version = "2")

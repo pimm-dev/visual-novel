@@ -19,6 +19,8 @@ using LS = LocalizationSupports;
 public class SerializableDialogueFlow
 {
     public string dialogueTablePostfix;
+
+    // TODO: Rename to `dialogueFlowDataContainers`
     public List<SerializableDialogueFlowDataContainer> dialogueFlow;
     public SerializableDialogueFlow
     (
@@ -102,190 +104,200 @@ public class SerializableDialogueDataContainer {
     }
 }
 
-/**
- * DialogueDataContainers with control methods
- */
-
-public class DialogueFlow
+public class DialogueContext
 {
+    public string format;
     public string dialogueTablePostfix;
-    public List<DialogueFlowDataContainer> dialogueFlow;
-    public DialogueFlow
-    (
-        string dialogueTablePostfix,
-        IEnumerable<DialogueFlowDataContainer> dialogueFlow
-    )
-    {
-        this.dialogueTablePostfix = dialogueTablePostfix;
-        this.dialogueFlow = dialogueFlow.ToList<DialogueFlowDataContainer>();
-    }
+    public Dictionary<string, DialogueFlowContainer> flowContainers;
+    public Dictionary<string, DialogueDataContainer> dataContainers;
+    public string entryDialogueID;
 
-    public DialogueFlow
-    (
-        SerializableDialogueFlow container
-    )
-    {
-        this.dialogueTablePostfix = container.dialogueTablePostfix;
-        this.dialogueFlow = container.dialogueFlow.Select(
-            d => new DialogueFlowDataContainer(dialogueTablePostfix, d)
-        ).ToList();
-    }
-
-    public static explicit operator
-    SerializableDialogueFlow(DialogueFlow container)
-    {
-        return new SerializableDialogueFlow(
-            container.dialogueTablePostfix,
-            container.dialogueFlow.Select(d => (SerializableDialogueFlowDataContainer)d).ToList()
-        );
-    }
-
-    public override bool Equals(object obj)
-    {
-        if (obj == null || GetType() != obj.GetType())
-        {
-            return false;
-        }
-        DialogueFlow other = (DialogueFlow)obj;
-        return dialogueTablePostfix == other.dialogueTablePostfix
-            && dialogueFlow.SequenceEqual(other.dialogueFlow);
-    }
-}
-
-public class DialogueFlowDataContainer
-{
-    public string dialogueFlowID { get; }
-    public string backgroundID { get; }
-    public List<DialogueDataContainer> dialogues { get; }
-    public BackgroundDefinition Background
+    public string TableName
     {
         get
         {
-            return BackgroundRegistry.Get(backgroundID);
+            switch (format)
+            {
+                case "2":
+                return $"{DialogueContainerDefaults.FORMAT_V2_TABLE_PREFIX}{dialogueTablePostfix}";
+                break;
+                default:
+                return $"{DialogueContainerDefaults.FALLBACK_TABLE_PREFIX}{dialogueTablePostfix}";
+            }
+            
         }
     }
 
-    public DialogueFlowDataContainer
+    /**
+     * Constructors & Initializers
+     */
+    public DialogueContext
     (
-        string backgroundID,
-        string dialogueFlowID,
-        IEnumerable<DialogueDataContainer> dialogues
+        string format,
+        string dialogueTablePostfix,
+        Dictionary<string, DialogueFlowContainer> flowContainers,
+        Dictionary<string, DialogueDataContainer> dataContainers,
+        string entryDialogueID
     )
     {
-        this.backgroundID = backgroundID;
-        this.dialogueFlowID = dialogueFlowID;
-        this.dialogues = dialogues.ToList<DialogueDataContainer>();
+        format = format;
+        dialogueTablePostfix = dialogueTablePostfix;
+        flowContainers = flowContainers;
+        dataContainers = dataContainers;
+        entryDialogueID = entryDialogueID;
+    }
+    public DialogueContext(SerializableDialogueFlow container)
+    {
+        /*
+        switch (container.format)
+        {
+            case "2":
+                _useFormat2(container);
+                break;
+            case "3":
+                // rewrited revision
+                // _useFormat3(container);
+                break;
+            default:
+                throw new ArgumentException("Unsupported format");
+        }*/
+        flowContainers = new Dictionary<string, DialogueFlowContainer>();
+        dataContainers = new Dictionary<string, DialogueDataContainer>();
+        _useFormat2(container);
     }
 
-    public DialogueFlowDataContainer
+    private string prevDialogueID = "";
+    private string nextDialogueID = "";
+    private void _useFormat2(SerializableDialogueFlow container)
+    {
+        /**
+         * Format 2 dialogue data are linear.
+         */
+        format = "2";
+        dialogueTablePostfix = container.dialogueTablePostfix;
+        entryDialogueID = container.dialogueFlow[0].dialogues[0].dialogueID;
+        foreach (SerializableDialogueFlowDataContainer flow in container.dialogueFlow)
+        {
+            flowContainers.Add(flow.dialogueFlowID, new DialogueFlowContainer(flow));
+            foreach (SerializableDialogueDataContainer dialogue in flow.dialogues)
+            {
+                // Instantiate current
+                dataContainers.Add(dialogue.dialogueID, new DialogueDataContainer
+                (
+                    dialogue.dialogueID,
+                    dialogue.l10nContentID,
+                    dialogue.characterID,
+                    flow.dialogueFlowID,
+                    prevDialogueID,
+                    nextDialogueID
+                ));
+                var _ = new DialogueDataContainer
+                (
+                    dialogue.dialogueID,
+                    dialogue.l10nContentID,
+                    dialogue.characterID,
+                    flow.dialogueFlowID,
+                    prevDialogueID,
+                    nextDialogueID
+                );
+
+                // Update previous data to link with current
+                if (prevDialogueID != "")
+                {
+                    dataContainers[prevDialogueID].nextDialogueID = dialogue.dialogueID;
+                }
+                prevDialogueID = dialogue.dialogueID;
+            }
+        }
+    }
+
+    /**
+     * NOTE: Format 3 supports non-linear flow that images DialogueContext
+     */
+    private void _useFormat3() { throw new NotImplementedException(); }
+
+    /**
+     * Public Methods
+     */
+    public string GetContentText(DialogueDataContainer dialogueData)
+    {
+        return GetContentText(dialogueData.dialogueContentTextID);
+    }
+    public string GetContentText(string dialogueContentTextID)
+    {
+        return LS.__(TableName, dialogueContentTextID);
+    }
+
+    public string __(DialogueDataContainer d) => GetContentText(d);
+    public string __(string k) => GetContentText(k);
+}
+
+public class DialogueFlowContainer
+{
+    public string flowID;
+    public string backgroundID;
+
+    public DialogueFlowContainer
     (
-        string dialogueTableId,
+        string flowID,
+        string backgroundID
+    )
+    {
+        this.flowID = flowID;
+        this.backgroundID = backgroundID;
+    }
+    public DialogueFlowContainer
+    (
         SerializableDialogueFlowDataContainer container
     )
     {
+        this.flowID = container.dialogueFlowID;
         this.backgroundID = container.backgroundID;
-        this.dialogueFlowID = container.dialogueFlowID;
-        this.dialogues = container.dialogues.Select(
-            d => new DialogueDataContainer(dialogueTableId, d)
-        ).ToList();
-    }
-
-    public static explicit operator
-    SerializableDialogueFlowDataContainer(DialogueFlowDataContainer container)
-    {
-        return new SerializableDialogueFlowDataContainer(
-            container.backgroundID,
-            container.dialogueFlowID,
-            container.dialogues.Select(d => (SerializableDialogueDataContainer)d)
-        );
-    }
-
-    public override bool Equals(object obj)
-    {
-        if (obj == null || GetType() != obj.GetType())
-        {
-            return false;
-        }
-        DialogueFlowDataContainer other = (DialogueFlowDataContainer)obj;
-        return backgroundID == other.backgroundID
-            && dialogueFlowID == other.dialogueFlowID
-            && dialogues.SequenceEqual(other.dialogues);
     }
 }
 
+[Serializable]
 public class DialogueDataContainer
 {
-    private string dialogueTableID;  // for querying localized string
-    public string dialogueID { get; }
-    public string characterID { get; }
-    public string l10nContentID { get; }
-    public CharacterDefinition Character
-    {
-        get
-        {
-            return CharacterRegistry.Get(characterID);
-        }
-    }
+    public string dialogueID;
 
-    public string DialogueText
-    {
-        get
-        {
-            /**
-             * TODO: Important performance issue here:
-             * - All of DialogueDataContainer instances has same `dialogueTableID` value
-             *   in the same DialogueFlowDataContainer instance.
-             */
-            return LS.__(dialogueTableID, l10nContentID);
-        }
-    }
+    /**
+     * Dialogue Content
+     */
+    public string dialogueContentTextID;
+    public string characterID;
+
+    /**
+     * Dialogue Flow
+     */
+    public string dialogueFlowID;
+    public string prevDialogueID;
+    public string nextDialogueID;
 
     public DialogueDataContainer
     (
-        string dialogueTablePostfix,
         string dialogueID,
+        string dialogueContentTextID,
         string characterID,
-        string l10nContentID
+        string dialogueFlowID,
+        string prevDialogueID,
+        string nextDialogueID
     )
     {
         this.dialogueID = dialogueID;
+        this.dialogueContentTextID = dialogueContentTextID;
         this.characterID = characterID;
-        this.l10nContentID = l10nContentID;
-        this.dialogueTableID = String.Format(LocalizationTableKeys.DIALOGUES_TABLE, dialogueTablePostfix);
+        this.dialogueFlowID = dialogueFlowID;
+        this.prevDialogueID = prevDialogueID;
+        this.nextDialogueID = nextDialogueID;
     }
-
     public DialogueDataContainer
     (
-        string dialogueTablePostfix,
         SerializableDialogueDataContainer container
     )
     {
         this.dialogueID = container.dialogueID;
+        this.dialogueContentTextID = container.l10nContentID;
         this.characterID = container.characterID;
-        this.l10nContentID = container.l10nContentID;
-        this.dialogueTableID = String.Format(LocalizationTableKeys.DIALOGUES_TABLE, dialogueTablePostfix);
-    }
-
-    public static explicit operator
-    SerializableDialogueDataContainer(DialogueDataContainer container)
-    {
-        return new SerializableDialogueDataContainer(
-            container.dialogueID,
-            container.characterID,
-            container.l10nContentID
-        );
-    }
-
-    public override bool Equals(object obj)
-    {
-        if (obj == null || GetType() != obj.GetType())
-        {
-            return false;
-        }
-        DialogueDataContainer other = (DialogueDataContainer)obj;
-        return dialogueID == other.dialogueID
-            && characterID == other.characterID
-            && l10nContentID == other.l10nContentID
-            && dialogueTableID == other.dialogueTableID;
     }
 }

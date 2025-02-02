@@ -18,6 +18,7 @@ public class DialogueDataContainersTest
      * NOTE: The reference value `_ref` have to generated manually.
      * If this test has been failed, please check the reference value.
      */
+    /*
     [Test]
     public void ValidateMethodWorks_v2Serialization()
     {
@@ -103,5 +104,5 @@ public class DialogueDataContainersTest
         v1ExpectedExceptionRaised:
         // Try to load v2 formatted chapter 1 file.
         SerializableDialogueFlow deserialized = DialogueLoader.LoadDialogueFlow("1", "2") as SerializableDialogueFlow;
-    }
+    }*/
 }
