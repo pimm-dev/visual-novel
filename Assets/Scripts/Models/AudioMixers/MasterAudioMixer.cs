@@ -9,9 +9,9 @@ public class MasterAudioMixerModel
     public AudioMixerModel dialogue;
     public MasterAudioMixerModel()
     {
-        master = new AudioMixerModel(AudioMixerDefaults.VOLUME);
-        music = new AudioMixerModel(AudioMixerDefaults.VOLUME);
-        sfx = new AudioMixerModel(AudioMixerDefaults.VOLUME);
-        dialogue = new AudioMixerModel(AudioMixerDefaults.VOLUME);
+        master = new AudioMixerModel(MasterAudioMixerDefaults.MASTER_VOLUME);
+        music = new AudioMixerModel(MasterAudioMixerDefaults.MUSIC_VOLUME);
+        sfx = new AudioMixerModel(MasterAudioMixerDefaults.SFX_VOLUME);
+        dialogue = new AudioMixerModel(MasterAudioMixerDefaults.DIALOGUE_VOLUME);
     }
 }

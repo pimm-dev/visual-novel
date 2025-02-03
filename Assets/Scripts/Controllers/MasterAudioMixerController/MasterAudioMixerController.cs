@@ -9,9 +9,19 @@ public class MasterAudioMixerController : MonoBehaviour
     public static MasterAudioMixerController Instance { get; private set; }
 
     [SerializeField] private AudioMixer audioMixer;
-    [SerializeField] private MasterAudioMixerModel masterAudioMixerModel = new MasterAudioMixerModel();
+    [SerializeField] private MasterAudioMixerModel masterAudioMixerModel;
 
     private void Awake()
+    {
+        _InitObject();
+    }
+
+    private void Start()
+    {
+        _SyncState();
+    }
+
+    private void _InitObject()
     {
         if (Instance == null)
         {
@@ -22,13 +32,19 @@ public class MasterAudioMixerController : MonoBehaviour
         {
             Destroy(gameObject);
         }
+        masterAudioMixerModel = new MasterAudioMixerModel();
     }
 
-    [ContextMenu("Debug exposed value")]
-    public void DebugAudioMixerExposedValue()
+    [ContextMenu("Apply state to master audio mixer")]
+    public void ApplyStateToMasterAudioMixer()
     {
-        audioMixer.GetFloat(Mixer._G(Group.Master), out masterAudioMixerModel.master.volume);
-        audioMixer.GetFloat(Mixer._G(Group.Music), out masterAudioMixerModel.music.volume);
-        audioMixer.GetFloat(Mixer._G(Group.SFX), out masterAudioMixerModel.sfx.volume);
+        audioMixer.SetFloat(Mixer._G(Group.Master), masterAudioMixerModel.master.volume);
+        audioMixer.SetFloat(Mixer._G(Group.Music), masterAudioMixerModel.music.volume);
+        audioMixer.SetFloat(Mixer._G(Group.SFX), masterAudioMixerModel.sfx.volume);
+    }
+
+    private void _SyncState()
+    {
+        ApplyStateToMasterAudioMixer();
     }
 }
