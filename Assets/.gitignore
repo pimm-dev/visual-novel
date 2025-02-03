@@ -3,3 +3,4 @@
 # But in the Unity Editor, it is saved under the Assets directory.
 # So, It is required to ignore playerdata.bin in the repository.
 playerdata.bin
+playerdata.bin.meta
