@@ -2331,6 +2331,7 @@ GameObject:
   m_Component:
   - component: {fileID: 871372842}
   - component: {fileID: 871372841}
+  - component: {fileID: 871372843}
   m_Layer: 0
   m_Name: BGMplayer
   m_TagString: Untagged
@@ -2347,7 +2348,7 @@ AudioSource:
   m_GameObject: {fileID: 871372840}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 24300002, guid: ccb833f4c67958842bdaa7f0f28d4055, type: 2}
+  OutputAudioMixerGroup: {fileID: 5331266515751196341, guid: ccb833f4c67958842bdaa7f0f28d4055, type: 2}
   m_audioClip: {fileID: 8300000, guid: debae28ceb0f5824c9a8e70a74d7218b, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
@@ -2449,6 +2450,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &871372843
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 871372840}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 000c2c374eeb24db9af0f46c29319bd6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &990925083
 GameObject:
   m_ObjectHideFlags: 0
@@ -2781,6 +2794,8 @@ MonoBehaviour:
   ev: {fileID: 1700001242}
   target: {fileID: 533974179}
   quitPanel: {fileID: 0}
+  masterAudioMixerControllerObject: {fileID: 0}
+  masterAudioMixerController: {fileID: 0}
   audioMixer: {fileID: 24100000, guid: ccb833f4c67958842bdaa7f0f28d4055, type: 2}
   resolutionDropdown: {fileID: 528758408}
 --- !u!1 &1064680431
@@ -4762,7 +4777,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 678568119}
   m_Direction: 0
   m_MinValue: -80
-  m_MaxValue: 0
+  m_MaxValue: 20
   m_WholeNumbers: 0
   m_Value: 0
   m_OnValueChanged:
@@ -5639,3 +5654,64 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2042452116}
   m_CullTransparentMesh: 1
+--- !u!1001 &6977130154417205958
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 6977130155643685876, guid: f3ea36be063ea445095451c498eab2ea, type: 3}
+      propertyPath: masterAudioMixerModel.master.volume
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6977130155643685877, guid: f3ea36be063ea445095451c498eab2ea, type: 3}
+      propertyPath: m_RootOrder
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6977130155643685877, guid: f3ea36be063ea445095451c498eab2ea, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6977130155643685877, guid: f3ea36be063ea445095451c498eab2ea, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6977130155643685877, guid: f3ea36be063ea445095451c498eab2ea, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6977130155643685877, guid: f3ea36be063ea445095451c498eab2ea, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6977130155643685877, guid: f3ea36be063ea445095451c498eab2ea, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6977130155643685877, guid: f3ea36be063ea445095451c498eab2ea, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6977130155643685877, guid: f3ea36be063ea445095451c498eab2ea, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6977130155643685877, guid: f3ea36be063ea445095451c498eab2ea, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6977130155643685877, guid: f3ea36be063ea445095451c498eab2ea, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6977130155643685877, guid: f3ea36be063ea445095451c498eab2ea, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6977130155643685879, guid: f3ea36be063ea445095451c498eab2ea, type: 3}
+      propertyPath: m_Name
+      value: MasterAudioMixerController
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: f3ea36be063ea445095451c498eab2ea, type: 3}
