@@ -9,7 +9,7 @@ public class MasterAudioMixerController : MonoBehaviour
     public static MasterAudioMixerController Instance { get; private set; }
 
     [SerializeField] private AudioMixer audioMixer;
-    [SerializeField] private MasterAudioMixerModel masterAudioMixerModel;
+    [SerializeField] public MasterAudioMixerModel masterAudioMixerModel;
 
     private void Awake()
     {
@@ -32,7 +32,7 @@ public class MasterAudioMixerController : MonoBehaviour
         {
             Destroy(gameObject);
         }
-        masterAudioMixerModel = new MasterAudioMixerModel();
+        masterAudioMixerModel = MasterAudioMixerModel.LoadFromPlayerData();
     }
 
     public void PushStateToMasterAudioMixer()

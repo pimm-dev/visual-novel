@@ -10,5 +10,5 @@ public class MasterAudioMixerDefaults
 
     /**
      */
-    
+    public const string PREFAB_NAME = "MasterAudioMixerController";
 }

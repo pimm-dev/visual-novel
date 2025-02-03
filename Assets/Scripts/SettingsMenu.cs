@@ -13,6 +13,38 @@ public class SettingsMenu : MonoBehaviour
     public GameObject quitPanel;
     private bool isSelected = false;
 
+    [SerializeField] private GameObject masterAudioMixerControllerObject;
+    [SerializeField] private MasterAudioMixerController masterAudioMixerController;
+    void Awake()
+    {
+        _LoadMasterAudioMixerController();
+    }
+
+    void _LoadMasterAudioMixerController()
+    {
+        if (masterAudioMixerControllerObject == null)
+        {
+            masterAudioMixerControllerObject = GameObject.Find(MasterAudioMixerDefaults.PREFAB_NAME);
+        }
+        if (masterAudioMixerController == null)
+        {
+            masterAudioMixerController = masterAudioMixerControllerObject.GetComponent<MasterAudioMixerController>();
+        }
+    }
+
+    void Start()
+    {
+        // Screen resolution
+        Screen.SetResolution(1920, 1080, Screen.fullScreen);
+        resolutionDropdown.RefreshShownValue();
+
+        // Audio levels
+        /**
+         * NOTE: First MasterAudioMixerController.PushStateToMasterAudioMixer() calling
+         *       is in the Start() method. Keep in mind when adjust initialization order.
+         */
+    }
+
     void Update()
     {
         if( Input.GetAxisRaw("Vertical") != 0f && !isSelected ){
@@ -46,6 +78,7 @@ public class SettingsMenu : MonoBehaviour
 
     public TMPro.TMP_Dropdown resolutionDropdown;
 
+    /*
     void Start()
     {
         // resolutions = Screen.resolutions;
@@ -69,9 +102,8 @@ public class SettingsMenu : MonoBehaviour
 
         // resolutionDropdown.AddOptions(options);
         // resolutionDropdown.value = currentResolutionIndex;
-        Screen.SetResolution(1920, 1080, Screen.fullScreen);
-        resolutionDropdown.RefreshShownValue();
     }
+    */
 
     public void SetResolution(int resulutionIndex)
     {
@@ -83,7 +115,15 @@ public class SettingsMenu : MonoBehaviour
 
     public void SetVolume(float volume)
     {
-        audioMixer.SetFloat("volume", volume);
+        /**
+         * NOTE: Sets the volume of the master audio mixer.
+         *       If there are requirements to set the each volume of the audio mixer,
+         *       then modify the following code:
+         */
+        masterAudioMixerController.masterAudioMixerModel.master.volume = volume;
+        masterAudioMixerController.PushStateToMasterAudioMixer();
+        masterAudioMixerController.PushStateToPlayerDataAndSave();
+        // audioMixer.SetFloat("volume", volume);
     }
 
     public void SetFullscreen(bool isFullscreen)

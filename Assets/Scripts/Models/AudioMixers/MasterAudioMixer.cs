@@ -20,6 +20,13 @@ public class MasterAudioMixerModel : ICloneable
         dialogue = new AudioMixerModel(MasterAudioMixerDefaults.DIALOGUE_VOLUME);
     }
 
+    public static MasterAudioMixerModel LoadFromPlayerData()
+    {
+        MasterAudioMixerModel masterAudioMixer = new MasterAudioMixerModel();
+        masterAudioMixer.LoadAndPullStateFromPlayerData();
+        return masterAudioMixer;
+    }
+
     public object Clone()
     {
         return new MasterAudioMixerModel
