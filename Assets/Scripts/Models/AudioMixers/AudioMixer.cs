@@ -1,9 +1,14 @@
 using System;
+using ProtoBuf;
 
 [Serializable]
-public class AudioMixerModel
+[ProtoContract]
+public class AudioMixerModel : ICloneable
 {
-    [UnityEngine.Range(AudioMixerDefaults.VOLUME_MIN, AudioMixerDefaults.VOLUME_MAX)] public float volume;
+    [UnityEngine.Range(AudioMixerDefaults.VOLUME_MIN, AudioMixerDefaults.VOLUME_MAX)]
+    [ProtoMember(1)]
+    public float volume;
+
     public AudioMixerModel()
     {
         volume = AudioMixerDefaults.VOLUME;
@@ -11,5 +16,13 @@ public class AudioMixerModel
     public AudioMixerModel(float volume)
     {
         this.volume = volume;
+    }
+
+    public object Clone()
+    {
+        return new AudioMixerModel
+        {
+            volume = volume
+        };
     }
 }

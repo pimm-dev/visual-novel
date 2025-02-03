@@ -5659,6 +5659,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6977130155643685876, guid: f3ea36be063ea445095451c498eab2ea, type: 3}
+      propertyPath: masterAudioMixerModel.master.volume
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6977130155643685877, guid: f3ea36be063ea445095451c498eab2ea, type: 3}
       propertyPath: m_RootOrder
       value: 5

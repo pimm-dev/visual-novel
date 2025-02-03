@@ -18,7 +18,7 @@ public class MasterAudioMixerController : MonoBehaviour
 
     private void Start()
     {
-        _SyncState();
+        PushStateToMasterAudioMixer();
     }
 
     private void _InitObject()
@@ -35,16 +35,37 @@ public class MasterAudioMixerController : MonoBehaviour
         masterAudioMixerModel = new MasterAudioMixerModel();
     }
 
-    [ContextMenu("Apply state to master audio mixer")]
-    public void ApplyStateToMasterAudioMixer()
+    public void PushStateToMasterAudioMixer()
     {
         audioMixer.SetFloat(Mixer._G(Group.Master), masterAudioMixerModel.master.volume);
         audioMixer.SetFloat(Mixer._G(Group.Music), masterAudioMixerModel.music.volume);
         audioMixer.SetFloat(Mixer._G(Group.SFX), masterAudioMixerModel.sfx.volume);
     }
 
-    private void _SyncState()
+    public void PullStateFromMasterAudioMixer()
     {
-        ApplyStateToMasterAudioMixer();
+        audioMixer.GetFloat(Mixer._G(Group.Master), out masterAudioMixerModel.master.volume);
+        audioMixer.GetFloat(Mixer._G(Group.Music), out masterAudioMixerModel.music.volume);
+        audioMixer.GetFloat(Mixer._G(Group.SFX), out masterAudioMixerModel.sfx.volume);
+    }
+
+    public void PushStateToPlayerData()
+    {
+        masterAudioMixerModel.PushStateToPlayerData();
+    }
+
+    public void PullStateFromPlayerData()
+    {
+        masterAudioMixerModel.PullStateFromPlayerData();
+    }
+
+    public void PushStateToPlayerDataAndSave()
+    {
+        masterAudioMixerModel.PushStateToPlayerDataAndSave();
+    }
+
+    public void LoadAndPullStateFromPlayerData()
+    {
+        masterAudioMixerModel.LoadAndPullStateFromPlayerData();
     }
 }
