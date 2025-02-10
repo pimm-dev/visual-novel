@@ -126,7 +126,7 @@
                 {
                     "dialogueID":"e22",
                     "character":5,
-                    "text":"주인공은 바람 마법으로 괴물들의 움직임을 묶었다."
+                    "text":"Player은(는) 바람 마법으로 괴물들의 움직임을 묶었다."
                 },
                 {
                     "dialogueID":"e23",
@@ -206,7 +206,7 @@
                 {
                     "dialogueID":"e36",
                     "character":1,
-                    "text":"우리가 마지막이라고? 다들 어떻게 빨리 나온거야?"
+                    "text":"우리가 마지막이라고? 다들 어떻게 빨리 나온 거야?"
                 },
                 {
                     "dialogueID":"e37",
@@ -231,7 +231,7 @@
                 {
                     "dialogueID":"e41",
                     "character":5,
-                    "text":"주인공의 효율적인 방식 덕분에 마지막에 들어왔지만 제일 처음으로 물약을 제출하였다."
+                    "text":"Player의 효율적인 방식 덕분에 마지막에 들어왔지만 제일 처음으로 물약을 제출하였다."
                 },
                 {
                     "dialogueID":"e42",
@@ -250,8 +250,8 @@
                 },
                 {
                     "dialogueID":"e45",
-                    "character":0,
-                    "text":"혹시.. 코코. 너네는 괴물을 보지 못했니?"
+                    "character":1,
+                    "text":"그보다, 너흰 괴물을 어떻게 빨리 해치운 거야?"
                 },
                 {
                     "dialogueID":"e46",
@@ -261,12 +261,12 @@
                 {
                     "dialogueID":"e47",
                     "character":5,
-                    "text":"소피아가 걱정스러운 눈으로 주인공을 보며 말한다."
+                    "text":"소피아가 걱정스러운 눈으로 Player을(를) 보며 말한다."
                 },
                 {
                     "dialogueID":"e48",
                     "character":2,
-                    "text":"괴물이라고..? 다친 덴 없는 거야?"
+                    "text":"괴물이요..? 다친 덴 없으세요?"
                 },
                 {
                     "dialogueID":"e49",
@@ -309,12 +309,20 @@
                     "text":"이상한 냄새는 안 나는데?"
                 },
                 {
+                    "dialogueID":"e58",
+                    "position":0,
+                    "character":3,
+                    "text":""
+                },
+                {
                     "dialogueID":"e56",
+                    "position":2,
                     "character":1,
                     "text":"네가 개냐."
                 },
                 {
                     "dialogueID":"e57",
+                    "position":0,
                     "character":3,
                     "text":"헤헤. 내가 좀 잘 맡아."
                 },
