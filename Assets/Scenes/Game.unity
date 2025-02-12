@@ -675,17 +675,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f3ea36be063ea445095451c498eab2ea, type: 3}
---- !u!114 &265810494 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6977130155643685876, guid: f3ea36be063ea445095451c498eab2ea, type: 3}
-  m_PrefabInstance: {fileID: 265810493}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1c6c91adcb1e340eb93b960a857e2480, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &275311897
 GameObject:
   m_ObjectHideFlags: 0
@@ -3357,15 +3346,15 @@ MonoBehaviour:
   backgrounds:
   - {fileID: 21300000, guid: 36d8ae3aa67032148ab1d534931bad67, type: 3}
   - {fileID: 21300000, guid: 0c6e2d6f5ce6be640988481ebc2140dc, type: 3}
-  - {fileID: 21300000, guid: eac661d2fc9b83b4aa854a9d7e960e46, type: 3}
+  - {fileID: 21300000, guid: 3914b8e1ee55d0a4bb703cc8efd77fbf, type: 3}
   - {fileID: 21300000, guid: a8993e2f26947be41885e210f3ec52d3, type: 3}
   - {fileID: 21300000, guid: 6497c6aad36397e41969effa5f0b4724, type: 3}
   - {fileID: 21300000, guid: bd0c4468e55648449bedd798ce48a453, type: 3}
-  - {fileID: 21300000, guid: 6f42daaaafd43cd4d806345a01084553, type: 3}
-  - {fileID: 21300000, guid: 5359bc66f85087e489036f31d64c100e, type: 3}
-  - {fileID: 21300000, guid: d866961d89054cb48b4769d409385d62, type: 3}
-  - {fileID: 21300000, guid: 5bc50f8057e7a3645b0238ec335b4a60, type: 3}
-  - {fileID: 21300000, guid: e8451141a05c52c46b6b4197be340c5d, type: 3}
+  - {fileID: 21300000, guid: 13c0603ee6c6ab14cb089bd0676dfe4a, type: 3}
+  - {fileID: 21300000, guid: f0cadd946d62e24468a10d181a41f2d7, type: 3}
+  - {fileID: 21300000, guid: 3bad0d7574bdfc74799c7869bdfca1cc, type: 3}
+  - {fileID: 21300000, guid: 9245819a655dae5438c7ab65df77cc60, type: 3}
+  - {fileID: 21300000, guid: 49096e79ce662c54587c5a0eb25dbbf5, type: 3}
   - {fileID: 21300000, guid: e0b6783be4fcf0a41b364ef57ed8883f, type: 3}
   - {fileID: 21300000, guid: 4b6da719a961e7943800554cc35500ec, type: 3}
   ChatText: {fileID: 181569068}
@@ -3633,6 +3622,8 @@ MonoBehaviour:
   ev: {fileID: 1695223741}
   target: {fileID: 2016357197}
   quitPanel: {fileID: 1085818433}
+  masterAudioMixerControllerObject: {fileID: 0}
+  masterAudioMixerController: {fileID: 0}
   audioMixer: {fileID: 24100000, guid: ccb833f4c67958842bdaa7f0f28d4055, type: 2}
   resolutionDropdown: {fileID: 1578803274}
 --- !u!1 &1387886398
