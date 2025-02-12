@@ -3633,8 +3633,6 @@ MonoBehaviour:
   ev: {fileID: 1695223741}
   target: {fileID: 2016357197}
   quitPanel: {fileID: 1085818433}
-  masterAudioMixerControllerObject: {fileID: 0}
-  masterAudioMixerController: {fileID: 0}
   audioMixer: {fileID: 24100000, guid: ccb833f4c67958842bdaa7f0f28d4055, type: 2}
   resolutionDropdown: {fileID: 1578803274}
 --- !u!1 &1387886398
