@@ -3000,6 +3000,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1122970995}
   - component: {fileID: 1122970996}
+  - component: {fileID: 1122970997}
   m_Layer: 5
   m_Name: Slider
   m_TagString: Untagged
@@ -3094,6 +3095,21 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &1122970997
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1122970994}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c57b0eb7feed844d39bac51dc02865dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  masterVolumeSlider: {fileID: 0}
+  masterAudioMixerControllerObject: {fileID: 0}
+  masterAudioMixerController: {fileID: 0}
 --- !u!1 &1126382820
 GameObject:
   m_ObjectHideFlags: 0
@@ -3617,8 +3633,6 @@ MonoBehaviour:
   ev: {fileID: 1695223741}
   target: {fileID: 2016357197}
   quitPanel: {fileID: 1085818433}
-  masterAudioMixerControllerObject: {fileID: 827237905}
-  masterAudioMixerController: {fileID: 265810494}
   audioMixer: {fileID: 24100000, guid: ccb833f4c67958842bdaa7f0f28d4055, type: 2}
   resolutionDropdown: {fileID: 1578803274}
 --- !u!1 &1387886398
