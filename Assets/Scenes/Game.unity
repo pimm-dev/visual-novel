@@ -3357,6 +3357,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 49096e79ce662c54587c5a0eb25dbbf5, type: 3}
   - {fileID: 21300000, guid: e0b6783be4fcf0a41b364ef57ed8883f, type: 3}
   - {fileID: 21300000, guid: 4b6da719a961e7943800554cc35500ec, type: 3}
+  - {fileID: 21300000, guid: 343d1efcd310c8e42afe5e70c3bbe45e, type: 3}
   ChatText: {fileID: 181569068}
   CharacterName: {fileID: 1417408168}
   writerText: 

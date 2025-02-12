@@ -129,6 +129,11 @@
             "background":10,
             "dialogueDatas":[
                 {
+                    "dialogueID":"f54",
+                    "character":5,
+                    "text":"엘리나가 책 한 권을 집어 든다."
+                },
+                {
                     "dialogueID":"f14",
                     "character":4,
                     "text":"그게 뭐야?"
@@ -141,7 +146,7 @@
                 {
                     "dialogueID":"f25",
                     "character":4,
-                    "text":"저번부터 생각했는데, 엘리나는 보호막에 대해 잘 아는 것 같아. 난 보호막이 있는 줄도, 약화시킬 수 있는 것도 몰랐는데."
+                    "text":"저번부터 생각했는데, 엘리나는 보호막에 대해 잘 아는 것 같아. 난 보호막이 있는 줄도 몰랐는데."
                 },
                 {
                     "dialogueID":"f26",
@@ -256,7 +261,7 @@
                 {
                     "dialogueID":"f46",
                     "character":3,
-                    "text":"답답해 죽겠어... 여기 나가면 소리 지를 거야..."
+                    "text":"답답해 죽겠어.. 여기 나가면 소리 지를 거야."
                 },
                 {
                     "dialogueID":"f47",

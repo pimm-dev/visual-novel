@@ -32,13 +32,15 @@ public enum BG {
     alchemy,
     lab,
     library,
-    schoolyard
+    schoolyard,
+    dark_schoolyard
 }
 
 public enum NPC {
     Left,
     Middle,
-    Right
+    Right,
+    Absence
 }
 
 public class Chat : MonoBehaviour
@@ -139,6 +141,9 @@ public class Chat : MonoBehaviour
             case BG.schoolyard:
                 main.sprite = backgrounds[12];
                 break;
+            case BG.dark_schoolyard:
+                main.sprite = backgrounds[13];
+                break;
         }
     }
 
@@ -234,6 +239,9 @@ public class Chat : MonoBehaviour
                         emptyImage.sprite = characters[0];
                         right.sprite = characters[1];
                         break;
+                    case NPC.Absence:
+                        emptyImage.sprite = characters[0];
+                        break;
                 }
                 break;
             case Character.Cecilia:
@@ -252,6 +260,9 @@ public class Chat : MonoBehaviour
                     case NPC.Right:
                         emptyImage.sprite = characters[0];
                         right.sprite = characters[2];
+                        break;
+                    case NPC.Absence:
+                        emptyImage.sprite = characters[0];
                         break;
                 }
                 break;
@@ -272,6 +283,9 @@ public class Chat : MonoBehaviour
                         emptyImage.sprite = characters[0];
                         right.sprite = characters[3];
                         break;
+                    case NPC.Absence:
+                        emptyImage.sprite = characters[0];
+                        break;
                 }
                 break;
             case Character.Coco:
@@ -290,6 +304,9 @@ public class Chat : MonoBehaviour
                     case NPC.Right:
                         emptyImage.sprite = characters[0];
                         right.sprite = characters[4];
+                        break;
+                    case NPC.Absence:
+                        emptyImage.sprite = characters[0];
                         break;
                 }
                 break;

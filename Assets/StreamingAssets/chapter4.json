@@ -139,6 +139,7 @@
                 },
                 {
                     "dialogueID":"g24",
+                    "position":3,
                     "character":3,
                     "text":"악, 잠깐만요! 진짜라니까요!"
                 },
@@ -254,7 +255,12 @@
                     "dialogueID":"g43",
                     "character":3,
                     "text":"이상한 냄새가 나."
-                },
+                }
+            ]
+        },
+        {
+            "background":13,
+            "dialogueDatas":[
                 {
                     "dialogueID":"g44",
                     "character":5,
@@ -312,6 +318,7 @@
                 },
                 {
                     "dialogueID":"g55",
+                    "position":3,
                     "character":0,
                     "text":"당신이죠? 10년 전…"
                 },
