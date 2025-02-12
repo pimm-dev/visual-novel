@@ -13,7 +13,348 @@
         {
             "background":4,
             "dialogueDatas":[
-                
+                {
+                    "dialogueID":"g2",
+                    "character":3,
+                    "text":"자, 부끄럼쟁이 엘리나를 위해 모인 이유를 설명해줄게."
+                },
+                {
+                    "dialogueID":"g3",
+                    "position":0,
+                    "character":3,
+                    "text":""
+                },
+                {
+                    "dialogueID":"g4",
+                    "position":2,
+                    "character":0,
+                    "text":"..."
+                },
+                {
+                    "dialogueID":"g5",
+                    "position":0,
+                    "character":3,
+                    "text":"여긴 도서관이 아니니까 마음껏 소리쳐도 돼! 자, 말한다."
+                },
+                {
+                    "dialogueID":"g6",
+                    "position":2,
+                    "character":0,
+                    "text":"괜찮아."
+                },
+                {
+                    "dialogueID":"g7",
+                    "position":0,
+                    "character":3,
+                    "text":"응?"
+                },
+                {
+                    "dialogueID":"g8",
+                    "position":2,
+                    "character":0,
+                    "text":"기말고사 때 일어날 사건에 대비하자는 거지?"
+                },
+                {
+                    "dialogueID":"g9",
+                    "position":0,
+                    "character":3,
+                    "text":"아앗- 내가 말해주려고 했는데! 누구야!"
+                },
+                {
+                    "dialogueID":"g10",
+                    "position":2,
+                    "character":0,
+                    "text":"..너희가 간 뒤로 다시 가서 책을 읽었어."
+                },
+                {
+                    "dialogueID":"g11",
+                    "position":0,
+                    "character":3,
+                    "text":"그렇군!"
+                },
+                {
+                    "dialogueID":"g12",
+                    "character":3,
+                    "text":"그럼 내 작전을 소개하지. 이름하여 ‘모두가 대비하고 있으면 어떻게든 되겠지!’ 작전!"
+                },
+                {
+                    "dialogueID":"g13",
+                    "character":5,
+                    "text":"세실리아가 작게 말한다."
+                },
+                {
+                    "dialogueID":"g14",
+                    "character":1,
+                    "text":"이름부터 신뢰가 안 가는데.."
+                },
+                {
+                    "dialogueID":"g15",
+                    "character":3,
+                    "text":"게시판에 기말고사 때 사건이 일어난다는 포스터를 붙여 놓는 거야. 그럼 모두가 알게 되겠지!"
+                },
+                {
+                    "dialogueID":"g16",
+                    "character":2,
+                    "text":"괜찮은 작전 같아요! 다들 알고 있으면 다같이 힘을 모아 싸우면 되잖아요!"
+                },
+                {
+                    "dialogueID":"g17",
+                    "character":4,
+                    "text":"나도 동의해."
+                },
+                {
+                    "dialogueID":"g18",
+                    "character":0,
+                    "text":"나도."
+                },
+                {
+                    "dialogueID":"g19",
+                    "character":3,
+                    "text":"예이! 만장일치!"
+                },
+                {
+                    "dialogueID":"g20",
+                    "character":1,
+                    "text":"웬일로 괜찮은 생각을 했네."
+                },
+                {
+                    "dialogueID":"g21",
+                    "character":1,
+                    "text":"그럼 오늘은 포스터를 만들고 배분해서 모든 층에 붙이고 오는 거야."
+                },
+                {
+                    "dialogueID":"g22",
+                    "character":2,
+                    "text":"네!"
+                }
+            ]
+        },
+        {
+            "background":8,
+            "dialogueDatas":[
+                {
+                    "dialogueID":"g23",
+                    "character":5,
+                    "text":"포스터를 완성하고 모두 흩어져 게시판에 붙이던 중, 익숙한 소리가 들린다."
+                },
+                {
+                    "dialogueID":"g24",
+                    "character":3,
+                    "text":"악, 잠깐만요! 진짜라니까요!"
+                },
+                {
+                    "dialogueID":"g25",
+                    "character":4,
+                    "text":"이건 코코 목소린데.. 무슨 일이지?"
+                },
+                {
+                    "dialogueID":"g26",
+                    "character":7,
+                    "text":"증거도 없이 이런 걸 붙이면 학교 전체에 불안감을 조성할 뿐이야. "
+                },
+                {
+                    "dialogueID":"g27",
+                    "character":3,
+                    "text":"하지만, 진짜라니까요! 모두가 알아야 해요!"
+                },
+                {
+                    "dialogueID":"g28",
+                    "character":7,
+                    "text":"코코 학생, 예언술 점수가 낮은 걸로 아는데. 근 10년간 우리 학교는 안전했어."
+                },
+                {
+                    "dialogueID":"g29",
+                    "character":3,
+                    "text":"..."
+                },
+                {
+                    "dialogueID":"g30",
+                    "character":7,
+                    "text":"이 포스터는 다 수거할 테니 다신 붙이지 않도록 하게."
+                }
+            ]
+        },
+        {
+            "background":4,
+            "dialogueDatas":[
+                {
+                    "dialogueID":"g31",
+                    "character":1,
+                    "text":"다 붙이고 왔지?"
+                },
+                {
+                    "dialogueID":"g32",
+                    "position":0,
+                    "character":1,
+                    "text":""
+                },
+                {
+                    "dialogueID":"g33",
+                    "position":2,
+                    "character":3,
+                    "text":"작전 실패야.."
+                },
+                {
+                    "dialogueID":"g34",
+                    "position":0,
+                    "character":1,
+                    "text":"뭐?"
+                },
+                {
+                    "dialogueID":"g35",
+                    "character":4,
+                    "text":"교수님이 불안감 조성이라며 모든 포스터를 수거한다고 하셨어. 교수님의 반응도 이해돼. 증거가 없긴 하잖아."
+                },
+                {
+                    "dialogueID":"g36",
+                    "character":0,
+                    "text":"그럼 우리의 무력을 더 키울 수밖에 없겠어."
+                }
+            ]
+        },
+        {
+            "background":1,
+            "dialogueDatas":[
+                {
+                    "dialogueID":"g37",
+                    "character":5,
+                    "text":"그날 이후로 동아리는 전투 동아리로 둔갑한 듯했다."
+                },
+                {
+                    "dialogueID":"g38",
+                    "character":5,
+                    "text":"어느새 기말고사가 다가왔다."
+                }
+            ]
+        },
+        {
+            "background":12,
+            "dialogueDatas":[
+                {
+                    "dialogueID":"g39",
+                    "character":5,
+                    "text":"학생들은 넓은 운동장에서 준비하고 있었다."
+                },
+                {
+                    "dialogueID":"g40",
+                    "character":7,
+                    "text":"자, 이제 기말고사를 시작하겠다. 순번대로 나와서 내 공격을 막으면 된다."
+                },
+                {
+                    "dialogueID":"g41",
+                    "character":5,
+                    "text":"기말고사는 순조롭게 진행됐고, 무사히 끝마쳤다."
+                },
+                {
+                    "dialogueID":"g42",
+                    "character":5,
+                    "text":"코코가 속삭였다."
+                },
+                {
+                    "dialogueID":"g43",
+                    "character":3,
+                    "text":"이상한 냄새가 나."
+                },
+                {
+                    "dialogueID":"g44",
+                    "character":5,
+                    "text":"하늘은 순식간에 어둠으로 뒤덮였고, 거대한 무리가 모습을 드러냈다."
+                },
+                {
+                    "dialogueID":"g45",
+                    "character":8,
+                    "text":"으악, 괴물이다!"
+                },
+                {
+                    "dialogueID":"g46",
+                    "character":5,
+                    "text":"엘리나는 침착하게 괴물과 싸우고 있었다."
+                },
+                {
+                    "dialogueID":"g47",
+                    "character":8,
+                    "text":"저건.. 그림자 연합이잖아!"
+                },
+                {
+                    "dialogueID":"g48",
+                    "character":5,
+                    "text":"코코가 싸우다 말고 끼어든다."
+                },
+                {
+                    "dialogueID":"g49",
+                    "character":3,
+                    "text":"뭐? 저거 이름도 있어?"
+                },
+                {
+                    "dialogueID":"g50",
+                    "character":8,
+                    "text":"금지된 마법을 쓴대..."
+                },
+                {
+                    "dialogueID":"g51",
+                    "character":8,
+                    "text":"으으.. 무서워!"
+                },
+                {
+                    "dialogueID":"g52",
+                    "character":5,
+                    "text":"학생들은 겁에 질려 도망가기 바빴다."
+                },
+                {
+                    "dialogueID":"g53",
+                    "character":5,
+                    "text":"교수들이 하나둘씩 운동장으로 모여들어 마법 난투가 벌어졌다."
+                },
+                {
+                    "dialogueID":"g54",
+                    "character":5,
+                    "text":"그림자 연합과의 싸움이 길어지던 중, 어딘가에서 엘리나의 목소리가 들려왔다."
+                },
+                {
+                    "dialogueID":"g55",
+                    "character":0,
+                    "text":"당신이죠? 10년 전…"
+                },
+                {
+                    "dialogueID":"g56",
+                    "character":4,
+                    "text":"(엘리나? 잘 안 들리는데, 이 상황에 누구랑 대화하는 거지?)"
+                },
+                {
+                    "dialogueID":"g57",
+                    "character":5,
+                    "text":"Player은(는) 소리가 들리는 쪽을 쳐다봤다."
+                },
+                {
+                    "dialogueID":"g58",
+                    "character":1,
+                    "text":"뭐 하는 거야!"
+                },
+                {
+                    "dialogueID":"g59",
+                    "character":5,
+                    "text":"세실리아가 Player 앞에 날아온 공격을 막아주었다."
+                },
+                {
+                    "dialogueID":"g60",
+                    "character":4,
+                    "text":"아, 세실리아! 고마워! 잠깐만.."
+                },
+                {
+                    "dialogueID":"g61",
+                    "character":5,
+                    "text":"다시 쳐다보니 엘리나가 누군가를 쫓아가고 있었다."
+                },
+                {
+                    "dialogueID":"g62",
+                    "character":4,
+                    "text":"세실리아, 잠시 여기 좀 맡길게!"
+                },
+                {
+                    "dialogueID":"g63",
+                    "character":5,
+                    "text":"세실리아가 뭐라 할 틈도 없이 Player은(는) 재빠르게 엘리나의 뒤를 밟았다."
+                }
             ]
         }
     ]

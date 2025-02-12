@@ -1345,6 +1345,17 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 436765700}
   m_CullTransparentMesh: 1
+--- !u!114 &489534063 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6977130155643685876, guid: f3ea36be063ea445095451c498eab2ea, type: 3}
+  m_PrefabInstance: {fileID: 6977130154417205958}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1c6c91adcb1e340eb93b960a857e2480, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &501216941
 GameObject:
   m_ObjectHideFlags: 0
@@ -2793,9 +2804,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ev: {fileID: 1700001242}
   target: {fileID: 533974179}
-  quitPanel: {fileID: 0}
-  masterAudioMixerControllerObject: {fileID: 0}
-  masterAudioMixerController: {fileID: 0}
+  quitPanel: {fileID: 1797312318}
+  masterAudioMixerControllerObject: {fileID: 871372840}
+  masterAudioMixerController: {fileID: 489534063}
   audioMixer: {fileID: 24100000, guid: ccb833f4c67958842bdaa7f0f28d4055, type: 2}
   resolutionDropdown: {fileID: 528758408}
 --- !u!1 &1064680431
