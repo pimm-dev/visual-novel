@@ -16,24 +16,28 @@ public enum Character {
     Narration,
     Principal,
     Professor,
-    Student
+    Student,
+    Silhouette1,
+    Silhouette2
 }
 
 public enum BG {
-    hall,
-    black,
-    bed,
-    classtest,
-    classroom,
-    campus,
-    forest,
-    frontgate,
-    corridor,
-    alchemy,
-    lab,
-    library,
-    schoolyard,
-    dark_schoolyard
+    Hall,
+    Black,
+    Bedroom,
+    ClassroomTesting,
+    Classroom,
+    CampusOverview,
+    Forest,
+    FrontGate,
+    Hallway,
+    AlchemyClassroom,
+    Laboratory,
+    Library,
+    Schoolyard,
+    DarkSchoolyard,
+    BanquetHall,
+    BreakRoom
 }
 
 public enum NPC {
@@ -58,7 +62,7 @@ public class Chat : MonoBehaviour
     public TMPro.TMP_Text ChatText;
     public TMPro.TMP_Text CharacterName;
 
-    private string[] names = {"엘리나", "세실리아", "소피아", "코코", "교장", "교수", "학생"};
+    private string[] names = {"엘리나", "세실리아", "소피아", "코코", "교장", "교수", "학생", "그림자1", "그림자2"};
 
     public string writerText = "";
 
@@ -66,7 +70,7 @@ public class Chat : MonoBehaviour
     private GameObject namebox;
 
     private bool isAutoMode = false;
-    public float autoChatDelay = 1f;
+    public float autoChatDelay = 3f;
 
     private bool isSkip = false;
     private bool isTyping = false;
@@ -102,47 +106,53 @@ public class Chat : MonoBehaviour
     {
         switch (scene.background)
         {
-            case BG.hall:
+            case BG.Hall:
                 main.sprite = backgrounds[0];
                 break;
-            case BG.black:
+            case BG.Black:
                 main.sprite = backgrounds[1];
                 break;
-            case BG.bed:
+            case BG.Bedroom:
                 main.sprite = backgrounds[2];
                 break;
-            case BG.classtest:
+            case BG.ClassroomTesting:
                 main.sprite = backgrounds[3];
                 break;
-            case BG.classroom:
+            case BG.Classroom:
                 main.sprite = backgrounds[4];
                 break;
-            case BG.campus:
+            case BG.CampusOverview:
                 main.sprite = backgrounds[5];
                 break;
-            case BG.forest:
+            case BG.Forest:
                 main.sprite = backgrounds[6];
                 break;
-            case BG.frontgate:
+            case BG.FrontGate:
                 main.sprite = backgrounds[7];
                 break;
-            case BG.corridor:
+            case BG.Hallway:
                 main.sprite = backgrounds[8];
                 break;
-            case BG.alchemy:
+            case BG.AlchemyClassroom:
                 main.sprite = backgrounds[9];
                 break;
-            case BG.lab:
+            case BG.Laboratory:
                 main.sprite = backgrounds[10];
                 break;
-            case BG.library:
+            case BG.Library:
                 main.sprite = backgrounds[11];
                 break;
-            case BG.schoolyard:
+            case BG.Schoolyard:
                 main.sprite = backgrounds[12];
                 break;
-            case BG.dark_schoolyard:
+            case BG.DarkSchoolyard:
                 main.sprite = backgrounds[13];
+                break;
+            case BG.BanquetHall:
+                main.sprite = backgrounds[14];
+                break;
+            case BG.BreakRoom:
+                main.sprite = backgrounds[15];
                 break;
         }
     }
@@ -321,8 +331,12 @@ public class Chat : MonoBehaviour
                     CharacterName.text = names[4];
                 else if (data.character == Character.Professor)
                     CharacterName.text = names[5];
-                else
+                else if (data.character == Character.Student)
                     CharacterName.text = names[6];
+                else if (data.character == Character.Silhouette1)
+                    CharacterName.text = names[7];
+                else
+                    CharacterName.text = names[8];
                 break;
         }
        

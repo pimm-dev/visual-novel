@@ -191,7 +191,7 @@
                 {
                     "dialogueID":"d35",
                     "character":1,
-                    "text":"호오? 재미있는 걸."
+                    "text":"호오? 재미있는걸."
                 },
                 {
                     "dialogueID":"d36",
@@ -281,7 +281,7 @@
                 {
                     "dialogueID":"d52",
                     "character":7,
-                    "text":"Player, 엘리나, 세실리아, 소피아, 코코... 모두 A반입니다."
+                    "text":"Player, 엘리나, 세실리아, 소피아, 코코… 모두 A반입니다."
                 }
             ]
         },
@@ -349,7 +349,7 @@
                     "dialogueID":"d61",
                     "position":0,
                     "character":1,
-                    "text":"흥, 하지만 나 만큼은 아니지."
+                    "text":"흥, 하지만 나만큼은 아니지."
                 },
                 {
                     "dialogueID":"d62",
@@ -436,7 +436,7 @@
                     "dialogueID":"d76",
                     "position":0,
                     "character":1,
-                    "text":"어쩌다보니, 충분히 모았네."
+                    "text":"어쩌다 보니, 충분히 모았네."
                 },
                 {
                     "dialogueID":"d77",
@@ -556,7 +556,7 @@
                 {
                     "dialogueID":"d97",
                     "character":5,
-                    "text":"이렇게, 새로운 친구들과의 학교 생활이 시작되었다."
+                    "text":"이렇게, 새로운 친구들과의 학교생활이 시작되었다."
                 }
             ]
         }
