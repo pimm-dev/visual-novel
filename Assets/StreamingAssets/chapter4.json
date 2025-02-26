@@ -45,6 +45,7 @@
                 {
                     "dialogueID":"g7",
                     "position":0,
+                    "emotion":3,
                     "character":3,
                     "text":"응?"
                 },
@@ -57,6 +58,7 @@
                 {
                     "dialogueID":"g9",
                     "position":0,
+                    "emotion":4,
                     "character":3,
                     "text":"아앗- 내가 말해주려고 했는데! 누구야!"
                 },
@@ -155,6 +157,7 @@
                 },
                 {
                     "dialogueID":"g27",
+                    "emotion":3,
                     "character":3,
                     "text":"하지만, 진짜라니까요! 모두가 알아야 해요!"
                 },
@@ -165,6 +168,7 @@
                 },
                 {
                     "dialogueID":"g29",
+                    "emotion":4,
                     "character":3,
                     "text":"..."
                 },
@@ -192,6 +196,7 @@
                 {
                     "dialogueID":"g33",
                     "position":2,
+                    "emotion":4,
                     "character":3,
                     "text":"작전 실패야.."
                 },
@@ -208,6 +213,7 @@
                 },
                 {
                     "dialogueID":"g36",
+                    "emotion":4,
                     "character":0,
                     "text":"그럼 우리의 무력을 더 키울 수밖에 없겠어."
                 }
@@ -253,6 +259,7 @@
                 },
                 {
                     "dialogueID":"g43",
+                    "emotion":4,
                     "character":3,
                     "text":"이상한 냄새가 나."
                 }
@@ -288,6 +295,7 @@
                 },
                 {
                     "dialogueID":"g49",
+                    "emotion":3,
                     "character":3,
                     "text":"뭐? 저거 이름도 있어?"
                 },
@@ -334,6 +342,7 @@
                 },
                 {
                     "dialogueID":"g58",
+                    "emotion":3,
                     "character":1,
                     "text":"뭐 하는 거야!"
                 },

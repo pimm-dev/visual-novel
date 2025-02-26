@@ -1,8 +1,5 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using System.IO;
-using Unity.VisualScripting;
 
 public class Dialogue : MonoBehaviour
 {
@@ -48,14 +45,14 @@ public class DialogueData
     public string dialogueID;
     public Character character;
     public string text;
-    public string emotion;
+    public EMOTION emotion;
     public NPC position;
     public int textSpeed;
     public int fontSize;
     public string fontType;
     public DialogueData()
     {
-        emotion = "happy";
+        emotion = EMOTION.basic;
         textSpeed = 50;
         fontSize = 40;
         fontType = "Preesentation";

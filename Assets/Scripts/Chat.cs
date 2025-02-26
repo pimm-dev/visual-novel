@@ -3,9 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using System.IO;
-using System.Security.Permissions;
-using Unity.VisualScripting;
-using Unity.Burst.Intrinsics;
 
 public enum Character {
     Elina,
@@ -45,6 +42,15 @@ public enum NPC {
     Middle,
     Right,
     Absence
+}
+
+public enum EMOTION {
+    basic,
+    happy,
+    sad,
+    surprised,
+    serious,
+    jealous
 }
 
 public class Chat : MonoBehaviour
@@ -221,6 +227,31 @@ public class Chat : MonoBehaviour
         }
     }
 
+    void SpriteSetting(DialogueData data, int num)
+    {
+        switch (data.position)
+        {
+            case NPC.Left:
+                emptyImage.sprite = characters[0];
+                left.sprite = characters[num];
+                break;
+            case NPC.Middle:
+                left.sprite = characters[0];
+                emptyImage.sprite = characters[num];
+                right.sprite = characters[0];
+                break;
+            case NPC.Right:
+                emptyImage.sprite = characters[0];
+                right.sprite = characters[num];
+                break;
+            case NPC.Absence:
+                left.sprite = characters[0];
+                emptyImage.sprite = characters[0];
+                right.sprite = characters[0];
+                break;
+        }
+    }
+
     IEnumerator NormalChat(DialogueData data)
     {
         if (data.character == Character.Narration) {
@@ -234,89 +265,73 @@ public class Chat : MonoBehaviour
         {
             case Character.Elina:
                 CharacterName.text = names[0];
-                switch (data.position)
+                switch (data.emotion)
                 {
-                    case NPC.Left:
-                        emptyImage.sprite = characters[0];
-                        left.sprite = characters[1];
+                    case EMOTION.basic:
+                        SpriteSetting(data, 1);
                         break;
-                    case NPC.Middle:
-                        left.sprite = characters[0];
-                        emptyImage.sprite = characters[1];
-                        right.sprite = characters[0];
+                    case EMOTION.happy:
+                        SpriteSetting(data, 5);
                         break;
-                    case NPC.Right:
-                        emptyImage.sprite = characters[0];
-                        right.sprite = characters[1];
+                    case EMOTION.sad:
+                        SpriteSetting(data, 6);
                         break;
-                    case NPC.Absence:
-                        emptyImage.sprite = characters[0];
+                    case EMOTION.serious:
+                        SpriteSetting(data, 7);
                         break;
                 }
                 break;
             case Character.Cecilia:
                 CharacterName.text = names[1];
-                switch (data.position)
+                switch (data.emotion)
                 {
-                    case NPC.Left:
-                        emptyImage.sprite = characters[0];
-                        left.sprite = characters[2];
+                    case EMOTION.basic:
+                        SpriteSetting(data, 2);
                         break;
-                    case NPC.Middle:
-                        left.sprite = characters[0];
-                        emptyImage.sprite = characters[2];
-                        right.sprite = characters[0];
+                    case EMOTION.happy:
+                        SpriteSetting(data, 8);
                         break;
-                    case NPC.Right:
-                        emptyImage.sprite = characters[0];
-                        right.sprite = characters[2];
+                    case EMOTION.surprised:
+                        SpriteSetting(data, 9);
                         break;
-                    case NPC.Absence:
-                        emptyImage.sprite = characters[0];
+                    case EMOTION.jealous:
+                        SpriteSetting(data, 10);
                         break;
                 }
                 break;
             case Character.Sophia:
                 CharacterName.text = names[2];
-                switch (data.position)
+                switch (data.emotion)
                 {
-                    case NPC.Left:
-                        emptyImage.sprite = characters[0];
-                        left.sprite = characters[3];
+                    case EMOTION.basic:
+                        SpriteSetting(data, 3);
                         break;
-                    case NPC.Middle:
-                        left.sprite = characters[0];
-                        emptyImage.sprite = characters[3];
-                        right.sprite = characters[0];
+                    case EMOTION.happy:
+                        SpriteSetting(data, 11);
                         break;
-                    case NPC.Right:
-                        emptyImage.sprite = characters[0];
-                        right.sprite = characters[3];
+                    case EMOTION.sad:
+                        SpriteSetting(data, 12);
                         break;
-                    case NPC.Absence:
-                        emptyImage.sprite = characters[0];
+                    case EMOTION.surprised:
+                        SpriteSetting(data, 13);
                         break;
                 }
                 break;
             case Character.Coco:
                 CharacterName.text = names[3];
-                switch (data.position)
+                switch (data.emotion)
                 {
-                    case NPC.Left:
-                        emptyImage.sprite = characters[0];
-                        left.sprite = characters[4];
+                    case EMOTION.basic:
+                        SpriteSetting(data, 4);
                         break;
-                    case NPC.Middle:
-                        left.sprite = characters[0];
-                        emptyImage.sprite = characters[4];
-                        right.sprite = characters[0];
+                    case EMOTION.happy:
+                        SpriteSetting(data, 14);
                         break;
-                    case NPC.Right:
-                        emptyImage.sprite = characters[0];
-                        right.sprite = characters[4];
+                    case EMOTION.surprised:
+                        SpriteSetting(data, 15);
                         break;
-                    case NPC.Absence:
-                        emptyImage.sprite = characters[0];
+                    case EMOTION.serious:
+                        SpriteSetting(data, 16);
                         break;
                 }
                 break;

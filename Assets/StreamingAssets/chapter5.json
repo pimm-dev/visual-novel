@@ -20,6 +20,7 @@
                 },
                 {
                     "dialogueID":"h4",
+                    "emotion":4,
                     "character":0,
                     "text":"도망쳐봤자 소용없어요! 난 당신을…"
                 },
@@ -30,6 +31,7 @@
                 },
                 {
                     "dialogueID":"h6",
+                    "emotion":4,
                     "character":0,
                     "text":"...뭔가 이상해."
                 },
@@ -40,6 +42,7 @@
                 },
                 {
                     "dialogueID":"h8",
+                    "emotion":4,
                     "character":0,
                     "text":"함정이야."
                 },
@@ -60,11 +63,13 @@
                 },
                 {
                     "dialogueID":"h12",
+                    "emotion":4,
                     "character":0,
                     "text":"..."
                 },
                 {
                     "dialogueID":"h13",
+                    "emotion":4,
                     "character":0,
                     "text":"한 명으로는 족하지 않았나요?"
                 },
@@ -116,11 +121,13 @@
                 },
                 {
                     "dialogueID":"h23",
+                    "emotion":4,
                     "character":0,
                     "text":"내 앞에서 죽지 마."
                 },
                 {
                     "dialogueID":"h24",
+                    "emotion":2,
                     "character":0,
                     "text":"나 때문에... 또... 그럴 순 없어."
                 },
@@ -151,11 +158,13 @@
                 },
                 {
                     "dialogueID":"h30",
+                    "emotion":2,
                     "character":0,
                     "text":"제대로 배운 것도 없으면서 누굴 지킨다고.."
                 },
                 {
                     "dialogueID":"h31",
+                    "emotion":2,
                     "character":0,
                     "text":"죽는 줄 알았잖아!"
                 },
@@ -166,6 +175,7 @@
                 },
                 {
                     "dialogueID":"h33",
+                    "emotion":2,
                     "character":0,
                     "text":"그래, 배운 대로 잘하더라! 여긴 어떻게 알고 온 거야!"
                 },
@@ -176,6 +186,7 @@
                 },
                 {
                     "dialogueID":"h35",
+                    "emotion":4,
                     "character":0,
                     "text":"...이젠 말해야겠지."
                 },
@@ -196,6 +207,7 @@
                 },
                 {
                     "dialogueID":"d39",
+                    "emotion":4,
                     "character":0,
                     "text":"그날이 오빠를 본 마지막 날이었어. 그림자 연합이…"
                 },
@@ -236,6 +248,7 @@
                 },
                 {
                     "dialogueID":"d47",
+                    "emotion":1,
                     "character":0,
                     "text":"응."
                 },
@@ -251,6 +264,7 @@
                 },
                 {
                     "dialogueID":"d50",
+                    "emotion":1,
                     "character":0,
                     "text":"빨리 와!"
                 }
@@ -271,11 +285,13 @@
                 },
                 {
                     "dialogueID":"d53",
+                    "emotion":2,
                     "character":2,
                     "text":"아, Player님! 안 보여서 걱정했어요..."
                 },
                 {
                     "dialogueID":"d54",
+                    "emotion":5,
                     "character":1,
                     "text":"또 둘이서 오네? 우리가 싸울 동안 어디 갔던 거야!"
                 },
@@ -301,16 +317,19 @@
                 },
                 {
                     "dialogueID":"d58",
+                    "emotion":3,
                     "character":3,
                     "text":"뭐? 아, 그걸 너만 보면 어떡해!"
                 },
                 {
                     "dialogueID":"d59",
+                    "emotion":5,
                     "character":1,
                     "text":"나한테 떠넘기고 말이야."
                 },
                 {
                     "dialogueID":"d60",
+                    "emotion":3,
                     "character":2,
                     "text":"대단해요.. 그런 마법은 어떻게 하신 거예요?"
                 },
@@ -321,6 +340,7 @@
                 },
                 {
                     "dialogueID":"d62",
+                    "emotion":4,
                     "character":3,
                     "text":"엣- 치사해."
                 },
@@ -341,12 +361,14 @@
                 },
                 {
                     "dialogueID":"d66",
+                    "emotion":4,
                     "character":3,
                     "text":"그냥 재능인 거야~ 아이고 불공평해라."
                 },
                 {
                     "dialogueID":"d67",
                     "position":0,
+                    "emotion":4,
                     "character":3,
                     "text":""
                 },
@@ -359,18 +381,21 @@
                 {
                     "dialogueID":"d69",
                     "position":0,
+                    "emotion":3,
                     "character":3,
                     "text":"세실리아.."
                 },
                 {
                     "dialogueID":"d70",
                     "position":2,
+                    "emotion":1,
                     "character":1,
                     "text":"웃기는 재능. 사실 어이없어서 웃기는 거지."
                 },
                 {
                     "dialogueID":"d71",
                     "position":0,
+                    "emotion":4,
                     "character":3,
                     "text":"넌 날 코미디언쯤으로 생각하는 거니.."
                 },
@@ -436,6 +461,7 @@
                 },
                 {
                     "dialogueID":"d81",
+                    "emotion":1,
                     "character":0,
                     "text":"아, Player. 고생은 네가 더 했지."
                 },
@@ -481,6 +507,7 @@
                 },
                 {
                     "dialogueID":"d89",
+                    "emotion":1,
                     "character":0,
                     "text":"..응."
                 },
@@ -516,6 +543,7 @@
                 },
                 {
                     "dialogueID":"d96",
+                    "emotion":1,
                     "character":0,
                     "text":"치, 그것도 모르면서 뭘 알려준대."
                 },
@@ -536,6 +564,7 @@
                 },
                 {
                     "dialogueID":"d100",
+                    "emotion":4,
                     "character":0,
                     "text":"나 참, 나만 알려주잖아. 마법도."
                 },
@@ -543,6 +572,17 @@
                     "dialogueID":"d101",
                     "character":4,
                     "text":"사랑도."
+                },
+                {
+                    "dialogueID":"d105",
+                    "character":0,
+                    "text":"!"
+                },
+                {
+                    "dialogueID":"d104",
+                    "emotion":1,
+                    "character":0,
+                    "text":"..."
                 },
                 {
                     "dialogueID":"d102",

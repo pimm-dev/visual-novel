@@ -135,6 +135,7 @@
                 },
                 {
                     "dialogueID":"e24",
+                    "emotion":3,
                     "character":1,
                     "text":"뭐, 뭐야 이것들은!"
                 },
@@ -145,6 +146,7 @@
                 },
                 {
                     "dialogueID":"e26",
+                    "emotion":4,
                     "character":0,
                     "text":"이 틈에 돌아가자."
                 },
@@ -170,16 +172,19 @@
                 },
                 {
                     "dialogueID":"e30",
+                    "emotion":4,
                     "character":0,
                     "text":"보호막이.. 다시 강해졌어."
                 },
                 {
                     "dialogueID":"e31",
+                    "emotion":4,
                     "character":0,
                     "text":"누군가 일부러 보호막을 약화시켰던 것 같아."
                 },
                 {
                     "dialogueID":"e32",
+                    "emotion":3,
                     "character":1,
                     "text":"누구야? 누가 감히!"
                 },
@@ -216,7 +221,7 @@
                 {
                     "dialogueID":"e38",
                     "character":5,
-                    "text":"아르베르토 교수는 돌아다니며 말하고 있었다."
+                    "text":"아르베르토 교수는 교실을 순회하며 말하고 있었다."
                 },
                 {
                     "dialogueID":"e39",
@@ -265,6 +270,7 @@
                 },
                 {
                     "dialogueID":"e48",
+                    "emotion":3,
                     "character":2,
                     "text":"괴물이요..? 다친 덴 없으세요?"
                 },
@@ -323,11 +329,13 @@
                 {
                     "dialogueID":"e57",
                     "position":0,
+                    "emotion":1,
                     "character":3,
                     "text":"헤헤. 내가 좀 잘 맡아."
                 },
                 {
                     "dialogueID":"e14",
+                    "emotion":4,
                     "character":0,
                     "text":"지금 여기 없다면.. 여기서 출발했다는 거지."
                 }
