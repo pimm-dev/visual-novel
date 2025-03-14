@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 using UnityEngine;
 using UnityEngine.UI;
 using System.IO;
@@ -62,6 +63,8 @@ public class Chat : MonoBehaviour
     
     [SerializeField] private Sprite[] characters;
     [SerializeField] private Sprite[] backgrounds;
+    [SerializeField] private Image fadeImage;
+    [SerializeField] private float fadeDuration = 1.5f;
 
     private Dictionary<string, Sprite> backgroundSprites;
 
@@ -178,12 +181,59 @@ public class Chat : MonoBehaviour
         }
     }
 
+    IEnumerator FadeIn()
+    {
+        float elapsedTime = 0f;
+        Color color = fadeImage.color;
+        color.a = 0f;
+        fadeImage.color = color;
+        fadeImage.gameObject.SetActive(true);
+
+        while (elapsedTime < fadeDuration)
+        {
+            elapsedTime += Time.deltaTime;
+            color.a = Mathf.Clamp01(elapsedTime / fadeDuration);
+            fadeImage.color = color;
+            yield return null;
+        }
+    }
+
+    IEnumerator FadeOut()
+    {
+        float elapsedTime = fadeDuration;
+        Color color = fadeImage.color;
+        color.a = 1f;
+        fadeImage.color = color;
+
+        while (elapsedTime > 0)
+        {
+            elapsedTime -= Time.deltaTime;
+            color.a = Mathf.Clamp01(elapsedTime / fadeDuration);
+            fadeImage.color = color;
+            yield return null;
+        }
+
+        fadeImage.gameObject.SetActive(false);
+    }
+
     public void LoadChapter(int chapterNumber)
     {
+        StartCoroutine(TransitionToChapter(chapterNumber));
+    }
+
+    IEnumerator TransitionToChapter(int chapterNumber)
+    {
+        if (chapterNumber != 1 && SaveLoad.LoadID == "d1")
+        {
+            yield return StartCoroutine(FadeIn());
+            yield return new WaitForSeconds(0.5f);
+        }
         string fileName = $"chapter{chapterNumber}.json";
         LoadDialogueData(fileName);
         ApplyPlayerName();
         StartCoroutine(PlayDialogues());
+
+        yield return StartCoroutine(FadeOut()); 
     }
 
     void ApplyPlayerName()
@@ -410,6 +460,13 @@ public class Chat : MonoBehaviour
                 }
             }
             yield return null;
+        }
+
+        if (data.dialogueID == "h103")
+        {
+            yield return StartCoroutine(FadeIn());
+            yield return new WaitForSeconds(0.5f);
+            SceneManager.LoadScene("Main");
         }
     }
 

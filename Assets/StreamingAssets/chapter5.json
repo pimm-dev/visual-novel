@@ -206,64 +206,64 @@
                     "text":"어릴 때, 우리 오빠가 학교에 다녔을 때 놀러 온 적이 있거든."
                 },
                 {
-                    "dialogueID":"d39",
+                    "dialogueID":"h39",
                     "emotion":4,
                     "character":0,
                     "text":"그날이 오빠를 본 마지막 날이었어. 그림자 연합이…"
                 },
                 {
-                    "dialogueID":"d40",
+                    "dialogueID":"h40",
                     "character":4,
                     "text":"…그럼 너는 복수하기 위해 이 학교에 온 거야?"
                 },
                 {
-                    "dialogueID":"d41",
+                    "dialogueID":"h41",
                     "character":0,
                     "text":"맞아."
                 },
                 {
-                    "dialogueID":"d42",
+                    "dialogueID":"h42",
                     "character":4,
                     "text":"힘들었겠다.."
                 },
                 {
-                    "dialogueID":"d43",
+                    "dialogueID":"h43",
                     "character":0,
                     "text":"사실 너 볼 때 힘들었어."
                 },
                 {
-                    "dialogueID":"d44",
+                    "dialogueID":"h44",
                     "character":4,
                     "text":"응?"
                 },
                 {
-                    "dialogueID":"d45",
+                    "dialogueID":"h45",
                     "character":0,
                     "text":"너 우리 오빠 닮았거든. 그래서 너랑은 엮이지 말아야지 했는데.."
                 },
                 {
-                    "dialogueID":"d46",
+                    "dialogueID":"h46",
                     "character":4,
                     "text":"단단히 엮인 것 같네."
                 },
                 {
-                    "dialogueID":"d47",
+                    "dialogueID":"h47",
                     "emotion":1,
                     "character":0,
                     "text":"응."
                 },
                 {
-                    "dialogueID":"d48",
+                    "dialogueID":"h48",
                     "character":4,
                     "text":"아, 다들 괜찮나? 괜찮아졌으면 운동장으로 돌아가 볼까?"
                 },
                 {
-                    "dialogueID":"d49",
+                    "dialogueID":"h49",
                     "character":5,
                     "text":"엘리나는 부끄러운 듯 먼저 달아났다."
                 },
                 {
-                    "dialogueID":"d50",
+                    "dialogueID":"h50",
                     "emotion":1,
                     "character":0,
                     "text":"빨리 와!"
@@ -274,29 +274,29 @@
             "background":12,
             "dialogueDatas":[
                 {
-                    "dialogueID":"d51",
+                    "dialogueID":"h51",
                     "character":5,
                     "text":"운동장은 사람들로 북적였다."
                 },
                 {
-                    "dialogueID":"d52",
+                    "dialogueID":"h52",
                     "character":4,
                     "text":"다들 괜찮은 거야?"
                 },
                 {
-                    "dialogueID":"d53",
+                    "dialogueID":"h53",
                     "emotion":2,
                     "character":2,
                     "text":"아, Player님! 안 보여서 걱정했어요..."
                 },
                 {
-                    "dialogueID":"d54",
+                    "dialogueID":"h54",
                     "emotion":5,
                     "character":1,
                     "text":"또 둘이서 오네? 우리가 싸울 동안 어디 갔던 거야!"
                 },
                 {
-                    "dialogueID":"d55",
+                    "dialogueID":"h55",
                     "character":4,
                     "text":"일단 사람이 많으니, 자리를 옮길까."
                 }
@@ -306,101 +306,101 @@
             "background":4,
             "dialogueDatas":[
                 {
-                    "dialogueID":"d56",
+                    "dialogueID":"h56",
                     "character":5,
                     "text":"Player은(는) 상황을 설명했다."
                 },
                 {
-                    "dialogueID":"d57",
+                    "dialogueID":"h57",
                     "character":4,
                     "text":"그렇게 광범위한 마법은 처음이었어. 정말 멋있었는데."
                 },
                 {
-                    "dialogueID":"d58",
+                    "dialogueID":"h58",
                     "emotion":3,
                     "character":3,
                     "text":"뭐? 아, 그걸 너만 보면 어떡해!"
                 },
                 {
-                    "dialogueID":"d59",
+                    "dialogueID":"h59",
                     "emotion":5,
                     "character":1,
                     "text":"나한테 떠넘기고 말이야."
                 },
                 {
-                    "dialogueID":"d60",
+                    "dialogueID":"h60",
                     "emotion":3,
                     "character":2,
                     "text":"대단해요.. 그런 마법은 어떻게 하신 거예요?"
                 },
                 {
-                    "dialogueID":"d61",
+                    "dialogueID":"h61",
                     "character":0,
                     "text":"몰라."
                 },
                 {
-                    "dialogueID":"d62",
+                    "dialogueID":"h62",
                     "emotion":4,
                     "character":3,
                     "text":"엣- 치사해."
                 },
                 {
-                    "dialogueID":"d63",
+                    "dialogueID":"h63",
                     "character":0,
                     "text":"진짜야."
                 },
                 {
-                    "dialogueID":"d64",
+                    "dialogueID":"h64",
                     "character":0,
                     "text":"모르겠지만, 마법보다 강한 게 있었으니 가능했던 게 아닌가 싶어."
                 },
                 {
-                    "dialogueID":"d65",
+                    "dialogueID":"h65",
                     "character":1,
                     "text":"마법보다 강한 게 어딨어?"
                 },
                 {
-                    "dialogueID":"d66",
+                    "dialogueID":"h66",
                     "emotion":4,
                     "character":3,
                     "text":"그냥 재능인 거야~ 아이고 불공평해라."
                 },
                 {
-                    "dialogueID":"d67",
+                    "dialogueID":"h67",
                     "position":0,
                     "emotion":4,
                     "character":3,
                     "text":""
                 },
                 {
-                    "dialogueID":"d68",
+                    "dialogueID":"h68",
                     "position":2,
                     "character":1,
                     "text":"너도 재능 있어."
                 },
                 {
-                    "dialogueID":"d69",
+                    "dialogueID":"h69",
                     "position":0,
                     "emotion":3,
                     "character":3,
                     "text":"세실리아.."
                 },
                 {
-                    "dialogueID":"d70",
+                    "dialogueID":"h70",
                     "position":2,
                     "emotion":1,
                     "character":1,
                     "text":"웃기는 재능. 사실 어이없어서 웃기는 거지."
                 },
                 {
-                    "dialogueID":"d71",
+                    "dialogueID":"h71",
                     "position":0,
                     "emotion":4,
                     "character":3,
                     "text":"넌 날 코미디언쯤으로 생각하는 거니.."
                 },
                 {
-                    "dialogueID":"d72",
+                    "dialogueID":"h72",
                     "character":5,
                     "text":"동아리실에선 오늘도 웃음소리가 가득했다."
                 }
@@ -410,17 +410,17 @@
             "background":1,
             "dialogueDatas":[
                 {
-                    "dialogueID":"d73",
+                    "dialogueID":"h73",
                     "character":5,
                     "text":"긴 전투가 끝나고, 학교에는 다시 평화가 찾아왔다."
                 },
                 {
-                    "dialogueID":"d74",
+                    "dialogueID":"h74",
                     "character":5,
                     "text":"금지된 마법의 힘을 봉인 당한 그림자 연합은 모두 사형당해 연합은 없어지게 되었다."
                 },
                 {
-                    "dialogueID":"d75",
+                    "dialogueID":"h75",
                     "character":5,
                     "text":"다음 날, 학교의 전통적인 연회가 열렸다."
                 }
@@ -430,12 +430,12 @@
             "background":14,
             "dialogueDatas":[
                 {
-                    "dialogueID":"d76",
+                    "dialogueID":"h76",
                     "character":6,
                     "text":"여러분, 이번 기말고사를 비롯해 큰 사건을 무사히 마친 것을 축하합니다. 오늘 연회에서 한 학기의 마무리를 마음껏 즐기세요!"
                 },
                 {
-                    "dialogueID":"d77",
+                    "dialogueID":"h77",
                     "character":5,
                     "text":"연회장은 환희와 열기로 들썩였다."
                 }
@@ -445,48 +445,48 @@
             "background":15,
             "dialogueDatas":[
                 {
-                    "dialogueID":"d78",
+                    "dialogueID":"h78",
                     "character":5,
                     "text":"조용한 곳을 찾아 나온 Player은(는) 바람을 쐬고 있는 엘리나를 발견했다."
                 },
                 {
-                    "dialogueID":"d79",
+                    "dialogueID":"h79",
                     "character":5,
                     "text":"바람에 엘리나의 머리카락이 슬며시 흩날리고 있었다."
                 },
                 {
-                    "dialogueID":"d80",
+                    "dialogueID":"h80",
                     "character":4,
                     "text":"엘리나, 정말 고생 많았어."
                 },
                 {
-                    "dialogueID":"d81",
+                    "dialogueID":"h81",
                     "emotion":1,
                     "character":0,
                     "text":"아, Player. 고생은 네가 더 했지."
                 },
                 {
-                    "dialogueID":"d82",
+                    "dialogueID":"h82",
                     "character":4,
                     "text":"오늘은 내가 좀 더 했을지 몰라도.. 그동안 고생 많았잖아. 앞으론 편히 학교생활 했으면 좋겠네."
                 },
                 {
-                    "dialogueID":"d83",
+                    "dialogueID":"h83",
                     "character":5,
                     "text":"엘리나와 Player은(는) 서로를 바라보며 웃는다."
                 },
                 {
-                    "dialogueID":"d84",
+                    "dialogueID":"h84",
                     "character":3,
                     "text":"어이어이! 춤 안 추고 뭐 하는 거야~"
                 },
                 {
-                    "dialogueID":"d85",
+                    "dialogueID":"h85",
                     "character":5,
                     "text":"코코가 엘리나를 끌며 연회장으로 향했다."
                 },
                 {
-                    "dialogueID":"d86",
+                    "dialogueID":"h86",
                     "character":0,
                     "text":"아, 코코 잠깐! 나 춤은 잘 못 추는데-"
                 }
@@ -496,101 +496,101 @@
             "background":14,
             "dialogueDatas":[
                 {
-                    "dialogueID":"d87",
+                    "dialogueID":"h87",
                     "character":5,
                     "text":"연회장에선 음악이 흘러나왔고, 모두 즐거워 보였다."
                 },
                 {
-                    "dialogueID":"d88",
+                    "dialogueID":"h88",
                     "character":4,
                     "text":"춤출래?"
                 },
                 {
-                    "dialogueID":"d89",
+                    "dialogueID":"h89",
                     "emotion":1,
                     "character":0,
                     "text":"..응."
                 },
                 {
-                    "dialogueID":"d90",
+                    "dialogueID":"h90",
                     "character":4,
                     "text":"오빠랑 춤춘 적 있어?"
                 },
                 {
-                    "dialogueID":"d91",
+                    "dialogueID":"h91",
                     "character":0,
                     "text":"있지. 오빠가 가르쳐주기도 했는데, 다 까먹었네."
                 },
                 {
-                    "dialogueID":"d92",
+                    "dialogueID":"h92",
                     "character":4,
                     "text":"이제 내가 알려줘야겠네."
                 },
                 {
-                    "dialogueID":"d93",
+                    "dialogueID":"h93",
                     "character":0,
                     "text":"나 생각보다 모르는 게 많아. 밖을 잘 못 나갔거든."
                 },
                 {
-                    "dialogueID":"d94",
+                    "dialogueID":"h94",
                     "character":4,
                     "text":"나도 많아."
                 },
                 {
-                    "dialogueID":"d95",
+                    "dialogueID":"h95",
                     "character":4,
                     "text":"아직 네가 말한 마법보다 강한 게 뭔지도 모르겠어."
                 },
                 {
-                    "dialogueID":"d96",
+                    "dialogueID":"h96",
                     "emotion":1,
                     "character":0,
                     "text":"치, 그것도 모르면서 뭘 알려준대."
                 },
                 {
-                    "dialogueID":"d97",
+                    "dialogueID":"h97",
                     "character":5,
                     "text":"그 순간, Player은(는) 자신을 바라보는 엘리나의 눈을 보고 그 답을 알 수 있었다."
                 },
                 {
-                    "dialogueID":"d98",
+                    "dialogueID":"h98",
                     "character":4,
                     "text":"아- 알겠다. 근데 좀 아리송하네."
                 },
                 {
-                    "dialogueID":"d99",
+                    "dialogueID":"h99",
                     "character":4,
                     "text":"그거 좀 자세히 알려줄래?"
                 },
                 {
-                    "dialogueID":"d100",
+                    "dialogueID":"h100",
                     "emotion":4,
                     "character":0,
                     "text":"나 참, 나만 알려주잖아. 마법도."
                 },
                 {
-                    "dialogueID":"d101",
+                    "dialogueID":"h101",
                     "character":4,
                     "text":"사랑도."
                 },
                 {
-                    "dialogueID":"d105",
+                    "dialogueID":"h105",
                     "character":0,
                     "text":"!"
                 },
                 {
-                    "dialogueID":"d104",
+                    "dialogueID":"h104",
                     "emotion":1,
                     "character":0,
                     "text":"..."
                 },
                 {
-                    "dialogueID":"d102",
+                    "dialogueID":"h102",
                     "character":5,
                     "text":"엘리나는 순간 멈칫했다가, 피식 웃으며 Player의 손을 꼭 잡았다."
                 },
                 {
-                    "dialogueID":"d103",
+                    "dialogueID":"h103",
                     "character":5,
                     "text":"Player과(와) 엘리나는 흘러나오는 음악에 맞춰 천천히 춤을 췄다."
                 }
