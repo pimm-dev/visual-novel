@@ -31,8 +31,7 @@ public class SettingsMenu : MonoBehaviour
 
     void Start()
     {
-        // Screen resolution
-        Screen.SetResolution(1920, 1080, Screen.fullScreen);
+        Screen.SetResolution(1920, 1080, true);
         resolutionDropdown.RefreshShownValue();
 
         // Audio levels
@@ -102,9 +101,9 @@ public class SettingsMenu : MonoBehaviour
     }
     */
 
-    public void SetResolution(int resulutionIndex)
+    public void SetResolution(int resolutionIndex)
     {
-        string[] resolutionText = resolutionDropdown.options[resulutionIndex].text.Split('x');
+        string[] resolutionText = resolutionDropdown.options[resolutionIndex].text.Split('x');
         int width = int.Parse(resolutionText[0].Trim());
         int height = int.Parse(resolutionText[1].Trim());
         Screen.SetResolution(width, height, Screen.fullScreen);
@@ -125,6 +124,6 @@ public class SettingsMenu : MonoBehaviour
 
     public void SetFullscreen(bool isFullscreen)
     {
-        Screen.fullScreen = isFullscreen;
+       Screen.fullScreen = isFullscreen;
     }
 }
